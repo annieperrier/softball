@@ -1,0 +1,27 @@
+{
+  "name": "softball",
+  "version": "1.0.0",
+  "authors": [
+    "Annie Perrier"
+  ],
+  "description": "Softball Statistics",
+  "license": "MIT",
+  "homepage": "https://github.com/annieperrier/softball.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.25",
+    "angular-ui-router": "~0.2.11",
+    "chartjs": "1.0.1-beta.2",
+    "jquery": "1.11.1",
+    "bootstrap": "~3.2.0",
+    "firebase": "1.0.15",
+    "angularfire": "0.7.1",
+    "font-awesome": "~4.2.0"
+  }
+}

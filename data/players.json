@@ -1,0 +1,264 @@
+{
+	"Albert":{
+		"name": "Albert",
+		"number": "00",
+		"sex": "m",
+		"sub": false,
+		"color": "#214C18",
+		"highlight": "#113509"
+	},
+	"Andy":{
+		"name": "Andy",
+		"number": "5",
+		"sex": "m",
+		"sub": false,
+		"color": "#27E200",
+		"highlight": "#1EAF00"
+	},
+	"Annie":{
+		"name": "Annie",
+		"number": "2",
+		"sex": "f",
+		"sub": false,
+		"color": "#5C095C",
+		"highlight": "#440044"
+	},
+	"Brookes":{
+		"name": "Brookes",
+		"number": "69",
+		"sex": "m",
+		"sub": false,
+		"color": "#D0BE98",
+		"highlight": "#AD986B"
+	},
+	"Charles":{
+		"name": "Charles",
+		"number": "3",
+		"sex": "m",
+		"sub": false,
+		"color": "#898676",
+		"highlight": "#57554A"
+	},
+	"Garrett":{
+		"name": "Garrett",
+		"number": "0",
+		"sex": "m",
+		"sub": false,
+		"color": "#322B7A",
+		"highlight": "#0E0948"
+	},
+	"Jeff":{
+		"name": "Jeff",
+		"number": "73",
+		"sex": "m",
+		"sub": false,
+		"color": "#4B412E",
+		"highlight": "#3F321C"
+	},
+	"Kaitlyn":{
+		"name": "Kaitlyn",
+		"number": "7",
+		"sex": "f",
+		"sub": false,
+		"color": "#826E92",
+		"highlight": "#664E7A"
+	},
+	"Katia":{
+		"name": "Katia",
+		"number": "0",
+		"sex": "f",
+		"sub": false,
+		"color": "#EB8DB3",
+		"highlight": "#CB3E77"
+	},
+	"Kim":{
+		"name": "Kim",
+		"number": "3",
+		"sex": "f",
+		"sub": false,
+		"color": "#F90018",
+		"highlight": "#CA0013"
+	},
+	"Lou":{
+		"name": "Lou",
+		"number": "88",
+		"sex": "m",
+		"sub": false,
+		"color": "#1911A7",
+		"highlight": "#130C82"
+	},
+	"Michelle":{
+		"name": "Michelle",
+		"number": "16",
+		"sex": "f",
+		"sub": false,
+		"color": "#FF9463",
+		"highlight": "#CF4C10"
+	},
+	"Steve":{
+		"name": "Steve",
+		"number": "79",
+		"sex": "m",
+		"sub": false,
+		"color": "#FFF100",
+		"highlight": "#E8DB00"
+	},
+	"Stuart":{
+		"name": "Stuart",
+		"number": "17",
+		"sex": "m",
+		"sub": false,
+		"color": "#9CB987",
+		"highlight": "#779A5F"
+	},
+	"Tom":{
+		"name": "Tom",
+		"number": "19",
+		"sex": "m",
+		"sub": false,
+		"color": "#FFD985",
+		"highlight": "#FFC035"
+	},
+	"Tratham":{
+		"name": "Tratham",
+		"number": "13",
+		"sex": "m",
+		"sub": false,
+		"color": "#02DEF2",
+		"highlight": "#01B2C2"
+	},
+	"Leslie":{
+		"name": "Leslie",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#BFBB77",
+		"highlight": "#9E9951"
+	},
+	"Sharon":{
+		"name": "Sharon",
+		"number": "0",
+		"sex": "f",
+		"sub": true,
+		"color": "#FFE5DA",
+		"highlight": "#F6C9B5"
+	},
+	"David":{
+		"name": "David",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#FFFC8D",
+		"highlight": "#FFFB1A"
+	},
+	"Liz":{
+		"name": "Liz",
+		"number": "1",
+		"sex": "f",
+		"sub": false,
+		"color": "#FFC9B0",
+		"highlight": "#F5A885"
+	},
+	"Dianne":{
+		"name": "Dianne",
+		"number": "8",
+		"sex": "f",
+		"sub": false,
+		"color": "#F45C71",
+		"highlight": "#E93850"
+	},
+	"Al":{
+		"name": "Al",
+		"number": "9",
+		"sex": "m",
+		"sub": false
+	},
+	"Lori":{
+		"name": "Lori",
+		"number": "10",
+		"sex": "f",
+		"sub": false,
+		"color": "#9F8B93",
+		"highlight": "#55474C"
+	},
+	"Brad":{
+		"name": "Brad",
+		"number": "24",
+		"sex": "m",
+		"sub": false,
+		"color": "#785D2C",
+		"highlight": "#5B4216"
+	},
+	"Aslam":{
+		"name": "Aslam",
+		"number": "28",
+		"sex": "m",
+		"sub": false,
+		"color": "#E8E7E1",
+		"highlight": "#BDBBB3"
+	},
+	"Brian":{
+		"name": "Brian",
+		"number": "83",
+		"sex": "m",
+		"sub": false,
+		"color": "#667688",
+		"highlight": "#4A5C71"
+	},
+	"Michael":{
+		"name": "Michael",
+		"number": "99",
+		"sex": "m",
+		"sub": false,
+		"color": "#4F7D57",
+		"highlight": "#355C3C"
+	},
+	"Legen":{
+		"name": "Legen",
+		"number": "0",
+		"sex": "f",
+		"sub": true,
+		"color": "#FE8F92",
+		"highlight": "#FD6A6E"
+	},
+	"Lee":{
+		"name": "Lee",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#7AB083",
+		"highlight": "#51935D"
+	},
+	"Randy":{
+		"name": "Randy",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#5B7D7D",
+		"highlight": "#406868"
+	},
+	"Joe":{
+		"name": "Joe",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#B2F200",
+		"highlight": "#90C400"
+	},
+	"Yanna":{
+		"name": "Yanna",
+		"number": "0",
+		"sex": "f",
+		"sub": true,
+		"color": "#C59DC6",
+		"highlight": "#AD7CB0"
+	},
+	"Mike":{
+		"name": "Mike",
+		"number": "0",
+		"sex": "m",
+		"sub": false,
+		"color": "#9EB1C8",
+		"highlight": "#7992B0"
+	}
+}

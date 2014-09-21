@@ -1,0 +1,213 @@
+html
+{
+  height: 100%;
+}
+body
+{
+  background: url('../img/grass-small.png') repeat-x bottom fixed;
+  height: 100%;
+}
+
+td
+{
+  background-color: #fff;
+}
+th
+{
+  white-space: nowrap;
+}
+
+label
+{
+  font-weight: 500;
+}
+
+.checkbox-inline input[type=checkbox]
+{
+  margin-top: 1px;
+}
+
+.masterView
+{
+  margin-bottom: 58px;
+}
+
+.logo
+{
+  background: url('../img/logo.png') no-repeat;
+  width: 200px;
+  height: 200px;
+}
+
+.tableSortHeader:hover, .tableSortHeader.sort:hover
+{
+	background-color: #ddd;
+	cursor: pointer;
+}
+.tableSortHeader.sort
+{
+	background-color: #eee;
+}
+.tableSortArrowContainer
+{
+	float: right;
+	width: 10px;
+}
+.tableSortArrow
+{
+	visibility: hidden;
+}
+.tableSortArrow i
+{
+  height: 8px;
+}
+.tableSortHeader:hover .tableSortArrow, .tableSortArrow.sort
+{
+	visibility: visible;
+}
+
+
+.chart {
+    background: #eee;
+    padding: 3px;
+}
+
+.chart div {
+  width: 0;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 5px;
+  color: white;
+  box-shadow: 2px 2px 2px #666;
+}
+
+.baseball
+{
+  background-image: url('../img/baseball_128x128.png');
+  background-position:  bottom right;
+  background-repeat: no-repeat;
+}
+.jumbotron-baseball
+{
+  padding-right: 128px;
+}
+
+.battingimg
+{
+  background-image: url('../img/baseball_24_2x.png');
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 48px;
+  color: #fff;
+  display: inline-block;
+}
+
+.shadow-icon
+{
+  text-shadow: 1px 1px 3px;
+}
+/* colors for trophies */
+.trophy-color2
+{
+  color: #965A38;
+}
+.trophy-color1
+{
+  color: #A8A8A8;
+}
+.trophy-color0
+{
+  color: #C98910;
+}
+.award
+{
+  width: 100%;
+}
+.icon-space
+{
+  margin-left: 30px;
+}
+.badge-container
+{
+  width: 46px;
+  height: 46px;
+  border: 1px #ccc solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  box-shadow: 5px 5px 3px #999;
+  -webkit-box-shadow: 3px 3px 3px #999;
+  -moz-box-shadow: 5px 5px 3px #999;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+.badge-icon
+{
+  width: 100%;
+  font-size: 25px;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+}
+.badge-text
+{
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+}
+.badge-comment
+{
+  height: 46px;
+  font-size: 15px;
+  display:table-cell;
+  vertical-align:middle;
+}
+
+.bar-legend
+{
+  font-size: 12px;
+  line-height: 18px;
+  list-style-type: none;
+  text-align: left;
+  vertical-align: middle;
+  border: 1px #eee solid;
+  padding: 0px;
+  margin: 0px;
+  float: right;
+}
+.bar-legend li
+{
+  padding: 3px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.bar-legend li span
+{
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  display: inline-block;
+  float: left;
+}
+
+.navbar
+{
+  margin-bottom: 0px;
+}
+
+.navbar-nav li
+{
+  cursor: pointer;
+}

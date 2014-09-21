@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html ng-app="softballApp" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Softball Stats Tracking">
+	<meta name="author" content="ASP">
+
+	<link rel="icon" type="image/png" href="img/baseball_32x32.png">
+
+	<title>Softball Statistics</title>
+
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/style-icomoon.css">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body ng-app="softballApp">
+
+	<div class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#/">Softball Statistics</a>
+			</div>	
+
+			<!-- context nav menu based on chosen season -->
+			<div ui-view="navmenu"></div>
+		</div>
+	</div>
+
+	<div ui-view class="masterView"></div>
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<!-- templates start below -->
+
+	<script type="text/ng-template" id="navmenu.html">
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li ng-class="{active:$state.includes('main.dashboard.**')}">
+					<a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-th-large"/> Dashboard <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li ui-sref-active="active"><a ui-sref=".dashboard.team">Team</a></li>
+						<li ui-sref-active="active"><a ui-sref=".dashboard.games">Games</a></li>
+						<!--<li ui-sref-active="active"><a ui-sref=".dashboard.player">Player</a></li>-->
+					</ul>
+				</li>
+				<li ng-class="{active:$state.includes('main.batting.**')}">
+					<a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fa icon-bat"/> Batting <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li ui-sref-active="active"><a ui-sref=".batting.team">Team</a></li>
+						<li ui-sref-active="active"><a ui-sref=".batting.game">Game</a></li>
+						<li ui-sref-active="active"><a ui-sref=".batting.player">Player</a></li>
+					</ul>
+				</li>
+				<li ng-class="{active:$state.includes('main.fielding.**')}">
+					<a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown"><span class="fa icon-field"/> Fielding <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li ui-sref-active="active"><a ui-sref=".fielding.team">Team</a></li>
+						<li ui-sref-active="active"><a ui-sref=".fielding.game">Game</a></li>
+						<li ui-sref-active="active"><a ui-sref=".fielding.player">Player</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li ui-sref-active="active">
+					<a ui-sref=".info"><span class="fa fa-info"/> Info</a>
+				</li>
+			</ul>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="info.html">
+		<div class="container">
+		<div class="row">
+			<br/>
+			<div class="col-lg-12">
+				<div class="jumbotron baseball jumbotron-baseball">
+					<h1>Softball Statistics</h1>
+					<p>View team batting and fielding statistics.</p>
+				</div>
+			</div>
+
+			<div class="col-lg-12">
+			</div>
+
+		</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="main.filter.html">
+		<div ui-view="masterFilter"></div>
+		<div ui-view></div>
+	</script>
+
+	<script type="text/ng-template" id="filter.yearseasonsub.html">
+		<div class="container">
+		<div class="row">
+
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<h5 class="pull-right">
+				<form name="subFilterForm" class="form-inline">
+				<span ng-controller="FilterYearSeasonCtrl">
+				Year:
+				<select
+					ng-model="curyear"
+					ng-change="changeYear(curyear)"
+					ng-options="val.year for (key, val) in years"
+					>
+					<option value="">All</option>
+				</select>
+				 - Season: 
+				<select
+					ng-model="curseason"
+					ng-change="changeSeason(curseason)"
+					ng-options="val as val.displayname for (key, val) in seasons"
+					>
+					<option value="">All</option>
+				</select>
+				</span>
+				<span ng-controller="FilterSubCtrl">
+				- 
+				<label class="checkbox-inline">
+					<input type="checkbox" ng-model="showsub" ng-change="changeShowSubStatus(showsub)"> Show Subs
+				</label>
+				</span>
+				</form>
+				</h5>
+			</div>
+
+		</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="filter.yearseason.html">
+		<div class="container">
+		<div class="row">
+
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<h5 class="pull-right">
+				<form name="subFilterForm" class="form-inline">
+				<span ng-controller="FilterYearSeasonCtrl">
+				Year:
+				<select
+					ng-model="curyear"
+					ng-change="changeYear(curyear)"
+					ng-options="val.year for (key, val) in years"
+					>
+					<option value="">All</option>
+				</select>
+				 - Season: 
+				<select
+					ng-model="curseason"
+					ng-change="changeSeason(curseason)"
+					ng-options="val as val.displayname for (key, val) in seasons"
+					>
+					<option value="">All</option>
+				</select>
+				</span>
+				</form>
+				</h5>
+			</div>
+
+		</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="filter.games.html">
+		<div class="container">
+		<div class="row">
+
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<h5 class="pull-right">
+				<form name="subFilterForm" class="form-inline">
+				<span ng-controller="FilterGamesCtrl">
+				Game:
+				<select
+					ng-model="curgame"
+					ng-change="changeGame(curgame)"
+					ng-init="curgameid=$curgame"
+					ng-options="val.displayname for val in games track by val.gameid"
+					>
+				</select>
+				</span>
+				</form>
+				</h5>
+			</div>
+
+		</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="filter.players.html">
+		<div class="container">
+		<div class="row">
+
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<h5 class="pull-right">
+				<span ng-controller="FilterPlayersCtrl">
+				Player:
+				<select
+					ng-model="curname"
+					ng-change="changePlayer(curname)"
+					ng-init="curname=$curname"
+					ng-options="val as val.name group by (!val.sub ? 'Player' : 'Sub') for (key, val) in players"
+					>
+				</select>
+				</span>
+				<span ng-controller="FilterYearSeasonCtrl">
+				 - Year:
+				<select
+					ng-model="curyear"
+					ng-change="changeYear(curyear)"
+					ng-options="val.year for (key, val) in years"
+					>
+					<option value="">All</option>
+				</select>
+				 - Season: 
+				<select
+					ng-model="curseason"
+					ng-change="changeSeason(curseason)"
+					ng-options="val as val.displayname for (key, val) in seasons"
+					>
+					<option value="">All</option>
+				</select>
+				</span>
+				</h5>
+			</div>
+
+		</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="dashboard.games.html">
+		<div class="container">
+		<div class="row">
+
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="fa fa-pie-chart shadow-icon" /> Game Results</h3>
+				</div>
+				<div class="panel-body">
+					<chart-pie chart-data="gameChart" class="center-block text-center"></chart-pie>
+					<h6 class="text-center">Total Games: {{gameChart | total:'value'}}</h6>
+				</div>
+				</div>
+			</div>
+
+			<div class="col-sm-8 col-md-8 col-lg-8">
+				<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="fa fa-bar-chart-o shadow-icon" /> Game Scores</h3>
+				</div>
+				<div class="panel-body">
+					<chart-bar chart-data="gameScoreChart" class="center-block text-center"></chart-bar>
+				</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-sm-12 col-md-12 col-lg-6">
+				<div class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="fa fa-calendar shadow-icon" /> Games</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped table-hover table-condensed table-bordered">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Game #</th>
+								<th>Us</th>
+								<th>Them</th>
+								<th>Type</th>
+								<th>Status</th>
+								<th>Result</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="game in games | orderByPriority | orderBy:date">
+								<td>{{game.date}}</td>
+								<td>{{game.game}}</td>
+								<td>{{game.scoreus}}</td>
+								<td>{{game.scorethem}}</td>
+								<td><span ng-class="{
+									'label label-default': ('regular' == game.type || 'rescheduled' == game.type),
+									'label label-info': 'playoff1' == game.type,
+									'label label-primary': 'playoff2' == game.type}">{{game.type | gameTypeName}}</span></td>
+								<td><span ng-class="{
+									'label label-success': 'played' == game.status,
+									'label label-default': 'new' == game.status,
+									'label label-primary': 'rainedout' == game.status,
+									'label label-warning': 'default' == game.status}">{{game.status | gameStatusName}}</span></td>
+								<td><span ng-class="{
+									'label label-success': 'win' == game.result,
+									'label label-danger': 'lose' == game.result,
+									'label label-warning': 'tie' == game.result}">{{game.result | gameResultDisplay}}</span></td>
+							</tr>
+						</tbody>
+					</table>					
+				</div>
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-12 col-lg-6">
+				<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="fa fa-cutlery shadow-icon" /> Snacks</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped table-hover table-condensed table-bordered">
+						<thead>
+							<tr>
+								<th>Year</th>
+								<th>Season</th>
+								<th>Game #</th>
+								<th>Name</th>
+								<th>Snack</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="snack in snacks | orderByPriority | orderBy:game">
+								<td>{{snack.year}}</td>
+								<td><span class="fa fa-{{snack.season | seasonIcon}}" title="{{snack.season | seasonName}}"/></td>
+								<td>{{snack.game}}</td>
+								<td>{{snack.name}}</td>
+								<td>{{snack.snack}}</td>
+							</tr>
+						</tbody>
+					</table>					
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-sm-4 col-md-4 col-lg-3">
+				<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="fa fa-pencil-square-o shadow-icon" /> Base Totals</h3>
+				</div>
+				<div class="panel-body">
+					<chart-pie chart-data="baseHitChart" class="center-block text-center"></chart-pie>
+					<h6 class="text-center">Total Base Hits: {{baseHitChart | total:'value'}}</h6>
+				</div>
+				</div>
+			</div>
+			
+		</div>
+
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="dashboard.team.html">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-12 col-md-6 col-lg-6">
+					<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title"><span class="fa fa-bar-chart-o shadow-icon" /> Batting Average</h3>
+					</div>
+					<div class="panel-body">
+						<chart-bar chart-data="battingAvgChart" class="center-block text-center"></chart-bar>
+					</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-3 col-lg-3">
+					<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title"><span class="fa fa-pencil-square-o shadow-icon" /> Base Hit Total</h3>
+					</div>
+					<div class="panel-body">
+						<chart-pie chart-data="baseHitChart" class="center-block text-center"></chart-pie>
+						<h6 class="text-center">Total Base Hits: {{baseHitChart | total:'value'}}</h6>
+					</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-3 col-lg-3">
+					<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title"><span class="fa fa-pencil-square-o shadow-icon" /> Home Run Total</h3>
+					</div>
+					<div class="panel-body">
+						<chart-pie chart-data="homeRunChart" class="center-block text-center"></chart-pie>
+						<h6 class="text-center">Total Home Runs: {{homeRunChart | total:'value'}}</h6>
+					</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="panel panel-warning">
+					<div class="panel-heading">
+						<h3 class="panel-title"><span class="fa fa-star shadow-icon" /> Top X-Factor</h3>
+					</div>
+					<div class="panel-body">
+						<div ng-if="0 >= topXFactor[0].length" class="alert alert-danger well-sm" role="alert">
+							No data available.
+						</div>
+						<div ng-repeat="(key, topx) in topXFactor" class="award clearfix" ng-if="0 < topx.length">
+							<div class="pull-left badge-container">
+								<div class="pull-left fa fa-trophy shadow-icon trophy-color{{key}} badge-icon"></div>
+								<div class="pull-left badge-text">{{topx[0].xfactor | toFixed:3}}</div>
+							</div>
+							<div class="badge-comment">
+								<span ng-repeat="(key, player) in topx">
+									{{player.name}} <span ng-if="(key+1) < topx.length"> & </span>
+								</span>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title"><span class="fa fa-star shadow-icon" /> Top Fielding - Outs</h3>
+					</div>
+					<div class="panel-body">
+						<div ng-if="0 >= topFieldingOuts[0].length" class="alert alert-danger well-sm" role="alert">
+							No data available.
+						</div>
+						<div ng-repeat="(key, topf) in topFieldingOuts" class="award clearfix" ng-if="0 < topf.length">
+							<div class="pull-left badge-container">
+								<div class="fa fa-trophy shadow-icon trophy-color{{key}} badge-icon"></div>
+								<div class="pull-left badge-text">{{topf[0].outs}}</div>
+							</div>
+							<div class="badge-comment">
+								<span ng-repeat="(key, player) in topf">
+									{{player.name}} <span ng-if="(key+1) < topf.length"> & </span>
+								</span>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title"><span class="fa fa-star shadow-icon" /> Top Fielding - Assists</h3>
+					</div>
+					<div class="panel-body">
+						<div ng-if="0 >= topFieldingAssists[0].length" class="alert alert-danger well-sm" role="alert">
+							No data available.
+						</div>
+						<div ng-repeat="(key, topf) in topFieldingAssists"  class="award clearfix" ng-if="0 < topf.length">
+							<div class="pull-left badge-container">
+								<div class="fa fa-trophy shadow-icon trophy-color{{key}} badge-icon"></div>
+								<div class="pull-left badge-text">{{topf[0].assists}}</div>
+							</div>
+							<div class="badge-comment">
+								<span ng-repeat="(key, player) in topf">
+									{{player.name}} <span ng-if="(key+1) < topf.length"> & </span>
+								</span>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="panel panel-warning">
+					<div class="panel-heading">
+						<h3 class="panel-title"><span class="fa fa-certificate shadow-icon" /> Best Game X-Factor</h3>
+					</div>
+					<div class="panel-body">
+						<div ng-if="0 >= topXFactorGame[0].names.length" class="alert alert-danger well-sm" role="alert">
+							No data available.
+						</div>
+						<div ng-repeat="(key, topx) in topXFactorGame" class="award clearfix" ng-if="0 < topx.names.length">
+							<div class="pull-left badge-container">
+								<div class="pull-left fa fa-trophy shadow-icon trophy-color{{key}} badge-icon"></div>
+								<div class="pull-left badge-text">{{topx.xfactor}}</div>
+							</div>
+							<div class="badge-comment">
+								<span ng-repeat="(key, player) in topx.names">
+									{{player.name}} <span ng-if="(key+1) < topx.names.length"> & </span>
+								</span>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</script>
+
+<!--
+	<script type="text/ng-template" id="dashboard.player.html">
+		<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-lg-3">
+				<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title"><span class="fa fa-certificate shadow-icon" /> Best X-Factor Game</h3>
+				</div>
+				<div class="panel-body">
+					<div ng-repeat="(key, topx) in topXFactorGame" class="award clearfix" ng-if="0 < topx.length">
+						<div class="pull-left badge-container">
+							<div class="pull-left fa fa-trophy shadow-icon trophy-color{{key}} badge-icon"></div>
+							<div class="pull-left badge-text">{{topx.xfactor | toFixed:3}}</div>
+						</div>
+						<div class="badge-comment">
+							<span ng-repeat="(key, player) in topx.names">
+								{{player.name}} <span ng-if="(key+1) < topx.length"> & </span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</script>
+-->
+	<script type="text/ng-template" id="game.html">
+		<ul ng-controller="GameListCtrl" class="nav nav-tabs">
+			<li ng-repeat="game in games">
+				<a href="#">Game #{{game.number}}</a>
+			</li>
+		</ul>
+	</script>
+
+	<script type="text/ng-template" id="playerlist.html">
+	<div class="container">
+		<h3><span class="fa fa-users" /> Players</h3>
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-lg-3">
+				<table class="table table-striped table-hover table-condensed table-bordered">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Number</th>
+							<th>Is Sub</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="player in players | orderByPriority | orderBy:name">
+							<td>{{player.name}}</td>
+							<td>{{player.number}}</td>
+							<td><span ng-if="player.sub" class="fa fa-check"></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	</script>
+
+	<script type="text/ng-template" id="batting.html">
+		<div ui-view></div>
+	</script>
+
+	<script type="text/ng-template" id="batting.team.html">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<h3><span class="fa icon-bat"/> Batting Team</h3>
+		<table class="table table-striped table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th ng-repeat="heading in headings" ng-click="changeSort(heading.id)" ng-class="sort == heading.id ? 'tableSortHeader sort' : 'tableSortHeader'">{{heading.name}}
+						<div class="tableSortArrowContainer">
+							<div ng-class="(sort == heading.id && reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-up pull-left"></i>
+							</div>
+							<div ng-class="(sort == heading.id && !reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-down pull-left"></i>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="bat in batting | orderByPriority | orderBy:sort:reverse">
+					<td><a href="#/batting/player?name={{bat.name}}">{{bat.name}}</a></td>
+					<td>{{bat.GP}}</td>
+					<td>{{bat.AB}}</td>
+					<td>{{bat.H}}</td>
+					<td>{{bat.R}}</td>
+					<td>{{bat.B1}}</td>
+					<td>{{bat.B2}}</td>
+					<td>{{bat.B3}}</td>
+					<td>{{bat.HR}}</td>
+					<td>{{bat.RBI}}</td>
+					<td>{{bat.Avg | toFixed:3}}</td>
+					<td>{{bat.Slug | toFixed:3}}</td>
+					<td>{{bat.XFactor | toFixed:3}}</td>
+				</tr>
+				<tr class="success">
+					<td><strong>Total</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'GP'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'AB'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'H'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'R'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'B1'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'B2'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'B3'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'HR'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | total:'RBI'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | avgSum:'H':'AB':3}}</strong></td>
+					<td><strong>{{batting | orderByPriority | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
+					<td><strong>{{batting | orderByPriority | xfactorSum:'B1':'B2':'B3':'HR':'R':'RBI':3 | avg:(batting | orderByPriority | total:'GP'):3}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+	</script>
+
+	<script type="text/ng-template" id="batting.game.html">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<h3><span class="fa icon-bat"/> Batting {{game.displayname}} ({{game.date}})
+			<span ng-class="{
+					'label label-success':
+						game.result == 'win' || game.result == 'defaultthem'
+					,
+					'label label-danger':
+						game.result == 'lose' || game.result == 'defaultus'
+					,
+					'label label-warning':
+						game.result == 'tie'
+				}">
+				{{game.result | gameResultDisplay}}
+			</span>
+		</h3>
+		<div ng-if="game.status && game.status != 'played'" class="alert alert-warning" role="alert">
+			{{game.status | gameStatusDescription}}
+		</div>
+		<table ng-if="game.status == 'played'" class="table table-striped table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th ng-repeat="heading in headings" ng-click="changeSort(heading.id)" ng-class="sort == heading.id ? 'tableSortHeader sort' : 'tableSortHeader'">{{heading.name}}
+						<div class="tableSortArrowContainer">
+							<div ng-class="(sort == heading.id && reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-up pull-left"></i>
+							</div>
+							<div ng-class="(sort == heading.id && !reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-down pull-left"></i>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="bat in batting | orderByPriority | filter:{game:gamenumber} | orderBy:sort:reverse">
+					<td><a href="#/batting/player?name={{bat.name}}">{{bat.name}}</a></td>
+					<td>{{bat.AB}}</td>
+					<td>{{bat.H}}</td>
+					<td>{{bat.R}}</td>
+					<td>{{bat.B1}}</td>
+					<td>{{bat.B2}}</td>
+					<td>{{bat.B3}}</td>
+					<td>{{bat.HR}}</td>
+					<td>{{bat.RBI}}</td>
+					<td>{{bat.Avg | toFixed:3}}</td>
+					<td>{{bat.Slug | toFixed:3}}</td>
+					<td>{{bat.XFactor}}</td>
+				</tr>
+				<tr class="success">
+					<td><strong>Total</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'AB'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'H'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'R'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'B1'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'B2'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'B3'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'HR'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'RBI'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | avgSum:'H':'AB':3}}</td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | xfactorSum:'B1':'B2':'B3':'HR':'R':'RBI':3}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+	</script>
+
+	<script type="text/ng-template" id="batting.player.html">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<h3><span class="fa icon-bat"/> Batting for {{player.name}}</h3>
+		<table class="table table-striped table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th ng-repeat="heading in headings" ng-click="changeSort(heading.id)" ng-class="sort == heading.id ? 'tableSortHeader sort' : 'tableSortHeader'">{{heading.name}}
+						<div class="tableSortArrowContainer">
+							<div ng-class="(sort == heading.id && reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-up pull-left"></i>
+							</div>
+							<div ng-class="(sort == heading.id && !reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-down pull-left"></i>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="bat in batting | orderByPriority | filter:{name:playername} | orderBy:sort:reverse">
+					<td><a href="#/batting/game?gameid={{bat.gameid}}">{{bat.displayname}}</a>
+					</td>
+					<td>{{bat.AB}}</td>
+					<td>{{bat.H}}</td>
+					<td>{{bat.R}}</td>
+					<td>{{bat.B1}}</td>
+					<td>{{bat.B2}}</td>
+					<td>{{bat.B3}}</td>
+					<td>{{bat.HR}}</td>
+					<td>{{bat.RBI}}</td>
+					<td>{{bat.Avg | toFixed:3}}</td>
+					<td>{{bat.Slug | toFixed:3}}</td>
+					<td>{{bat.XFactor}}</td>
+				</tr>
+				<tr class="success">
+					<td><strong>Total</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'AB'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'H'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'R'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'B1'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'B2'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'B3'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'HR'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'RBI'}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | avgSum:'H':'AB':3}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
+					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'XFactor' | avg:(batting | orderByPriority | filter:{name:playername} ).length:3}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+	</script>
+
+	<script type="text/ng-template" id="fielding.html">
+		<div ui-view></div>
+	</script>
+
+	<script type="text/ng-template" id="fielding.team.html">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+		<h3><span class="fa icon-field"/> Fielding Team</h3>
+		<table class="table table-striped table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th ng-repeat="heading in headings" ng-click="changeSort(heading.id)" ng-class="sort == heading.id ? 'tableSortHeader sort' : 'tableSortHeader'">{{heading.name}}
+						<div class="tableSortArrowContainer">
+							<div ng-class="(sort == heading.id && reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-up pull-left"></i>
+							</div>
+							<div ng-class="(sort == heading.id && !reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-down pull-left"></i>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="field in fielding | orderByPriority | orderBy:sort:reverse">
+					<td><a href="#/fielding/player?name={{field.name}}">{{field.name}}</a></td>
+					<td>{{field.outs}}</td>
+					<td>{{field.assists}}</td>
+					<td>{{field.total}}</td>
+				</tr>
+				<tr class="success">
+					<td><strong>Total</strong></td>
+					<td><strong>{{fielding | orderByPriority | total:'outs'}}</strong></td>
+					<td><strong>{{fielding | orderByPriority | total:'assists'}}</strong></td>
+					<td><strong>{{fielding | orderByPriority | total:'total'}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+	</script>
+
+	<script type="text/ng-template" id="fielding.game.html">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<h3><span class="fa icon-field"/> Fielding  {{game.displayname}} ({{game.date}}) 
+			<span ng-class="{
+					'label label-success':
+						game.result == 'win' || game.result == 'defaultthem'
+					,
+					'label label-danger':
+						game.result == 'lose' || game.result == 'defaultus'
+					,
+					'label label-warning':
+						game.result == 'tie'
+				}">
+				{{game.result | gameResultDisplay}}
+			</span>
+		</h3>
+		</div>
+	</div>
+	</div>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+		<div ng-if="game.status != 'played'" class="alert alert-warning" role="alert">
+			{{game.status | gameStatusDescription}}
+		</div>
+		<table ng-if="game.status == 'played'" class="table table-striped table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th ng-repeat="heading in headings" ng-click="changeSort(heading.id)" ng-class="sort == heading.id ? 'tableSortHeader sort' : 'tableSortHeader'">{{heading.name}}
+						<div class="tableSortArrowContainer">
+							<div ng-class="(sort == heading.id && reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-up pull-left"></i>
+							</div>
+							<div ng-class="(sort == heading.id && !reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-down pull-left"></i>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="field in fielding | orderByPriority | orderBy:sort:reverse">
+					<td><a href="#/fielding/player?name={{field.name}}">{{field.name}}</a></td>
+					<td>{{field.outs}}</td>
+					<td>{{field.assists}}</td>
+					<td>{{field.total}}</td>
+				</tr>
+				<tr class="success">
+					<td><strong>Total</strong></td>
+					<td><strong>{{fielding | orderByPriority | filter:{game:gamenumber} | total:'outs'}}</strong></td>
+					<td><strong>{{fielding | orderByPriority | filter:{game:gamenumber} | total:'assists'}}</strong></td>
+					<td><strong>{{fielding | orderByPriority | filter:{game:gamenumber} | total:'total'}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+	</script>
+
+	<script type="text/ng-template" id="fielding.player.html">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+		<h3><span class="fa icon-field"/> Fielding for {{player.name}}</h3>
+		<table class="table table-striped table-hover table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th ng-repeat="heading in headings" ng-click="changeSort(heading.id)" ng-class="sort == heading.id ? 'tableSortHeader sort' : 'tableSortHeader'">{{heading.name}}
+						<div class="tableSortArrowContainer">
+							<div ng-class="(sort == heading.id && reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-up pull-left"></i>
+							</div>
+							<div ng-class="(sort == heading.id && !reverse) ? 'tableSortArrow sort' : 'tableSortArrow'">
+								<i class="fa fa-caret-down pull-left"></i>
+							</div>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="field in fielding | orderByPriority | orderBy:sort:reverse">
+					<td><a href="#/fielding/game?gameid={{field.gameid}}">{{field.displayname}}</a>
+					<td>{{field.outs}}</td>
+					<td>{{field.assists}}</td>
+					<td>{{field.total}}</td>
+				</tr>
+				<tr class="success">
+					<td><strong>Total</strong></td>
+					<td><strong>{{fielding | orderByPriority | filter:{name:playername} | total:'outs'}}</strong></td>
+					<td><strong>{{fielding | orderByPriority | filter:{name:playername} | total:'assists'}}</strong></td>
+					<td><strong>{{fielding | orderByPriority | filter:{name:playername} | total:'total'}}</strong></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	</div>
+	</script>
+
+	<!-- scripts below -->
+
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../bower_components/chartjs/Chart.min.js"></script>
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="../bower_components/firebase/firebase.js"></script>
+	<script src="../bower_components/angularfire/angularfire.min.js"></script>
+
+	<script src="js/app.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/directives.js"></script>
+</body>
+</html>
