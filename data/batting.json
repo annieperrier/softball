@@ -1,5 +1,1685 @@
 [
 	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Al",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"B3": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Al",
+		"AB": 4,
+		"H": 2,
+		"B1": 2,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Al",
+		"AB": 5,
+		"H": 3,
+		"R": 2,
+		"B1": 1,
+		"B2": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Albert",
+		"AB": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Albert",
+		"AB": 2,
+		"H": 1,
+		"R": 1,
+		"HR": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Albert",
+		"AB": 3,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Albert",
+		"AB": 6,
+		"H": 5,
+		"R": 3,
+		"B1": 3,
+		"B2": 1,
+		"HR": 1,
+		"RBI": 5
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Albert",
+		"AB": 4,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B2": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Albert",
+		"AB": 3,
+		"H": 1,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Albert",
+		"AB": 3,
+		"H": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Albert",
+		"AB": 4,
+		"H": 3,
+		"R": 1,
+		"B2": 1,
+		"B3": 2,
+		"RBI": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Albert",
+		"AB": 4,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Albert",
+		"AB": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Albert",
+		"AB": 4,
+		"H": 3,
+		"R": 1,
+		"B1": 2,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Albert",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B3": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Albert",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Andy",
+		"AB": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Andy",
+		"AB": 3,
+		"H": 3,
+		"R": 1,
+		"B1": 2,
+		"B2": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Andy",
+		"AB": 5,
+		"H": 5,
+		"R": 4,
+		"B1": 3,
+		"B2": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Andy",
+		"AB": 4,
+		"H": 4,
+		"R": 2,
+		"B1": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Andy",
+		"AB": 3,
+		"H": 2,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Andy",
+		"AB": 4,
+		"H": 3,
+		"R": 3,
+		"B1": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Andy",
+		"AB": 3,
+		"H": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Annie",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Annie",
+		"AB": 3,
+		"H": 3,
+		"R": 2,
+		"B1": 2,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Annie",
+		"AB": 3,
+		"H": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Annie",
+		"AB": 5,
+		"H": 4,
+		"R": 4,
+		"B1": 3,
+		"B2": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Annie",
+		"AB": 5,
+		"H": 4,
+		"R": 2,
+		"B1": 3,
+		"B2": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Annie",
+		"AB": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Annie",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Annie",
+		"AB": 5,
+		"H": 3,
+		"R": 2,
+		"B1": 1,
+		"B2": 2,
+		"RBI": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Annie",
+		"AB": 4,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Annie",
+		"AB": 6,
+		"H": 4,
+		"R": 3,
+		"B1": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Annie",
+		"AB": 4,
+		"H": 3,
+		"R": 2,
+		"B1": 3,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Annie",
+		"AB": 4,
+		"H": 2,
+		"B1": 1,
+		"B2": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Annie",
+		"AB": 4,
+		"H": 2,
+		"B2": 2,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Annie",
+		"AB": 4,
+		"H": 3,
+		"R": 1,
+		"B1": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Aslam",
+		"AB": 3,
+		"H": 2,
+		"R": 2,
+		"B1": 1,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Aslam",
+		"AB": 3,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Aslam",
+		"AB": 3,
+		"H": 2,
+		"B1": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Aslam",
+		"AB": 4,
+		"H": 4,
+		"R": 1,
+		"B1": 1,
+		"B2": 1,
+		"B3": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Brad",
+		"AB": 3,
+		"H": 2,
+		"R": 2,
+		"B1": 1,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Brad",
+		"AB": 3,
+		"H": 3,
+		"R": 2,
+		"B3": 1,
+		"HR": 2,
+		"RBI": 5
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Brad",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B3": 2,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Brad",
+		"AB": 5,
+		"H": 5,
+		"R": 4,
+		"B1": 1,
+		"B2": 2,
+		"HR": 2,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Brad",
+		"AB": 4,
+		"H": 4,
+		"R": 1,
+		"B2": 2,
+		"B3": 1,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Brad",
+		"AB": 2,
+		"H": 1,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Brad",
+		"AB": 4,
+		"H": 3,
+		"R": 3,
+		"B2": 1,
+		"HR": 2,
+		"RBI": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Brad",
+		"AB": 4,
+		"H": 2,
+		"R": 2,
+		"B2": 1,
+		"B3": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Brad",
+		"AB": 4,
+		"H": 3,
+		"R": 2,
+		"B1": 2,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Brad",
+		"AB": 3,
+		"H": 3,
+		"R": 2,
+		"B3": 2,
+		"HR": 1,
+		"RBI": 5
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Brookes",
+		"AB": 3,
+		"H": 3,
+		"B1": 1,
+		"B2": 2,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Brookes",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Brookes",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B2": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Brookes",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Brookes",
+		"AB": 3,
+		"H": 3,
+		"R": 1,
+		"B1": 2,
+		"B2": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Charles",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B3": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Charles",
+		"AB": 3,
+		"H": 3,
+		"R": 3,
+		"B2": 2,
+		"B3": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Charles",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B3": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Charles",
+		"AB": 5,
+		"H": 5,
+		"R": 5,
+		"B1": 1,
+		"B2": 2,
+		"HR": 2,
+		"RBI": 7
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Charles",
+		"AB": 4,
+		"H": 1,
+		"R": 1,
+		"HR": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Charles",
+		"AB": 4,
+		"H": 2,
+		"R": 1,
+		"B2": 2,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Charles",
+		"AB": 4,
+		"H": 3,
+		"R": 3,
+		"B1": 2,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Charles",
+		"AB": 4,
+		"H": 2,
+		"R": 2,
+		"B1": 1,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Charles",
+		"AB": 5,
+		"H": 4,
+		"R": 3,
+		"B2": 1,
+		"B3": 1,
+		"HR": 2,
+		"RBI": 10
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Charles",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"B3": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Charles",
+		"AB": 4,
+		"H": 1,
+		"R": 1,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Jeff",
+		"AB": 3,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Jeff",
+		"AB": 4,
+		"H": 2,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Jeff",
+		"AB": 3,
+		"H": 2,
+		"B1": 2,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Jeff",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Jeff",
+		"AB": 4,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B2": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Jeff",
+		"AB": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Jeff",
+		"AB": 4,
+		"H": 3,
+		"R": 2,
+		"B1": 2,
+		"B2": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Kaitlyn",
+		"AB": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Kaitlyn",
+		"AB": 3,
+		"H": 3,
+		"R": 2,
+		"B1": 1,
+		"B2": 2,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Kaitlyn",
+		"AB": 3,
+		"H": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Kaitlyn",
+		"AB": 5,
+		"H": 4,
+		"R": 3,
+		"B1": 3,
+		"B2": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Kaitlyn",
+		"AB": 5,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Kaitlyn",
+		"AB": 4,
+		"H": 2,
+		"R": 1,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Kaitlyn",
+		"AB": 3,
+		"H": 2,
+		"B1": 2,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Kaitlyn",
+		"AB": 5,
+		"H": 5,
+		"R": 3,
+		"B1": 5,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Kaitlyn",
+		"AB": 4,
+		"H": 2,
+		"R": 1,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Kaitlyn",
+		"AB": 6,
+		"H": 5,
+		"R": 2,
+		"B1": 3,
+		"B2": 2,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Kaitlyn",
+		"AB": 4,
+		"H": 1,
+		"R": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Kaitlyn",
+		"AB": 3,
+		"H": 2,
+		"R": 2,
+		"B1": 2,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Kaitlyn",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Kim",
+		"AB": 4,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Kim",
+		"AB": 3,
+		"H": 2,
+		"R": 2,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Kim",
+		"AB": 3,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Kim",
+		"AB": 6,
+		"H": 2,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Kim",
+		"AB": 4,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Kim",
+		"AB": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Kim",
+		"AB": 4,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Kim",
+		"AB": 5,
+		"H": 2,
+		"R": 1,
+		"B1": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Kim",
+		"AB": 4,
+		"H": 1,
+		"R": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Kim",
+		"AB": 4,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Kim",
+		"AB": 4,
+		"H": 1,
+		"R": 1,
+		"B2": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Kim",
+		"AB": 3,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Leslie",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Leslie",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Liz",
+		"AB": 3,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Liz",
+		"AB": 3,
+		"H": 2,
+		"B1": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Liz",
+		"AB": 4,
+		"H": 1,
+		"R": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Liz",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Liz",
+		"AB": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Lou",
+		"AB": 3,
+		"H": 3,
+		"R": 1,
+		"B1": 2,
+		"B3": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Lou",
+		"AB": 3,
+		"H": 3,
+		"R": 3,
+		"B1": 1,
+		"B3": 1,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Lou",
+		"AB": 3,
+		"H": 3,
+		"R": 2,
+		"B1": 2,
+		"B3": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Lou",
+		"AB": 5,
+		"H": 5,
+		"R": 3,
+		"B1": 1,
+		"HR": 4,
+		"RBI": 5
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Lou",
+		"AB": 4,
+		"H": 3,
+		"R": 3,
+		"B1": 1,
+		"B2": 1,
+		"HR": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Lou",
+		"AB": 4,
+		"H": 4,
+		"R": 4,
+		"B1": 1,
+		"B2": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Lou",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Lou",
+		"AB": 4,
+		"H": 4,
+		"R": 4,
+		"B1": 1,
+		"B2": 2,
+		"HR": 1,
+		"RBI": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Lou",
+		"AB": 4,
+		"H": 3,
+		"R": 2,
+		"B1": 1,
+		"B2": 1,
+		"HR": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Lou",
+		"AB": 6,
+		"H": 3,
+		"R": 3,
+		"B1": 2,
+		"HR": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Lou",
+		"AB": 3,
+		"H": 1,
+		"R": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Lou",
+		"AB": 4,
+		"H": 4,
+		"R": 3,
+		"B2": 3,
+		"HR": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Lou",
+		"AB": 4,
+		"H": 4,
+		"R": 4,
+		"B1": 1,
+		"B2": 1,
+		"B3": 1,
+		"HR": 1,
+		"RBI": 4
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Lou",
+		"AB": 4,
+		"H": 1,
+		"R": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Michelle",
+		"AB": 3,
+		"H": 1,
+		"B1": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Michelle",
+		"AB": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Michelle",
+		"AB": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Michelle",
+		"AB": 5,
+		"H": 5,
+		"R": 1,
+		"B1": 5,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Michelle",
+		"AB": 5,
+		"H": 1,
+		"R": 1,
+		"B2": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Michelle",
+		"AB": 4,
+		"H": 1,
+		"B1": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Michelle",
+		"AB": 2,
+		"H": 1,
+		"R": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Michelle",
+		"AB": 4,
+		"H": 2,
+		"R": 2,
+		"B1": 1,
+		"B2": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Michelle",
+		"AB": 5,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Michelle",
+		"AB": 4,
+		"H": 1,
+		"R": 1,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Michelle",
+		"AB": 3,
+		"H": 2,
+		"R": 1,
+		"B1": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Steve",
+		"AB": 4,
+		"H": 2,
+		"R": 2,
+		"B1": 1,
+		"B3": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Steve",
+		"AB": 4,
+		"H": 2,
+		"R": 2,
+		"B2": 1,
+		"HR": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Steve",
+		"AB": 3,
+		"H": 1,
+		"B1": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Steve",
+		"AB": 5,
+		"H": 2,
+		"R": 2,
+		"B1": 1,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Steve",
+		"AB": 4,
+		"H": 4,
+		"R": 4,
+		"B1": 3,
+		"B2": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 9,
+		"name": "Steve",
+		"AB": 4,
+		"H": 4,
+		"B1": 4,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Tom",
+		"AB": 3,
+		"H": 3,
+		"R": 3,
+		"B1": 1,
+		"B2": 1,
+		"B3": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Tom",
+		"AB": 5,
+		"H": 3,
+		"R": 1,
+		"B1": 2,
+		"B2": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Tom",
+		"AB": 4,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B2": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 1,
+		"name": "Tratham",
+		"AB": 3,
+		"H": 2,
+		"R": 2,
+		"B3": 1,
+		"HR": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 2,
+		"name": "Tratham",
+		"AB": 3,
+		"H": 2,
+		"R": 2,
+		"B2": 1,
+		"B3": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 4,
+		"name": "Tratham",
+		"AB": 3,
+		"H": 2,
+		"B2": 2
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 5,
+		"name": "Tratham",
+		"AB": 5,
+		"H": 4,
+		"R": 4,
+		"B1": 1,
+		"B2": 3,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 6,
+		"name": "Tratham",
+		"AB": 4,
+		"H": 3,
+		"R": 2,
+		"B2": 2,
+		"B3": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 2,
+		"game": 7,
+		"name": "Tratham",
+		"AB": 4,
+		"H": 4,
+		"R": 3,
+		"B2": 3,
+		"B3": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 1,
+		"name": "Tratham",
+		"AB": 3,
+		"H": 2,
+		"R": 2,
+		"B2": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 2,
+		"name": "Tratham",
+		"AB": 4,
+		"H": 3,
+		"R": 3,
+		"B1": 1,
+		"B2": 1,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 3,
+		"name": "Tratham",
+		"AB": 4,
+		"H": 4,
+		"R": 2,
+		"B1": 1,
+		"B3": 2,
+		"HR": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 5,
+		"name": "Tratham",
+		"AB": 6,
+		"H": 6,
+		"R": 5,
+		"B1": 5,
+		"B2": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 6,
+		"name": "Tratham",
+		"AB": 3,
+		"H": 3,
+		"R": 2,
+		"B1": 1,
+		"B3": 1,
+		"HR": 1,
+		"RBI": 3
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 7,
+		"name": "Tratham",
+		"AB": 4,
+		"H": 4,
+		"R": 2,
+		"B1": 3,
+		"B3": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2013,
+		"season": 3,
+		"game": 8,
+		"name": "Tratham",
+		"AB": 4,
+		"H": 2,
+		"R": 1,
+		"B1": 1,
+		"B2": 1,
+		"RBI": 1
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	{
 		"year": 2014,
 		"season": 2,
 		"game": 1,
