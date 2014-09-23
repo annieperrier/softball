@@ -22,7 +22,7 @@ softballControllers.controller('FilterYearSeasonCtrl', ['$scope', '$stateParams'
 				newyear = year.year;
 
 			$state.go($state.current, {'year': newyear, 'season': $scope.season});
-		}
+		};
 
 		$scope.changeSeason = function(season){
 			var newseason = null;
@@ -30,7 +30,7 @@ softballControllers.controller('FilterYearSeasonCtrl', ['$scope', '$stateParams'
 				newseason = season.season;
 
 			$state.go($state.current, {'year': $scope.year, 'season': newseason});
-		}
+		};
 }]);
 
 softballControllers.controller('FilterGamesCtrl', ['$scope', '$stateParams', '$state', 'Games', 'gameIdExplodeFilter', 
@@ -40,9 +40,9 @@ softballControllers.controller('FilterGamesCtrl', ['$scope', '$stateParams', '$s
 		if ($scope.gameid)
 		{
 			var d = gameIdExplodeFilter($scope.gameid);
-			$scope.year = d['year'];
-			$scope.season = d['season'];
-			$scope.game = d['game'];
+			$scope.year = d.year;
+			$scope.season = d.season;
+			$scope.game = d.game;
 		}
 
 		//console.log("Displaying filter for year:"+$scope.year+" and season:"+$scope.season);
@@ -51,7 +51,7 @@ softballControllers.controller('FilterGamesCtrl', ['$scope', '$stateParams', '$s
 			// remove games where status is new
 			for (var i = 0; i < data.length; i++)
 			{
-				if ("new" == data[i]['status'])
+				if ("new" == data[i].status)
 					data.splice(i, 1);
 			}
 			$scope.games = data;
@@ -63,11 +63,11 @@ softballControllers.controller('FilterGamesCtrl', ['$scope', '$stateParams', '$s
 				else
 				{
 					// find the currently selected gameid
-					for (var i = 0; i < data.length; i++)
+					for (var j = 0; j < data.length; j++)
 					{
-						if ($scope.gameid == data[i]['gameid'])
+						if ($scope.gameid == data[j].gameid)
 						{
-							$scope.curgame = data[i];
+							$scope.curgame = data[j];
 							return;
 						}
 					}
@@ -80,7 +80,7 @@ softballControllers.controller('FilterGamesCtrl', ['$scope', '$stateParams', '$s
 			//console.log(gameid);
 			$scope.curgame = gameid;
 			$state.go($state.current, {'gameid': gameid.gameid});
-		}
+		};
 }]);
 
 softballControllers.controller('FilterPlayersCtrl', ['$scope', '$stateParams', '$state', 'Players', 
@@ -116,7 +116,7 @@ softballControllers.controller('FilterPlayersCtrl', ['$scope', '$stateParams', '
 			//console.log(name);
 			$scope.curname = name;
 			$state.go($state.current, {'name': name.name});
-		}
+		};
 }]);
 
 softballControllers.controller('FilterSubCtrl', ['$scope', '$stateParams', '$state',
@@ -129,7 +129,7 @@ softballControllers.controller('FilterSubCtrl', ['$scope', '$stateParams', '$sta
 			//console.log("changeShowSubStatus to: "+showsub);
 			$scope.showsub = showsub;
 			$state.go($state.current, {'showsub': showsub});
-		}
+		};
 }]);
 
 softballControllers.controller('DashboardGamesCtrl', ['$scope', '$stateParams', '$state', 'Games', 'Snacks', 'BattingTeam', 
@@ -283,7 +283,7 @@ softballControllers.controller('FieldingTeamCtrl', ['$scope', '$stateParams', 'P
 
 			$scope.sort = value;
 			$scope.reverse = false;
-		}
+		};
 }]);
 
 softballControllers.controller('FieldingGameCtrl', ['$scope', '$stateParams', 'Games', 'Fielding', 'gameIdExplodeFilter',
@@ -294,9 +294,9 @@ softballControllers.controller('FieldingGameCtrl', ['$scope', '$stateParams', 'G
 		if ($scope.gameid)
 		{
 			var s = gameIdExplodeFilter($scope.gameid);
-			$scope.year = s['year'];
-			$scope.season = s['season'];
-			$scope.game = s['game'];
+			$scope.year = s.year;
+			$scope.season = s.season;
+			$scope.game = s.game;
 		}
 		//console.log("Displaying field for game #"+$scope.gamenumber);
 
@@ -321,7 +321,7 @@ softballControllers.controller('FieldingGameCtrl', ['$scope', '$stateParams', 'G
 
 			$scope.sort = value;
 			$scope.reverse = false;
-		}
+		};
 }]);
 
 softballControllers.controller('FieldingPlayerCtrl', ['$scope', '$stateParams', 'Players', 'Fielding',
@@ -353,7 +353,7 @@ softballControllers.controller('FieldingPlayerCtrl', ['$scope', '$stateParams', 
 
 			$scope.sort = value;
 			$scope.reverse = false;
-		}
+		};
 }]);
 
 
@@ -385,7 +385,7 @@ softballControllers.controller('BattingTeamCtrl', ['$scope', '$stateParams', 'Pl
 			$scope.sort = value;
 			$scope.reverse = false;
 			//console.log("New sort set to: "+$scope.sort+" dir: "+$scope.reverse);
-		}
+		};
 }]);
 
 softballControllers.controller('BattingGameCtrl', ['$scope', '$stateParams', 'Games', 'Batting', 'gameIdExplodeFilter',
@@ -395,9 +395,9 @@ softballControllers.controller('BattingGameCtrl', ['$scope', '$stateParams', 'Ga
 		if ($scope.gameid)
 		{
 			var s = gameIdExplodeFilter($scope.gameid);
-			$scope.year = s['year'];
-			$scope.season = s['season'];
-			$scope.game = s['game'];
+			$scope.year = s.year;
+			$scope.season = s.season;
+			$scope.game = s.game;
 		}
 		//console.log("Displaying batting for game #"+$scope.gamenumber);
 
@@ -419,10 +419,9 @@ softballControllers.controller('BattingGameCtrl', ['$scope', '$stateParams', 'Ga
 				return;
 			}
 
-
 			$scope.sort = value;
 			$scope.reverse = false;
-		}
+		};
 
 }]);
 
@@ -455,5 +454,5 @@ softballControllers.controller('BattingPlayerCtrl', ['$scope', '$stateParams', '
 
 			$scope.sort = value;
 			$scope.reverse = false;
-		}
+		};
 }]);

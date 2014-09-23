@@ -18,14 +18,14 @@ softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
 				dataFactory.getColors().then(function(colors) {
 					//console.log(colors);
 					keys.forEach(function(key, i) {
-						players[data[key]['name']] = data[key];
+						players[data[key].name] = data[key];
 						colors.forEach(function(col, j) {
-							if (data[key]['name'] == colors[j]['name'])
+							if (data[key].name == colors[j].name)
 							{
-								players[data[key]['name']]['color'] = colors[j]['color'];
-								players[data[key]['name']]['highlight'] = colors[j]['highlight'];
+								players[data[key].name].color = colors[j].color;
+								players[data[key].name].highlight = colors[j].highlight;
 							}
-						})
+						});
 					});
 					//console.log(players);
 					deferred.resolve(players);
@@ -33,7 +33,7 @@ softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
 			});
 
 			return deferred.promise;
-		}
+		};
 
 		dataFactory.getPlayers = function()
 		{
@@ -46,13 +46,13 @@ softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
 			data.$on("loaded", function() {
 				var keys = data.$getIndex();
 				keys.forEach(function(key, i) {
-					players[data[key]['name']] = data[key];
+					players[data[key].name] = data[key];
 				});
 				deferred.resolve(players);
 			});
 
 			return deferred.promise;
-		}
+		};
 
 		dataFactory.getPlayer = function(name)
 		{
@@ -65,14 +65,14 @@ softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
 			data.$on("loaded", function() {
 				var keys = data.$getIndex();
 				keys.forEach(function(key, i) {
-					if (name == data[key]['name'])
+					if (name == data[key].name)
 						player = data[key];
 				});
 				deferred.resolve(player);
 			});
 
 			return deferred.promise;
-		}
+		};
 
 		return dataFactory;
 }]);
@@ -99,7 +99,7 @@ softballServices.factory('Colors', ['CONFIG', '$firebase', '$q',
 			});
 
 			return deferred.promise;
-		}
+		};
 
 		dataFactory.getColor = function(name)
 		{
@@ -112,14 +112,14 @@ softballServices.factory('Colors', ['CONFIG', '$firebase', '$q',
 			data.$on("loaded", function() {
 				var keys = data.$getIndex();
 				keys.forEach(function(key, i) {
-					if (name == data[key]['name'])
+					if (name == data[key].name)
 						color = data[key];
 				});
 				deferred.resolve(color);
 			});
 
 			return deferred.promise;
-		}
+		};
 
 		return dataFactory;
 }]);
@@ -139,16 +139,16 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			data.$on("loaded", function() {
 				var keys = data.$getIndex();
 				keys.forEach(function(key, i) {
-					if (!years[data[key]['year']])
-						years[data[key]['year']] = {};
-					years[data[key]['year']]['year'] = data[key]['year'];
-					years[data[key]['year']]['current'] = (currentyear == data[key]['year']) ? true : false;
+					if (!years[data[key].year])
+						years[data[key].year] = {};
+					years[data[key].year].year = data[key].year;
+					years[data[key].year].current = (currentyear == data[key].year) ? true : false;
 				});
 				//console.log(years);
 				deferred.resolve(years);
 			});
 			return deferred.promise;
-		}
+		};
 
 		/**
 		 * 1 = Winter - removed
@@ -163,14 +163,14 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			for(var i = 2; i <= 3; i++)
 			{
 				seasons[i] = {};
-				seasons[i]['season'] = i;
-				seasons[i]['current'] = (currentseason == i) ? true : false;
-				seasons[i]['displayname'] = yearSeasonDisplayFilter(false, i);
+				seasons[i].season = i;
+				seasons[i].current = (currentseason == i) ? true : false;
+				seasons[i].displayname = yearSeasonDisplayFilter(false, i);
 			}
 			//console.log(seasons);
 
 			return seasons;
-		}
+		};
 
 
 		dataFactory.getYearSeasons = function()
@@ -184,15 +184,15 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			data.$on("loaded", function() {
 				var keys = data.$getIndex();
 				keys.forEach(function(key, i) {
-					if (!years[data[key]['year']])
-						years[data[key]['year']] = {};
-					years[data[key]['year']]['season'] = data[key]['season'];
-					years[data[key]['year']]['year'] = data[key]['year'];
+					if (!years[data[key].year])
+						years[data[key].year] = {};
+					years[data[key].year].season = data[key].season;
+					years[data[key].year].year = data[key].year;
 				});
 				deferred.resolve(years);
 			});
 			return deferred.promise;
-		}
+		};
 
 		dataFactory.getGames = function(year, season)
 		{
@@ -208,22 +208,22 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 				var skip = false;
 				keys.forEach(function(key, i) {
 					skip = false;
-					if ((year && year != data[key]['year'])
-					|| (season && season != data[key]['season']))
+					if ((year && year != data[key].year) ||
+					   (season && season != data[key].season))
 						skip = true;
 					if (!skip)
 					{
 						// build the gameid
-						data[key]['gameid'] = data[key]['year'] + '-' + data[key]['season'] + '-' + data[key]['game'];
+						data[key].gameid = data[key].year + '-' + data[key].season + '-' + data[key].game;
 						// build display name
-						data[key]['displayname'] = yearSeasonGameDisplayFilter(data[key]['year'], data[key]['season'], data[key]['game']);
+						data[key].displayname = yearSeasonGameDisplayFilter(data[key].year, data[key].season, data[key].game);
 						games.push(data[key]);
 					}
 				});
 				deferred.resolve(games);
 			});
 			return deferred.promise;
-		}
+		};
 
 		dataFactory.getGame = function(year, season, game)
 		{
@@ -237,14 +237,14 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 				var curgame = {};
 				keys.forEach(function(key, i) {
 					skip = false;
-					if ((year && year == data[key]['year'])
-					&& (season && season == data[key]['season'])
-					&& (game && game == data[key]['game']))
+					if ((year && year == data[key].year) &&
+						(season && season == data[key].season) &&
+						(game && game == data[key].game))
 					{
 						// build the gameid
-						data[key]['gameid'] = data[key]['year'] + '-' + data[key]['season'] + '-' + data[key]['game'];
+						data[key].gameid = data[key].year + '-' + data[key].season + '-' + data[key].game;
 						// build display name
-						data[key]['displayname'] = yearSeasonGameDisplayFilter(data[key]['year'], data[key]['season'], data[key]['game']);
+						data[key].displayname = yearSeasonGameDisplayFilter(data[key].year, data[key].season, data[key].game);
 						curgame = data[key];
 						return;
 					}
@@ -252,7 +252,7 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 				deferred.resolve(curgame);
 			});
 			return deferred.promise;
-		}
+		};
 
 		dataFactory.getGameStats = function(year, season)
 		{
@@ -268,34 +268,34 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 				var skip = false;
 				keys.forEach(function(key, i) {
 					skip = false;
-					if ((year && year != data[key]['year'])
-					|| (season && season != data[key]['season']))
+					if ((year && year != data[key].year) ||
+					   (season && season != data[key].season))
 						skip = true;
 					if (!skip)
 					{
-						if ("new" == data[key]['status'])
+						if ("new" == data[key].status)
 							newg++;
-						else if (data[key]['scoreus'] > data[key]['scorethem'])
+						else if (data[key].scoreus > data[key].scorethem)
 							win++;
-						else if (data[key]['scoreus'] < data[key]['scorethem'])
+						else if (data[key].scoreus < data[key].scorethem)
 							lose++;
-						else if (data[key]['scoreus'] == data[key]['scorethem'])
+						else if (data[key].scoreus == data[key].scorethem)
 							tie++;
 					}
 				});
 				// only send stats that are non-zero
 				if (win)
-					gamestats.push({"label": "Win", "value": win, "color": CONFIG.COLORS['win']['color'], "highlight": CONFIG.COLORS['win']['highlight']});
+					gamestats.push({"label": "Win", "value": win, "color": CONFIG.COLORS.win.color, "highlight": CONFIG.COLORS.win.highlight});
 				if (lose)
-					gamestats.push({"label": "Lose", "value": lose, "color": CONFIG.COLORS['lose']['color'], "highlight": CONFIG.COLORS['lose']['highlight']});
+					gamestats.push({"label": "Lose", "value": lose, "color": CONFIG.COLORS.lose.color, "highlight": CONFIG.COLORS.lose.highlight});
 				if (tie)
-					gamestats.push({"label": "Tie", "value": tie, "color": CONFIG.COLORS['tie']['color'], "highlight": CONFIG.COLORS['tie']['highlight']});
+					gamestats.push({"label": "Tie", "value": tie, "color": CONFIG.COLORS.tie.color, "highlight": CONFIG.COLORS.tie.highlight});
 //				if (newg)
-//					gamestats.push({"label": "New", "value": newg, "color": CONFIG.COLORS['new']['color'], "highlight": CONFIG.COLORS['new']['highlight']});
+//					gamestats.push({"label": "New", "value": newg, "color": CONFIG.COLORS.new.color, "highlight": CONFIG.COLORS.new.highlight});
 				deferred.resolve(gamestats);
 			});
 			return deferred.promise;
-		}
+		};
 
 		dataFactory.getGameScores = function(year, season)
 		{
@@ -314,16 +314,16 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 				var skip = false;
 				keys.forEach(function(key, i) {
 					skip = false;
-					if ((year && year != data[key]['year'])
-					|| (season && season != data[key]['season']))
+					if ((year && year != data[key].year) ||
+					   (season && season != data[key].season))
 						skip = true;
 					if (!skip)
 					{
-						if ("new" != data[key]['status'])
+						if ("new" != data[key].status)
 						{
-							gamelabels.push(yearSeasonDisplayFilter(data[key]['year'], data[key]['season']) + " #"+data[key]['game']);
-							scoreus.push(data[key]['scoreus']);
-							scorethem.push(data[key]['scorethem']);
+							gamelabels.push(yearSeasonDisplayFilter(data[key].year, data[key].season) + " #"+data[key].game);
+							scoreus.push(data[key].scoreus);
+							scorethem.push(data[key].scorethem);
 						}
 					}
 				});
@@ -345,13 +345,13 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 					data: scorethem
 				}
 				];
-				gamedata['labels'] = gamelabels;
-				gamedata['datasets'] = datasets;
+				gamedata.labels = gamelabels;
+				gamedata.datasets = datasets;
 
 				deferred.resolve(gamedata);
 			});
 			return deferred.promise;
-		}
+		};
 
 
 		return dataFactory;
@@ -376,8 +376,8 @@ softballServices.factory('Snacks', ['CONFIG', '$firebase', '$q',
 				var skip = false;
 				keys.forEach(function(key, i) {
 					skip = false;
-					if ((year && year != data[key]['year'])
-					|| (season && season != data[key]['season']))
+					if ((year && year != data[key].year) ||
+					   (season && season != data[key].season))
 						skip = true;
 					if (!skip)
 						snacks.push(data[key]);
@@ -387,7 +387,7 @@ softballServices.factory('Snacks', ['CONFIG', '$firebase', '$q',
 			});
 
 			return deferred.promise;
-		}
+		};
 
 		return dataFactory;
 }]);
@@ -406,7 +406,7 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 				{"id": "assists", "name": "Assists"},
 				{"id": "total", "name": "Total"}
 			];
-		}
+		};
 		
 		dataFactory.getFielding = function(year, season, showsub)
 		{
@@ -423,18 +423,18 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 					var keys = data.$getIndex();
 					var name = null;
 					keys.forEach(function(key, i) {
-						name = data[key]['name'];
+						name = data[key].name;
 						skip = false;
-						if ((year && year != data[key]['year'])
-						|| (season && season != data[key]['season'])
-						|| (!players[name] || (!showsub && players[name]['sub'])))
+						if ((year && year != data[key].year) ||
+						   (season && season != data[key].season) ||
+						   (!players[name] || (!showsub && players[name].sub)))
 							skip = true;
 						if (!skip)
 						{
 							// build the gameid
-							data[key]['gameid'] = data[key]['year'] + '-' + data[key]['season'] + '-' + data[key]['game'];
+							data[key].gameid = data[key].year + '-' + data[key].season + '-' + data[key].game;
 							// build display name
-							data[key]['displayname'] = yearSeasonGameDisplayFilter(data[key]['year'], data[key]['season'], data[key]['game']);
+							data[key].displayname = yearSeasonGameDisplayFilter(data[key].year, data[key].season, data[key].game);
 							if (!fieldtotal[name])
 							{
 								fieldtotal[name] = {
@@ -444,10 +444,10 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 									"total": 0
 								};
 							}
-							fieldtotal[name]['outs'] += (data[key]['outs'] ? data[key]['outs'] : 0);
-							fieldtotal[name]['assists'] += (data[key]['assists'] ? data[key]['assists'] : 0);
-							fieldtotal[name]['total'] += (data[key]['outs'] ? data[key]['outs'] : 0)
-											+ (data[key]['assists'] ? data[key]['assists'] : 0);
+							fieldtotal[name].outs += (data[key].outs ? data[key].outs : 0);
+							fieldtotal[name].assists += (data[key].assists ? data[key].assists : 0);
+							fieldtotal[name].total += (data[key].outs ? data[key].outs : 0) +
+										  (data[key].assists ? data[key].assists : 0);
 						}
 					});
 					deferred.resolve(fieldtotal);
@@ -455,7 +455,7 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 			});
 
 			return deferred.promise;
-		}
+		};
 
 		// return top 3 positions in xfactor - multiple ppl may be at same position
 		dataFactory.getTopFielding = function(year, season, showsub)
@@ -467,17 +467,17 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 				var data = $firebase(dRef);
 
 				var allfielding = {};
-				allfielding['outs'] = {};
-				allfielding['assists'] = {};
+				allfielding.outs = {};
+				allfielding.assists = {};
 				var topfielding = [];
-				topfielding['outs'] = [];
-				topfielding['assists'] = [];
-				topfielding['outs'][0] = [];
-				topfielding['outs'][1] = [];
-				topfielding['outs'][2] = [];
-				topfielding['assists'][0] = [];
-				topfielding['assists'][1] = [];
-				topfielding['assists'][2] = [];
+				topfielding.outs = [];
+				topfielding.assists = [];
+				topfielding.outs[0] = [];
+				topfielding.outs[1] = [];
+				topfielding.outs[2] = [];
+				topfielding.assists[0] = [];
+				topfielding.assists[1] = [];
+				topfielding.assists[2] = [];
 				var skip = false;
 				data.$on("loaded", function() {
 					var keys = data.$getIndex();
@@ -485,26 +485,26 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 					// pre-process each data entry to group each person's total
 					var name = null;
 					keys.forEach(function(key, i) {
-						name = data[key]['name'];
+						name = data[key].name;
 						skip = false;
-						if ((year && year != data[key]['year'])
-						|| (season && season != data[key]['season'])
-						|| (!players[name] || (!showsub && players[name]['sub'])))
+						if ((year && year != data[key].year) ||
+						   (season && season != data[key].season) ||
+						   (!players[name] || (!showsub && players[name].sub)))
 							skip = true;
 						if (!skip)
 						{
 
-							if (data[key]['outs'] && (0 < data[key]['outs']))
+							if (data[key].outs && (0 < data[key].outs))
 							{
-								if (!allfielding['outs'][name])
-									allfielding['outs'][name] = 0;
-								allfielding['outs'][name] += parseFloat(data[key]['outs']);
+								if (!allfielding.outs[name])
+									allfielding.outs[name] = 0;
+								allfielding.outs[name] += parseFloat(data[key].outs);
 							}
-							if (data[key]['assists'] && (0 < data[key]['assists']))
+							if (data[key].assists && (0 < data[key].assists))
 							{
-								if (!allfielding['assists'][name])
-									allfielding['assists'][name] = 0;
-								allfielding['assists'][name] += parseFloat(data[key]['assists']);
+								if (!allfielding.assists[name])
+									allfielding.assists[name] = 0;
+								allfielding.assists[name] += parseFloat(data[key].assists);
 							}
 						}
 					});
@@ -520,7 +520,7 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 						angular.forEach(allfielding[f], function(i, key) {
 							// need this below format to use variable as object keyname
 							tmpentry = {};
-							tmpentry['name'] = key;
+							tmpentry.name = key;
 							tmpentry[f] = allfielding[f][key];
 							// set first one
 							if (!topfielding[f][0])
@@ -559,7 +559,7 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 				});
 			});
 			return deferred.promise;
-		}
+		};
 
 		return dataFactory;
 }]);
@@ -579,7 +579,6 @@ softballServices.factory('Fielding', ['CONFIG', '$firebase', '$q', 'yearSeasonGa
 						{"id": "assists", "name": "Assists"},
 						{"id": "total", "name": "Total"}
 					];
-					break;
 				case 'player':
 					return [
 						{"id": "gameid", "name": "Game #"},
@@ -587,9 +586,8 @@ softballServices.factory('Fielding', ['CONFIG', '$firebase', '$q', 'yearSeasonGa
 						{"id": "assists", "name": "Assists"},
 						{"id": "total", "name": "Total"}
 					];
-					break;
 			}
-		}
+		};
 
 		dataFactory.getFielding = function(year, season, game, name)
 		{
@@ -603,26 +601,26 @@ softballServices.factory('Fielding', ['CONFIG', '$firebase', '$q', 'yearSeasonGa
 				var keys = data.$getIndex();
 				keys.forEach(function(key, i) {
 					skip = false;
-					if ((year && year != data[key]['year'])
-					|| (season && season != data[key]['season'])
-					|| (game && game != data[key]['game'])
-					|| (name && name != data[key]['name']))
+					if ((year && year != data[key].year) ||
+					   (season && season != data[key].season) ||
+					   (game && game != data[key].game) ||
+					   (name && name != data[key].name))
 						skip = true;
 					if (!skip)
 					{
 						// build the gameid
-						data[key]['gameid'] = data[key]['year'] + '-' + data[key]['season'] + '-' + data[key]['game'];
+						data[key].gameid = data[key].year + '-' + data[key].season + '-' + data[key].game;
 						// build display name
-						data[key]['displayname'] = yearSeasonGameDisplayFilter(data[key]['year'], data[key]['season'], data[key]['game']);
-						data[key]['total'] = (data[key]['outs'] ? data[key]['outs'] : 0)
-										+ (data[key]['assists'] ? data[key]['assists'] : 0);
+						data[key].displayname = yearSeasonGameDisplayFilter(data[key].year, data[key].season, data[key].game);
+						data[key].total = (data[key].outs ? data[key].outs : 0) +
+										(data[key].assists ? data[key].assists : 0);
 						fielding.push(data[key]);
 					}
 				});
 				deferred.resolve(fielding);
 			});
 			return deferred.promise;
-		}
+		};
 
 		return dataFactory;
 }]);
@@ -650,7 +648,7 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 				{"id": "Slug", "name": "Slug%"},
 				{"id": "XFactor", "name": "X-Factor"}
 			];
-		}
+		};
 
 		dataFactory.getBatting = function(year, season, showsub)
 		{
@@ -668,11 +666,11 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 					var name = null;
 					var skip = false;
 					keys.forEach(function(key, i) {
-						name = data[key]['name'];
+						name = data[key].name;
 						skip = false;
-						if ((year && year != data[key]['year'])
-						|| (season && season != data[key]['season'])
-						|| (!players[name] || (!showsub && players[name]['sub'])))
+						if ((year && year != data[key].year) ||
+						   (season && season != data[key].season) ||
+						   (!players[name] || (!showsub && players[name].sub)))
 							skip = true;
 						if (!skip)
 						{
@@ -680,8 +678,8 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 							{
 								battotal[name] = {
 									"name": name,
-									"color": players[name]['color'],
-									"highlight": players[name]['highlight'],
+									"color": players[name].color,
+									"highlight": players[name].highlight,
 									"GP": 0,
 									"AB": 0,
 									"H": 0,
@@ -696,35 +694,35 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 									"XFactor": 0
 								};
 							}
-							battotal[name]['GP'] += 1;
-							battotal[name]['AB'] += (data[key]['AB'] ? data[key]['AB'] : 0);
-							battotal[name]['H'] += (data[key]['H'] ? data[key]['H'] : 0);
-							battotal[name]['R'] += (data[key]['R'] ? data[key]['R'] : 0);
-							battotal[name]['B1'] += (data[key]['B1'] ? data[key]['B1'] : 0);
-							battotal[name]['B2'] += (data[key]['B2'] ? data[key]['B2'] : 0);
-							battotal[name]['B3'] += (data[key]['B3'] ? data[key]['B3'] : 0);
-							battotal[name]['HR'] += (data[key]['HR'] ? data[key]['HR'] : 0);
-							battotal[name]['RBI'] += (data[key]['RBI'] ? data[key]['RBI'] : 0);
+							battotal[name].GP += 1;
+							battotal[name].AB += (data[key].AB ? data[key].AB : 0);
+							battotal[name].H += (data[key].H ? data[key].H : 0);
+							battotal[name].R += (data[key].R ? data[key].R : 0);
+							battotal[name].B1 += (data[key].B1 ? data[key].B1 : 0);
+							battotal[name].B2 += (data[key].B2 ? data[key].B2 : 0);
+							battotal[name].B3 += (data[key].B3 ? data[key].B3 : 0);
+							battotal[name].HR += (data[key].HR ? data[key].HR : 0);
+							battotal[name].RBI += (data[key].RBI ? data[key].RBI : 0);
 						}
 					});
 
 					// post-process each person's entry to set averages from their totals
 					angular.forEach(battotal, function(i, key) {
 						// get the average of these values over games played
-						battotal[key].Avg = parseFloat(avgFilter(battotal[key]['H'], battotal[key]['AB'], 3));
-						battotal[key].Slug = parseFloat(slugFilter(battotal[key]['B1'], battotal[key]['B2'], battotal[key]['B3'],
-													battotal[key]['HR'], battotal[key]['AB'], 3));
-						battotal[key].XFactor = parseFloat((xfactorFilter(battotal[key]['B1'], battotal[key]['B2'],
-													battotal[key]['B3'], battotal[key]['HR'],
-													battotal[key]['R'], battotal[key]['RBI']) /
-													battotal[key]['GP']));
+						battotal[key].Avg = parseFloat(avgFilter(battotal[key].H, battotal[key].AB, 3));
+						battotal[key].Slug = parseFloat(slugFilter(battotal[key].B1, battotal[key].B2, battotal[key].B3,
+													battotal[key].HR, battotal[key].AB, 3));
+						battotal[key].XFactor = parseFloat((xfactorFilter(battotal[key].B1, battotal[key].B2,
+													battotal[key].B3, battotal[key].HR,
+													battotal[key].R, battotal[key].RBI) /
+													battotal[key].GP));
 					});
 
 					deferred.resolve(battotal);
 				});
 			});
 			return deferred.promise;
-		}
+		};
 
 		// return total of a specific item per player
 		// ex: homeruns for all players
@@ -738,7 +736,7 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 				var itemlabels = [];
 				var itemdata = [];
 				angular.forEach(battotal, function(i, key) {
-					itemlabels.push(battotal[key]['name']);
+					itemlabels.push(battotal[key].name);
 					itemdata.push(battotal[key][item]);
 				});
 				var datasets = [
@@ -751,14 +749,14 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 					data: itemdata
 				}
 				];
-				resdata['labels'] = itemlabels;
-				resdata['datasets'] = datasets;
+				resdata.labels = itemlabels;
+				resdata.datasets = datasets;
 
 				//console.log(resdata);
 				deferred.resolve(resdata);
 			});
 			return deferred.promise;
-		}
+		};
 
 		// return total of a specific item per player
 		// ex: homeruns for all players
@@ -779,12 +777,12 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 					var name = null;
 					var skip = false;
 					keys.forEach(function(key, i) {
-						name = data[key]['name'];
+						name = data[key].name;
 						skip = false;
-						if ((year && year != data[key]['year'])
-						|| (season && season != data[key]['season'])
-						|| (!item || !data[key][item])
-						|| (!players[name] || (!showsub && players[name]['sub'])))
+						if ((year && year != data[key].year) ||
+						   (season && season != data[key].season) ||
+						   (!item || !data[key][item]) ||
+						   (!players[name] || (!showsub && players[name].sub)))
 							skip = true;
 						if (!skip)
 						{
@@ -793,12 +791,12 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 								playertotal[name] = {
 									"name": name,
 									"label": name,
-									"color": players[name]['color'],
-									"highlight": players[name]['highlight'],
+									"color": players[name].color,
+									"highlight": players[name].highlight,
 									"value": 0
 								};
 							}
-							playertotal[name]['value'] += (data[key][item] ? data[key][item] : 0);
+							playertotal[name].value += (data[key][item] ? data[key][item] : 0);
 						}
 					});
 
@@ -810,7 +808,7 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 				});
 			});
 			return deferred.promise;
-		}
+		};
 
 		// return total of a specific item per player
 		// ex: homeruns for all players
@@ -828,8 +826,8 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 				for (var i = 0; i < icnt; i++)
 				{
 					itemlisttotal[itemlist[i]] = {
-						'color': CONFIG.COLORS[itemlist[i]]['color'],
-						'highlight': CONFIG.COLORS[itemlist[i]]['highlight'],
+						'color': CONFIG.COLORS[itemlist[i]].color,
+						'highlight': CONFIG.COLORS[itemlist[i]].highlight,
 						'label': baseDisplayFilter(itemlist[i]),
 						'value': 0
 					};
@@ -842,17 +840,17 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 					var name = null;
 					var skip = false;
 					keys.forEach(function(key, i) {
-						name = data[key]['name'];
+						name = data[key].name;
 						skip = false;
-						if ((year && year != data[key]['year'])
-						|| (season && season != data[key]['season'])
-						|| (!players[name] || (!showsub && players[name]['sub'])))
+						if ((year && year != data[key].year) ||
+						   (season && season != data[key].season) ||
+						   (!players[name] || (!showsub && players[name].sub)))
 							skip = true;
 						if (!skip)
 						{
 							angular.forEach(data[key], function(i2, key2) {
 								if (itemlisttotal[key2] && data[key][key2])
-									itemlisttotal[key2]['value'] += data[key][key2];
+									itemlisttotal[key2].value += data[key][key2];
 							});
 						}
 					});
@@ -865,7 +863,7 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 				});
 			});
 			return deferred.promise;
-		}
+		};
 
 		// return top 3 positions in xfactor - multiple ppl may be at same position
 		dataFactory.getTopXFactor = function(year, season, showsub)
@@ -889,22 +887,22 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 					var name = null;
 					var skip = false;
 					keys.forEach(function(key, i) {
-						name = data[key]['name'];
+						name = data[key].name;
 						skip = false;
-						if ((year && year != data[key]['year'])
-						|| (season && season != data[key]['season'])
-						|| (!players[name] || (!showsub && players[name]['sub'])))
+						if ((year && year != data[key].year) ||
+						   (season && season != data[key].season) ||
+						   (!players[name] || (!showsub && players[name].sub)))
 							skip = true;
 						if (!skip)
 						{
 							if (!allxfactor[name])
 								allxfactor[name] = 0;
-							allxfactor[name] += parseFloat(xfactorFilter((data[key]['B1'] ? data[key]['B1'] : 0),
-													(data[key]['B2'] ? data[key]['B2'] : 0),
-													(data[key]['B3'] ? data[key]['B3'] : 0),
-													(data[key]['HR'] ? data[key]['HR'] : 0),
-													(data[key]['R'] ? data[key]['R'] : 0),
-													(data[key]['RBI'] ? data[key]['RBI'] : 0)));
+							allxfactor[name] += parseFloat(xfactorFilter((data[key].B1 ? data[key].B1 : 0),
+													(data[key].B2 ? data[key].B2 : 0),
+													(data[key].B3 ? data[key].B3 : 0),
+													(data[key].HR ? data[key].HR : 0),
+													(data[key].R ? data[key].R : 0),
+													(data[key].RBI ? data[key].RBI : 0)));
 							if (!allgamesplayed[name])
 								allgamesplayed[name] = 0;
 							allgamesplayed[name]++;
@@ -948,7 +946,7 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 				});
 			});
 			return deferred.promise;
-		}
+		};
 		return dataFactory;
 }]);
 
@@ -975,7 +973,6 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 							{"id": "Slug", "name": "Slug%"},
 							{"id": "XFactor", "name": "X-Factor"}
 					];
-					break;
 				case 'player':
 					return [
 							{"id": "gameid", "name": "Game"},
@@ -991,9 +988,8 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 							{"id": "Slug", "name": "Slug%"},
 							{"id": "XFactor", "name": "X-Factor"}
 					];
-					break;
 			}
-		}
+		};
 
 		dataFactory.getBatting = function(year, season, game, name)
 		{
@@ -1009,38 +1005,38 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 				var skip = false;
 				keys.forEach(function(key, i) {
 					skip = false;
-					if ((year && year != data[key]['year'])
-					|| (season && season != data[key]['season'])
-					|| (game && game != data[key]['game'])
-					|| (name && name != data[key]['name']))
+					if ((year && year != data[key].year) ||
+					   (season && season != data[key].season) ||
+					   (game && game != data[key].game) ||
+					   (name && name != data[key].name))
 						skip = true;
 					if (!skip)
 					{
 						// build the gameid
-						data[key]['gameid'] = data[key]['year'] + '-' + data[key]['season'] + '-' + data[key]['game'];
+						data[key].gameid = data[key].year + '-' + data[key].season + '-' + data[key].game;
 						// build display name
-						data[key]['displayname'] = yearSeasonGameDisplayFilter(data[key]['year'], data[key]['season'], data[key]['game']);
+						data[key].displayname = yearSeasonGameDisplayFilter(data[key].year, data[key].season, data[key].game);
 						// make empty values be 0
 						var stats = ['AB','H','R','B1','B2','B3','HR','RBI'];
 						for (var s = 0; s < stats.length; s++)
 							data[key][stats[s]] = (data[key][stats[s]] ? data[key][stats[s]] : 0);
 						//console.log(data[key]);
-						data[key].Avg = parseFloat(avgFilter((data[key]['H']),
-											data[key]['AB'], 3));
-						data[key].Slug = parseFloat(slugFilter(data[key]['B1'],
-											data[key]['B2'], data[key]['B3'],
-											data[key]['HR'], data[key]['AB'], 3));
-						data[key].XFactor = parseFloat(xfactorFilter(data[key]['B1'],
-												data[key]['B2'], data[key]['B3'],
-												data[key]['HR'], data[key]['R'],
-												data[key]['RBI']));
+						data[key].Avg = parseFloat(avgFilter((data[key].H),
+											data[key].AB, 3));
+						data[key].Slug = parseFloat(slugFilter(data[key].B1,
+											data[key].B2, data[key].B3,
+											data[key].HR, data[key].AB, 3));
+						data[key].XFactor = parseFloat(xfactorFilter(data[key].B1,
+												data[key].B2, data[key].B3,
+												data[key].HR, data[key].R,
+												data[key].RBI));
 						batting.push(data[key]);
 					}
 				});
 				deferred.resolve(batting);
 			});
 			return deferred.promise;
-		}
+		};
 
 
 		// return top 3 best games in xfactor - multiple ppl may be at same position
@@ -1065,20 +1061,20 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 					var skip = false;
 					var xf = null;
 					keys.forEach(function(key, i) {
-						name = data[key]['name'];
+						name = data[key].name;
 						skip = false;
-						if ((year && year != data[key]['year'])
-						|| (season && season != data[key]['season'])
-						|| (!players[name] || (!showsub && players[name]['sub'])))
+						if ((year && year != data[key].year) ||
+						   (season && season != data[key].season) ||
+						   (!players[name] || (!showsub && players[name].sub)))
 							skip = true;
 						if (!skip)
 						{
-							xf = xfactorFilter((data[key]['B1'] ? data[key]['B1'] : 0),
-													(data[key]['B2'] ? data[key]['B2'] : 0),
-													(data[key]['B3'] ? data[key]['B3'] : 0),
-													(data[key]['HR'] ? data[key]['HR'] : 0),
-													(data[key]['R'] ? data[key]['R'] : 0),
-													(data[key]['RBI'] ? data[key]['RBI'] : 0));
+							xf = xfactorFilter((data[key].B1 ? data[key].B1 : 0),
+													(data[key].B2 ? data[key].B2 : 0),
+													(data[key].B3 ? data[key].B3 : 0),
+													(data[key].HR ? data[key].HR : 0),
+													(data[key].R ? data[key].R : 0),
+													(data[key].RBI ? data[key].RBI : 0));
 							if (!allxfactor[xf])
 								allxfactor[xf] = {};
 							// key by name to avoid duplicate scores for same person
@@ -1127,10 +1123,11 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 					for (var m = 0; m < cnt; m++)
 					{
 						var res = [];
-						angular.forEach(topxfactor[m]['names'], function(i, key) {
-							res.push(topxfactor[m]['names'][key]);
+						// ignore nested function in loop error
+						angular.forEach(topxfactor[m].names, function(i, key) {
+							res.push(topxfactor[m].names[key]);
 						});
-						topxfactor[m]['names'] = res;
+						topxfactor[m].names = res;
 					}
 					//console.log(topxfactor);
 
@@ -1139,7 +1136,7 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 				});
 			});
 			return deferred.promise;
-		}
+		};
 
 		return dataFactory;
 }]);

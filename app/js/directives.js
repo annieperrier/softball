@@ -51,7 +51,7 @@ softballDirectives.directive('chartPie', ['$parse',
 
 				var ctx = canvas.getContext("2d");
 				var myPieChart = new Chart(ctx).Pie(scope.data, options);
-			}
+			};
 		}
 	};
 	return directiveDefinitionObject;
@@ -105,14 +105,14 @@ softballDirectives.directive('chartBar', ['$parse',
 					barShowStroke: false,
 
 					//String - A legend template
-					legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\">"
-									+"<% for (var i=0; i<datasets.length; i++){%>"
-									+"<li>"
-									+"<span style=\"background-color:<%=datasets[i].fillColor%>\"></span>"
-									+"<%if(datasets[i].label){%><%=datasets[i].label%><%}%>"
-									+"</li>"
-									+"<%}%>"
-									+"</ul>",
+					legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\">"+
+									"<% for (var i=0; i<datasets.length; i++){%>"+
+									"<li>"+
+									"<span style=\"background-color:<%=datasets[i].fillColor%>\"></span>"+
+									"<%if(datasets[i].label){%><%=datasets[i].label%><%}%>"+
+									"</li>"+
+									"<%}%>"+
+									"</ul>",
 
 					maintainAspectRatio: false,
 					responsive: true
@@ -125,7 +125,7 @@ softballDirectives.directive('chartBar', ['$parse',
 				var myChart = new Chart(ctx).Bar(scope.data, options);
 				if (scope.data.datasets.length > 1)
 					element.find('div')[0].innerHTML = myChart.generateLegend();
-			}
+			};
 		}
 	};
 
@@ -180,14 +180,14 @@ softballDirectives.directive('chartLine', ['$parse',
 					barShowStroke: false,
 
 					//String - A legend template
-					legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\">"
-									+"<% for (var i=0; i<datasets.length; i++){%>"
-									+"<li>"
-									+"<span style=\"background-color:<%=datasets[i].fillColor%>\"></span>"
-									+"<%if(datasets[i].label){%><%=datasets[i].label%><%}%>"
-									+"</li>"
-									+"<%}%>"
-									+"</ul>",
+					legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\">"+
+									"<% for (var i=0; i<datasets.length; i++){%>"+
+									"<li>"+
+									"<span style=\"background-color:<%=datasets[i].fillColor%>\"></span>"+
+									"<%if(datasets[i].label){%><%=datasets[i].label%><%}%>"+
+									"</li>"+
+									"<%}%>"+
+									"</ul>",
 
 					maintainAspectRatio: false,
 					responsive: true
@@ -199,7 +199,7 @@ softballDirectives.directive('chartLine', ['$parse',
 				var ctx = canvas.getContext("2d");
 				var myChart = new Chart(ctx).Line(scope.data, options);
 				element.find('div')[0].innerHTML = myChart.generateLegend();
-			}
+			};
 		}
 	};
 

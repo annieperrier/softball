@@ -14,7 +14,7 @@ softballFilters.filter("total", [
 				total += parseFloat(items[i][field] ? items[i][field] : 0);
 			}
 			return total;
-		}
+		};
 }]);
 
 softballFilters.filter("toFixed", [
@@ -23,7 +23,7 @@ softballFilters.filter("toFixed", [
 			if (item)
 				return item.toFixed(precision);
 			return 0;
-		}
+		};
 }]);
 
 softballFilters.filter("avg", [
@@ -33,7 +33,7 @@ softballFilters.filter("avg", [
 				precision = 0;
 			//console.log("Avg of: "+a+" over: "+b+" to precision: "+precision)
 			return ((a ? a : 0) / (b ? b : 1)).toFixed(precision);
-		}
+		};
 }]);
 softballFilters.filter("avgSum", ['totalFilter', 'avgFilter',
 	function(totalFilter, avgFilter) {
@@ -41,17 +41,17 @@ softballFilters.filter("avgSum", ['totalFilter', 'avgFilter',
 			var a = totalFilter(items, field1);
 			var b = totalFilter(items, field2);
 			return avgFilter(a, b, precision);
-		}
+		};
 }]);
 
 softballFilters.filter("slug", [
 	function() {
 		return function(b1, b2, b3, hr, ab, precision) {
-			return (((b1 ? b1 : 0) + ((b2 ? b2 : 0)*2)
-				+ ((b3 ? b3 : 0)*3) + ((hr ? hr : 0)*4))/
+			return (((b1 ? b1 : 0) + ((b2 ? b2 : 0)*2) +
+				((b3 ? b3 : 0)*3) + ((hr ? hr : 0)*4))/
 				(ab ? ab : 1))
 				.toFixed(precision);
-		}
+		};
 }]);
 
 softballFilters.filter("slugSum", ['totalFilter', 'slugFilter',
@@ -63,16 +63,16 @@ softballFilters.filter("slugSum", ['totalFilter', 'slugFilter',
 			var thr = totalFilter(items, hr);
 			var tab = totalFilter(items, ab);
 			return slugFilter(tb1, tb2, tb3, thr, tab, precision);
-		}
+		};
 }]);
 
 softballFilters.filter("xfactor", [
 	function() {
 		return function(b1, b2, b3, hr, r, rbi) {
-			return (((b1 ? b1 : 0) + ((b2 ? b2 : 0)*2)
-				+ ((b3 ? b3 : 0)*3) + ((hr ? hr : 0)*4)
-				+ (r ? r : 0) + (rbi ? rbi : 0)));
-		}
+			return (((b1 ? b1 : 0) + ((b2 ? b2 : 0)*2) +
+				((b3 ? b3 : 0)*3) + ((hr ? hr : 0)*4) +
+				(r ? r : 0) + (rbi ? rbi : 0)));
+		};
 }]);
 softballFilters.filter("xfactorSum", ['totalFilter', 'xfactorFilter',
 	function(totalFilter, xfactorFilter) {
@@ -84,7 +84,7 @@ softballFilters.filter("xfactorSum", ['totalFilter', 'xfactorFilter',
 			var tr = totalFilter(items, r);
 			var trbi = totalFilter(items, rbi);
 			return xfactorFilter(tb1, tb2, tb3, thr, tr, trbi, precision);
-		}
+		};
 }]);
 
 softballFilters.filter("avgOfTotals", ['totalFilter', 'avgFilter',
@@ -93,7 +93,7 @@ softballFilters.filter("avgOfTotals", ['totalFilter', 'avgFilter',
 			var a = totalFilter(items, field);
 			var cnt = items.length;
 			return avgFilter(a, cnt, precision);
-		}
+		};
 }]);
 
 softballFilters.filter("yearSeasonDisplay", [
@@ -124,7 +124,7 @@ softballFilters.filter("yearSeasonDisplay", [
 				}
 			}
 			return res;
-		}
+		};
 }]);
 softballFilters.filter("yearSeasonGameDisplay", ['yearSeasonDisplayFilter', 
 	function(yearSeasonDisplayFilter) {
@@ -135,7 +135,7 @@ softballFilters.filter("yearSeasonGameDisplay", ['yearSeasonDisplayFilter',
 			if (game)
 				res += ' Game #'+game;
 			return res;
-		}
+		};
 }]);
 
 softballFilters.filter("seasonIcon", [
@@ -158,7 +158,7 @@ softballFilters.filter("seasonIcon", [
 					break;
 			}
 			return t;
-		}
+		};
 }]);
 softballFilters.filter("seasonName", [
 	function() {
@@ -180,7 +180,7 @@ softballFilters.filter("seasonName", [
 					break;
 			}
 			return t;
-		}
+		};
 }]);
 
 softballFilters.filter("gameTypeName", [
@@ -203,7 +203,7 @@ softballFilters.filter("gameTypeName", [
 					break;
 			}
 			return t;
-		}
+		};
 }]);
 
 softballFilters.filter("gameStatusName", [
@@ -226,7 +226,7 @@ softballFilters.filter("gameStatusName", [
 					break;
 			}
 			return t;
-		}
+		};
 }]);
 softballFilters.filter("gameStatusDescription", [
 	function() {
@@ -248,7 +248,7 @@ softballFilters.filter("gameStatusDescription", [
 					break;
 			}
 			return t;
-		}
+		};
 }]);
 
 softballFilters.filter("gameResultDisplay", [
@@ -274,7 +274,7 @@ softballFilters.filter("gameResultDisplay", [
 					break;
 			}
 			return t;
-		}
+		};
 }]);
 
 softballFilters.filter("gameIdExplode", [
@@ -284,12 +284,12 @@ softballFilters.filter("gameIdExplode", [
 			if (gameid)
 			{
 				var g = gameid.split('-');
-				res['year'] = g[0];
-				res['season'] = g[1];
-				res['game'] = g[2];
+				res.year = g[0];
+				res.season = g[1];
+				res.game = g[2];
 			}
 			return res;
-		}
+		};
 }]);
 
 softballFilters.filter("baseDisplay", [
@@ -315,7 +315,7 @@ softballFilters.filter("baseDisplay", [
 					break;
 			}
 			return t;
-		}
+		};
 }]);
 
 softballFilters.filter("firstLetterToUppercase", [
@@ -323,5 +323,5 @@ softballFilters.filter("firstLetterToUppercase", [
 		return function(val) {
 			res = val.charAt(0).toUpperCase()+val.slice(1);
 			return res;
-		}
+		};
 }]);

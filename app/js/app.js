@@ -212,4 +212,4 @@ softballApp.run(function($rootScope, $state) {
 	// ng-class="{active:$state.includes('season.dashboard')}"
 	$rootScope.$state = $state;
 	//console.log($state);
-})
+});
