@@ -200,7 +200,17 @@ softballApp.config(['$stateProvider', '$urlRouterProvider',
 				var d = new Date();
 				var y = d.getFullYear();
 				// get the season 1-4 winter-fall
+				// only allow 2-3
 				var s = Math.ceil((d.getMonth()+1) / 3);
+				// late in the year, show last season
+				if (s > 3)
+					s = 3;
+				// early in the year, show last season of last year
+				else if (s < 2)
+				{
+					s = 3;
+					y--;
+				}
 				return '/dashboard/games?year='+y+'&season='+s;
 			});
 
