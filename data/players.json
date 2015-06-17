@@ -260,5 +260,21 @@
 		"sub": false,
 		"color": "#9EB1C8",
 		"highlight": "#7992B0"
+	},
+	"Tegann":{
+		"name": "Tegann",
+		"number": "0",
+		"sex": "f",
+		"sub": false,
+		"color": "#A17592",
+		"highlight": "#865374"
+	},
+	"Nathan":{
+		"name": "Nathan",
+		"number": "0",
+		"sex": "m",
+		"sub": false,
+		"color": "#9A8F57",
+		"highlight": "#736935"
 	}
 }
