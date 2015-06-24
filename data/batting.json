@@ -5605,5 +5605,132 @@
 		"H": 2,
 		"B1": 2,
 		"R": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Albert",
+		"AB": 4,
+		"H": 1,
+		"B1": 1,
+		"R": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Annie",
+		"AB": 4,
+		"H": 3,
+		"B1": 3,
+		"R": 2
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Mike",
+		"AB": 4,
+		"H": 4,
+		"B1": 2,
+		"B2": 1,
+		"HR": 1,
+		"R": 3,
+		"RBI": 4
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Lou",
+		"AB": 4,
+		"H": 3,
+		"B1": 2,
+		"HR": 1,
+		"R": 2,
+		"RBI": 2
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Kaitlyn",
+		"AB": 4,
+		"H": 2,
+		"B1": 2,
+		"R": 1,
+		"RBI": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Charles",
+		"AB": 4,
+		"H": 3,
+		"B1": 2,
+		"B2": 1,
+		"RBI": 2
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Tom",
+		"AB": 4,
+		"H": 2,
+		"B1": 2,
+		"R": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Kim",
+		"AB": 4,
+		"H": 4,
+		"B1": 4,
+		"RBI": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Andy",
+		"AB": 4,
+		"H": 2,
+		"B1": 2,
+		"RBI": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Jeff",
+		"AB": 3,
+		"H": 3,
+		"B1": 3,
+		"R": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Michelle",
+		"AB": 3,
+		"H": 2,
+		"B1": 2,
+		"R": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Nathan",
+		"AB": 3,
+		"H": 2,
+		"B1": 2,
+		"RBI": 1
 	}
 ]

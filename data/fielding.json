@@ -1919,5 +1919,77 @@
 		"name": "Charles",
 		"outs": 1,
 		"assists": 0
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Annie",
+		"outs": 1,
+		"assists": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Charles",
+		"outs": 1,
+		"assists": 0
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Jeff",
+		"outs": 1,
+		"assists": 0
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Albert",
+		"outs": 5,
+		"assists": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Andy",
+		"outs": 3,
+		"assists": 0
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Mike",
+		"outs": 3,
+		"assists": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Tom",
+		"outs": 1,
+		"assists": 0
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Lou",
+		"outs": 2,
+		"assists": 1
+	},
+	{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"name": "Nathan",
+		"outs": 1,
+		"assists": 0
 	}
 ]

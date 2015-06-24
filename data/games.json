@@ -572,5 +572,27 @@
 		"scoreus": 15,
 		"scorethem": 20,
 		"result": "lose"
+	},
+	"2015-2-6":{
+		"year": 2015,
+		"season": 2,
+		"game": 6,
+		"date": "2015-06-16",
+		"status": "default",
+		"type": "playoff1",
+		"scoreus": 0,
+		"scorethem": 0,
+		"result": "win"
+	},
+	"2015-2-7":{
+		"year": 2015,
+		"season": 2,
+		"game": 7,
+		"date": "2015-06-23",
+		"status": "played",
+		"type": "playoff2",
+		"scoreus": 12,
+		"scorethem": 12,
+		"result": "tie"
 	}
 }
