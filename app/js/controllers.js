@@ -9,6 +9,7 @@ softballControllers.controller('FilterYearSeasonCtrl', ['$scope', '$stateParams'
 	
 		Games.getYears($scope.year).then(function(data) {
 			$scope.curyear = data[$scope.year];
+			//console.log(data);
 			$scope.years = data;
 		});
 		
@@ -200,7 +201,7 @@ softballControllers.controller('DashboardTeamCtrl', ['$scope', '$stateParams', '
 		});
 
 		BattingTeam.getCalcItemTotalPerPlayer($scope.year, $scope.season, "Avg", $scope.showsub).then(function(data) {
-			console.log(data);
+			//console.log(data);
 			$scope.battingAvgChart = data;
 		});
 
@@ -276,6 +277,7 @@ softballControllers.controller('FieldingTeamCtrl', ['$scope', '$stateParams', 'P
 		$scope.reverse = false;
 
 		$scope.changeSort = function(value){
+			//console.log(value);
 			if ($scope.sort == value){
  				$scope.reverse = !$scope.reverse;
 				return;

@@ -319,7 +319,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="game in games | orderByPriority | orderBy:date">
+							<tr ng-repeat="game in games | orderBy:'date'">
 								<td>{{game.date}}</td>
 								<td>{{game.game}}</td>
 								<td>{{game.scoreus}}</td>
@@ -361,7 +361,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="snack in snacks | orderByPriority | orderBy:game">
+							<tr ng-repeat="snack in snacks | orderBy:'gameid'">
 								<td>{{snack.year}}</td>
 								<td><span class="fa fa-{{snack.season | seasonIcon}}" title="{{snack.season | seasonName}}"/></td>
 								<td>{{snack.game}}</td>
@@ -590,7 +590,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="player in players | orderByPriority | orderBy:name">
+						<tr ng-repeat="player in players | orderBy:'name'">
 							<td>{{player.name}}</td>
 							<td>{{player.number}}</td>
 							<td><span ng-if="player.sub" class="fa fa-check"></span></td>
@@ -627,7 +627,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="bat in batting | orderByPriority | orderBy:sort:reverse">
+				<tr ng-repeat="bat in batting | orderBy:sort:reverse">
 					<td><a href="#/batting/player?name={{bat.name}}">{{bat.name}}</a></td>
 					<td>{{bat.GP}}</td>
 					<td>{{bat.AB}}</td>
@@ -644,18 +644,18 @@
 				</tr>
 				<tr class="success">
 					<td><strong>Total</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'GP'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'AB'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'H'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'R'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'B1'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'B2'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'B3'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'HR'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | total:'RBI'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | avgSum:'H':'AB':3}}</strong></td>
-					<td><strong>{{batting | orderByPriority | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
-					<td><strong>{{batting | orderByPriority | xfactorSum:'B1':'B2':'B3':'HR':'R':'RBI':3 | avg:(batting | orderByPriority | total:'GP'):3}}</strong></td>
+					<td><strong>{{batting | total:'GP'}}</strong></td>
+					<td><strong>{{batting | total:'AB'}}</strong></td>
+					<td><strong>{{batting | total:'H'}}</strong></td>
+					<td><strong>{{batting | total:'R'}}</strong></td>
+					<td><strong>{{batting | total:'B1'}}</strong></td>
+					<td><strong>{{batting | total:'B2'}}</strong></td>
+					<td><strong>{{batting | total:'B3'}}</strong></td>
+					<td><strong>{{batting | total:'HR'}}</strong></td>
+					<td><strong>{{batting | total:'RBI'}}</strong></td>
+					<td><strong>{{batting | avgSum:'H':'AB':3}}</strong></td>
+					<td><strong>{{batting | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
+					<td><strong>{{batting | xfactorSum:'B1':'B2':'B3':'HR':'R':'RBI':3 | avg:(batting | total:'GP'):3}}</strong></td>
 				</tr>
 			</tbody>
 		</table>
@@ -701,7 +701,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="bat in batting | orderByPriority | filter:{game:gamenumber} | orderBy:sort:reverse">
+				<tr ng-repeat="bat in batting | filter:{game:gamenumber} | orderBy:sort:reverse">
 					<td><a href="#/batting/player?name={{bat.name}}">{{bat.name}}</a></td>
 					<td>{{bat.AB}}</td>
 					<td>{{bat.H}}</td>
@@ -717,17 +717,17 @@
 				</tr>
 				<tr class="success">
 					<td><strong>Total</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'AB'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'H'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'R'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'B1'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'B2'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'B3'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'HR'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | total:'RBI'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | avgSum:'H':'AB':3}}</td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{game:gamenumber} | xfactorSum:'B1':'B2':'B3':'HR':'R':'RBI':3}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | total:'AB'}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | total:'H'}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | total:'R'}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | total:'B1'}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | total:'B2'}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | total:'B3'}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | total:'HR'}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | total:'RBI'}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | avgSum:'H':'AB':3}}</td>
+					<td><strong>{{batting | filter:{game:gamenumber} | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
+					<td><strong>{{batting | filter:{game:gamenumber} | xfactorSum:'B1':'B2':'B3':'HR':'R':'RBI':3}}</strong></td>
 				</tr>
 			</tbody>
 		</table>
@@ -757,7 +757,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="bat in batting | orderByPriority | filter:{name:playername} | orderBy:sort:reverse">
+				<tr ng-repeat="bat in batting | filter:{name:playername} | orderBy:sort:reverse">
 					<td><a href="#/batting/game?gameid={{bat.gameid}}">{{bat.displayname}}</a>
 					</td>
 					<td>{{bat.AB}}</td>
@@ -774,17 +774,17 @@
 				</tr>
 				<tr class="success">
 					<td><strong>Total</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'AB'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'H'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'R'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'B1'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'B2'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'B3'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'HR'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'RBI'}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | avgSum:'H':'AB':3}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
-					<td><strong>{{batting | orderByPriority | filter:{name:playername} | total:'XFactor' | avg:(batting | orderByPriority | filter:{name:playername} ).length:3}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'AB'}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'H'}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'R'}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'B1'}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'B2'}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'B3'}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'HR'}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'RBI'}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | avgSum:'H':'AB':3}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | slugSum:'B1':'B2':'B3':'HR':'AB':3}}</strong></td>
+					<td><strong>{{batting | filter:{name:playername} | total:'XFactor' | avg:(batting | filter:{name:playername} ).length:3}}</strong></td>
 				</tr>
 			</tbody>
 		</table>
@@ -818,7 +818,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="field in fielding | orderByPriority | orderBy:sort:reverse">
+				<tr ng-repeat="field in fielding | orderBy:sort:reverse">
 					<td><a href="#/fielding/player?name={{field.name}}">{{field.name}}</a></td>
 					<td>{{field.outs}}</td>
 					<td>{{field.assists}}</td>
@@ -826,9 +826,9 @@
 				</tr>
 				<tr class="success">
 					<td><strong>Total</strong></td>
-					<td><strong>{{fielding | orderByPriority | total:'outs'}}</strong></td>
-					<td><strong>{{fielding | orderByPriority | total:'assists'}}</strong></td>
-					<td><strong>{{fielding | orderByPriority | total:'total'}}</strong></td>
+					<td><strong>{{fielding | total:'outs'}}</strong></td>
+					<td><strong>{{fielding | total:'assists'}}</strong></td>
+					<td><strong>{{fielding | total:'total'}}</strong></td>
 				</tr>
 			</tbody>
 		</table>
@@ -880,7 +880,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="field in fielding | orderByPriority | orderBy:sort:reverse">
+				<tr ng-repeat="field in fielding | orderBy:sort:reverse">
 					<td><a href="#/fielding/player?name={{field.name}}">{{field.name}}</a></td>
 					<td>{{field.outs}}</td>
 					<td>{{field.assists}}</td>
@@ -888,9 +888,9 @@
 				</tr>
 				<tr class="success">
 					<td><strong>Total</strong></td>
-					<td><strong>{{fielding | orderByPriority | filter:{game:gamenumber} | total:'outs'}}</strong></td>
-					<td><strong>{{fielding | orderByPriority | filter:{game:gamenumber} | total:'assists'}}</strong></td>
-					<td><strong>{{fielding | orderByPriority | filter:{game:gamenumber} | total:'total'}}</strong></td>
+					<td><strong>{{fielding | filter:{game:gamenumber} | total:'outs'}}</strong></td>
+					<td><strong>{{fielding | filter:{game:gamenumber} | total:'assists'}}</strong></td>
+					<td><strong>{{fielding | filter:{game:gamenumber} | total:'total'}}</strong></td>
 				</tr>
 			</tbody>
 		</table>
@@ -920,7 +920,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="field in fielding | orderByPriority | orderBy:sort:reverse">
+				<tr ng-repeat="field in fielding | orderBy:sort:reverse">
 					<td><a href="#/fielding/game?gameid={{field.gameid}}">{{field.displayname}}</a>
 					<td>{{field.outs}}</td>
 					<td>{{field.assists}}</td>
@@ -928,9 +928,9 @@
 				</tr>
 				<tr class="success">
 					<td><strong>Total</strong></td>
-					<td><strong>{{fielding | orderByPriority | filter:{name:playername} | total:'outs'}}</strong></td>
-					<td><strong>{{fielding | orderByPriority | filter:{name:playername} | total:'assists'}}</strong></td>
-					<td><strong>{{fielding | orderByPriority | filter:{name:playername} | total:'total'}}</strong></td>
+					<td><strong>{{fielding | filter:{name:playername} | total:'outs'}}</strong></td>
+					<td><strong>{{fielding | filter:{name:playername} | total:'assists'}}</strong></td>
+					<td><strong>{{fielding | filter:{name:playername} | total:'total'}}</strong></td>
 				</tr>
 			</tbody>
 		</table>
@@ -947,7 +947,7 @@
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="bower_components/firebase/firebase.js"></script>
-	<script src="bower_components/angularfire/angularfire.min.js"></script>
+	<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
 
 	<script src="js/app.js"></script>
 	<script src="js/config.js"></script>

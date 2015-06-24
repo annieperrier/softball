@@ -1,7 +1,7 @@
 var softballServices = angular.module('softballServices', ['firebase', 'softballConfig', 'softballFilters']);
 
-softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
-	function(CONFIG, $firebase, $q){
+softballServices.factory('Players', ['CONFIG', '$firebaseObject', '$q',
+	function(CONFIG, $firebaseObject, $q){
 		var dataFactory = {};
 
 		dataFactory.getPlayersWithColors = function()
@@ -9,15 +9,13 @@ softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/players");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var players = {};
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-
+			data.$loaded().then(function() {
 				dataFactory.getColors().then(function(colors) {
 					//console.log(colors);
-					keys.forEach(function(key, i) {
+					angular.forEach(data, function(i, key) {
 						players[data[key].name] = data[key];
 						colors.forEach(function(col, j) {
 							if (data[key].name == colors[j].name)
@@ -40,12 +38,11 @@ softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/players");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var players = {};
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-				keys.forEach(function(key, i) {
+			data.$loaded().then(function() {
+				angular.forEach(data, function(i, key) {
 					players[data[key].name] = data[key];
 				});
 				deferred.resolve(players);
@@ -59,12 +56,11 @@ softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/players");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var player = {};
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-				keys.forEach(function(key, i) {
+			data.$loaded().then(function() {
+				angular.forEach(data, function(i, key) {
 					if (name == data[key].name)
 						player = data[key];
 				});
@@ -78,8 +74,8 @@ softballServices.factory('Players', ['CONFIG', '$firebase', '$q',
 }]);
 
 /** not used yet, will allow users to change their own colors **/
-softballServices.factory('Colors', ['CONFIG', '$firebase', '$q',
-	function(CONFIG, $firebase, $q){
+softballServices.factory('Colors', ['CONFIG', '$firebaseObject', '$q',
+	function(CONFIG, $firebaseObject, $q){
 		var dataFactory = {};
 
 		dataFactory.getColors = function()
@@ -87,12 +83,11 @@ softballServices.factory('Colors', ['CONFIG', '$firebase', '$q',
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/colors");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var colors = [];
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-				keys.forEach(function(key, i) {
+			data.$loaded().then(function() {
+				angular.forEach(data, function(i, key) {
 					colors.push(data[key]);
 				});
 				deferred.resolve(colors);
@@ -106,12 +101,11 @@ softballServices.factory('Colors', ['CONFIG', '$firebase', '$q',
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/colors");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var color = {};
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-				keys.forEach(function(key, i) {
+			data.$loaded().then(function() {
+				angular.forEach(data, function(i, key) {
 					if (name == data[key].name)
 						color = data[key];
 				});
@@ -124,8 +118,8 @@ softballServices.factory('Colors', ['CONFIG', '$firebase', '$q',
 		return dataFactory;
 }]);
 
-softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDisplayFilter', 'yearSeasonGameDisplayFilter', 'seasonIconFilter', 
-	function(CONFIG, $firebase, $q, yearSeasonDisplayFilter, yearSeasonGameDisplayFilter, seasonIconFilter){
+softballServices.factory('Games', ['CONFIG', '$firebaseObject', '$q', 'yearSeasonDisplayFilter', 'yearSeasonGameDisplayFilter', 'seasonIconFilter', 
+	function(CONFIG, $firebaseObject, $q, yearSeasonDisplayFilter, yearSeasonGameDisplayFilter, seasonIconFilter){
 		var dataFactory = {};
 
 		dataFactory.getYears = function(currentyear)
@@ -133,12 +127,11 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var years = {};
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-				keys.forEach(function(key, i) {
+			data.$loaded().then(function() {
+				angular.forEach(data, function(i, key) {
 					if (!years[data[key].year])
 						years[data[key].year] = {};
 					years[data[key].year].year = data[key].year;
@@ -178,12 +171,11 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var years = {};
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-				keys.forEach(function(key, i) {
+			data.$loaded().then(function() {
+				angular.forEach(data, function(i, key) {
 					if (!years[data[key].year])
 						years[data[key].year] = {};
 					years[data[key].year].season = data[key].season;
@@ -199,14 +191,12 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
-			//var games = {};
 			var games = [];
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
+			data.$loaded().then(function() {
 				var skip = false;
-				keys.forEach(function(key, i) {
+				angular.forEach(data, function(i, key) {
 					skip = false;
 					if ((year && year != data[key].year) ||
 					   (season && season != data[key].season))
@@ -230,12 +220,11 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
+			data.$loaded().then(function() {
 				var curgame = {};
-				keys.forEach(function(key, i) {
+				angular.forEach(data, function(i, key) {
 					skip = false;
 					if ((year && year == data[key].year) &&
 						(season && season == data[key].season) &&
@@ -259,14 +248,13 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var gamestats = [];
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
+			data.$loaded().then(function() {
 				var win = 0, lose = 0, tie = 0, newg = 0;
 				var skip = false;
-				keys.forEach(function(key, i) {
+				angular.forEach(data, function(i, key) {
 					skip = false;
 					if ((year && year != data[key].year) ||
 					   (season && season != data[key].season))
@@ -275,11 +263,11 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 					{
 						if ("new" == data[key].status)
 							newg++;
-						else if (data[key].scoreus > data[key].scorethem)
+						else if ("win" == data[key].result)
 							win++;
-						else if (data[key].scoreus < data[key].scorethem)
+						else if ("lose" == data[key].result)
 							lose++;
-						else if (data[key].scoreus == data[key].scorethem)
+						else if ("tie" == data[key].result)
 							tie++;
 					}
 				});
@@ -302,17 +290,16 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var gamedata = {};
 			var gamelabels = [];
 			var scoreus = [];
 			var scorethem = [];
 
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
+			data.$loaded().then(function() {
 				var skip = false;
-				keys.forEach(function(key, i) {
+				angular.forEach(data, function(i, key) {
 					skip = false;
 					if ((year && year != data[key].year) ||
 					   (season && season != data[key].season))
@@ -357,8 +344,8 @@ softballServices.factory('Games', ['CONFIG', '$firebase', '$q', 'yearSeasonDispl
 		return dataFactory;
 }]);
 
-softballServices.factory('Snacks', ['CONFIG', '$firebase', '$q',
-	function(CONFIG, $firebase, $q){
+softballServices.factory('Snacks', ['CONFIG', '$firebaseObject', '$q',
+	function(CONFIG, $firebaseObject, $q){
 		var dataFactory = {};
 		
 		dataFactory.getSnacks = function(year, season)
@@ -367,20 +354,23 @@ softballServices.factory('Snacks', ['CONFIG', '$firebase', '$q',
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/snacks/");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			// pre-process each data entry to group each person's total
 			var snacks = [];
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
+			data.$loaded().then(function() {
 				var skip = false;
-				keys.forEach(function(key, i) {
+				angular.forEach(data, function(i, key) {
 					skip = false;
 					if ((year && year != data[key].year) ||
 					   (season && season != data[key].season))
 						skip = true;
 					if (!skip)
+					{
+						// build the gameid
+						data[key].gameid = data[key].year + '-' + data[key].season + '-' + data[key].game;
 						snacks.push(data[key]);
+					}
 				});
 
 				deferred.resolve(snacks);
@@ -394,8 +384,8 @@ softballServices.factory('Snacks', ['CONFIG', '$firebase', '$q',
 
 // FIELDING ///////////////////////////////////////////////////////////////////
 
-softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players', 'yearSeasonGameDisplayFilter',
-	function(CONFIG, $firebase, $q, Players, yearSeasonGameDisplayFilter){
+softballServices.factory('FieldingTeam', ['CONFIG', '$firebaseObject', '$q', 'Players', 'yearSeasonGameDisplayFilter',
+	function(CONFIG, $firebaseObject, $q, Players, yearSeasonGameDisplayFilter){
 		var dataFactory = {};
 
 		dataFactory.getHeadings = function()
@@ -415,14 +405,13 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 
 			Players.getPlayers().then(function(players) {
 				var dRef = new Firebase(CONFIG.BASE_URL+"/fielding");
-				var data = $firebase(dRef);
+				var data = $firebaseObject(dRef);
 
 				// pre-process each data entry to group each person's total
 				var fieldtotal = {};
-				data.$on("loaded", function() {
-					var keys = data.$getIndex();
+				data.$loaded().then(function() {
 					var name = null;
-					keys.forEach(function(key, i) {
+					angular.forEach(data, function(i, key) {
 						name = data[key].name;
 						skip = false;
 						if ((year && year != data[key].year) ||
@@ -450,7 +439,12 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 										  (data[key].assists ? data[key].assists : 0);
 						}
 					});
-					deferred.resolve(fieldtotal);
+
+					var res = [];
+					angular.forEach(fieldtotal, function(val, key) {
+						res.push(val);
+					});
+					deferred.resolve(res);
 				});
 			});
 
@@ -464,7 +458,7 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 
 			Players.getPlayers().then(function(players) {
 				var dRef = new Firebase(CONFIG.BASE_URL+"/fielding");
-				var data = $firebase(dRef);
+				var data = $firebaseObject(dRef);
 
 				var allfielding = {};
 				allfielding.outs = {};
@@ -479,12 +473,11 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 				topfielding.assists[1] = [];
 				topfielding.assists[2] = [];
 				var skip = false;
-				data.$on("loaded", function() {
-					var keys = data.$getIndex();
+				data.$loaded().then(function() {
 
 					// pre-process each data entry to group each person's total
 					var name = null;
-					keys.forEach(function(key, i) {
+					angular.forEach(data, function(i, key) {
 						name = data[key].name;
 						skip = false;
 						if ((year && year != data[key].year) ||
@@ -510,6 +503,44 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 					});
 					//console.log(allfielding);
 
+					// function to process each fielding info
+					var fieldingfn = function(i, key) {
+						// need this below format to use variable as object keyname
+						tmpentry = {};
+						tmpentry.name = key;
+						tmpentry[f] = allfielding[f][key];
+						// set first one
+						if (!topfielding[f][0])
+						{
+							topfielding[f][0].push(tmpentry);
+						}
+						else
+						{
+							for (var j = 0; j < cnt; j++)
+							{
+								if (!topfielding[f][j][0] || (topfielding[f][j][0] && (allfielding[f][key] == topfielding[f][j][0][f])))
+								{
+									//console.log("Adding entry to pos: "+j+" name: "+key+" val: "+i);
+									topfielding[f][j].push(tmpentry);
+									j = cnt;
+								}
+								else if (allfielding[f][key] > topfielding[f][j][0][f])
+								{
+									//console.log("Insert entry to pos: "+j+" name: "+key+" val: "+i);
+									// shift all items below down one level
+									for (var k = cnt-1; k > j; k--)
+									{
+										//console.log("Shifting entry at pos: "+k+" with pos: "+k-1);
+										topfielding[f][k] = topfielding[f][k-1];
+									}
+									topfielding[f][j] = [];
+									topfielding[f][j].push(tmpentry);
+									j = cnt;
+								}
+							}
+						}
+					};
+
 					var cnt = 3;
 					var ftypes = ['outs', 'assists'];
 					var tmpentry = {};
@@ -517,42 +548,7 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 					{
 						f = ftypes[n];
 						//console.log("running for type:"+f);
-						angular.forEach(allfielding[f], function(i, key) {
-							// need this below format to use variable as object keyname
-							tmpentry = {};
-							tmpentry.name = key;
-							tmpentry[f] = allfielding[f][key];
-							// set first one
-							if (!topfielding[f][0])
-							{
-								topfielding[f][0].push(tmpentry);
-							}
-							else
-							{
-								for (var j = 0; j < cnt; j++)
-								{
-									if (!topfielding[f][j][0] || (topfielding[f][j][0] && (allfielding[f][key] == topfielding[f][j][0][f])))
-									{
-										//console.log("Adding entry to pos: "+j+" name: "+key+" val: "+i);
-										topfielding[f][j].push(tmpentry);
-										j = cnt;
-									}
-									else if (allfielding[f][key] > topfielding[f][j][0][f])
-									{
-										//console.log("Insert entry to pos: "+j+" name: "+key+" val: "+i);
-										// shift all items below down one level
-										for (var k = cnt-1; k > j; k--)
-										{
-											//console.log("Shifting entry at pos: "+k+" with pos: "+k-1);
-											topfielding[f][k] = topfielding[f][k-1];
-										}
-										topfielding[f][j] = [];
-										topfielding[f][j].push(tmpentry);
-										j = cnt;
-									}
-								}
-							}
-						});
+						angular.forEach(allfielding[f], fieldingfn);
 					}
 					//console.log(topfielding);
 					deferred.resolve(topfielding);
@@ -564,8 +560,8 @@ softballServices.factory('FieldingTeam', ['CONFIG', '$firebase', '$q', 'Players'
 		return dataFactory;
 }]);
 
-softballServices.factory('Fielding', ['CONFIG', '$firebase', '$q', 'yearSeasonGameDisplayFilter', 
-	function(CONFIG, $firebase, $q, yearSeasonGameDisplayFilter){
+softballServices.factory('Fielding', ['CONFIG', '$firebaseObject', '$q', 'yearSeasonGameDisplayFilter',
+	function(CONFIG, $firebaseObject, $q, yearSeasonGameDisplayFilter){
 		var dataFactory = {};
 
 		dataFactory.getHeadings = function(typename)
@@ -594,12 +590,11 @@ softballServices.factory('Fielding', ['CONFIG', '$firebase', '$q', 'yearSeasonGa
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/fielding");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var fielding = [];
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-				keys.forEach(function(key, i) {
+			data.$loaded().then(function() {
+				angular.forEach(data, function(i, key) {
 					skip = false;
 					if ((year && year != data[key].year) ||
 					   (season && season != data[key].season) ||
@@ -627,8 +622,8 @@ softballServices.factory('Fielding', ['CONFIG', '$firebase', '$q', 'yearSeasonGa
 
 // BATTING ////////////////////////////////////////////////////////////////////
 
-softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players', '$filter', 'avgFilter', 'slugFilter', 'xfactorFilter', 'baseDisplayFilter', 
-	function(CONFIG, $firebase, $q, Players, $filter, avgFilter, slugFilter, xfactorFilter, baseDisplayFilter){
+softballServices.factory('BattingTeam', ['CONFIG', '$firebaseObject', '$q', 'Players', '$filter', 'avgFilter', 'slugFilter', 'xfactorFilter', 'baseDisplayFilter', 
+	function(CONFIG, $firebaseObject, $q, Players, $filter, avgFilter, slugFilter, xfactorFilter, baseDisplayFilter){
 		var dataFactory = {};
 
 		dataFactory.getHeadings = function()
@@ -656,16 +651,14 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 
 			Players.getPlayers().then(function(players) {
 				var dRef = new Firebase(CONFIG.BASE_URL+"/batting");
-				var data = $firebase(dRef);
+				var data = $firebaseObject(dRef);
 
 				var battotal = {};
-				data.$on("loaded", function() {
-					var keys = data.$getIndex();
-
+				data.$loaded().then(function() {
 					// pre-process each data entry to group each person's total
 					var name = null;
 					var skip = false;
-					keys.forEach(function(key, i) {
+					angular.forEach(data, function(i, key) {
 						name = data[key].name;
 						skip = false;
 						if ((year && year != data[key].year) ||
@@ -718,7 +711,11 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 													battotal[key].GP));
 					});
 
-					deferred.resolve(battotal);
+					var res = [];
+					angular.forEach(battotal, function(val, key) {
+						res.push(val);
+					});
+					deferred.resolve(res);
 				});
 			});
 			return deferred.promise;
@@ -766,17 +763,15 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 
 			Players.getPlayers().then(function(players) {
 				var dRef = new Firebase(CONFIG.BASE_URL+"/batting");
-				var data = $firebase(dRef);
+				var data = $firebaseObject(dRef);
 
 				var playertotal = {};
 				var itemtotal = [];
-				data.$on("loaded", function() {
-					var keys = data.$getIndex();
-
+				data.$loaded().then(function() {
 					// pre-process each data entry to group each person's total
 					var name = null;
 					var skip = false;
-					keys.forEach(function(key, i) {
+					angular.forEach(data, function(i, key) {
 						name = data[key].name;
 						skip = false;
 						if ((year && year != data[key].year) ||
@@ -800,8 +795,8 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 						}
 					});
 
-					angular.forEach(playertotal, function(i, key) {
-						itemtotal.push(playertotal[key]);
+					angular.forEach(playertotal, function(val, key) {
+						itemtotal.push(val);
 					});
 					//console.log(itemtotal);
 					deferred.resolve(itemtotal);
@@ -818,7 +813,7 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 
 			Players.getPlayers().then(function(players) {
 				var dRef = new Firebase(CONFIG.BASE_URL+"/batting");
-				var data = $firebase(dRef);
+				var data = $firebaseObject(dRef);
 
 				var itemlisttotal = {};
 				// build list of items
@@ -833,13 +828,11 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 					};
 				}
 				var itemtotal = [];
-				data.$on("loaded", function() {
-					var keys = data.$getIndex();
-
+				data.$loaded().then(function() {
 					// pre-process each data entry to group each person's total
 					var name = null;
 					var skip = false;
-					keys.forEach(function(key, i) {
+					angular.forEach(data, function(i, key) {
 						name = data[key].name;
 						skip = false;
 						if ((year && year != data[key].year) ||
@@ -855,8 +848,8 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 						}
 					});
 
-					angular.forEach(itemlisttotal, function(i, key) {
-						itemtotal.push(itemlisttotal[key]);
+					angular.forEach(itemlisttotal, function(val, key) {
+						itemtotal.push(val);
 					});
 					//console.log(itemtotal);
 					deferred.resolve(itemtotal);
@@ -872,7 +865,7 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 
 			Players.getPlayers().then(function(players) {
 				var dRef = new Firebase(CONFIG.BASE_URL+"/batting");
-				var data = $firebase(dRef);
+				var data = $firebaseObject(dRef);
 
 				var allxfactor = {};
 				var allgamesplayed = {};
@@ -880,13 +873,11 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 				topxfactor[0] = [];
 				topxfactor[1] = [];
 				topxfactor[2] = [];
-				data.$on("loaded", function() {
-					var keys = data.$getIndex();
-
+				data.$loaded().then(function() {
 					// pre-process each data entry to group each person's total
 					var name = null;
 					var skip = false;
-					keys.forEach(function(key, i) {
+					angular.forEach(data, function(i, key) {
 						name = data[key].name;
 						skip = false;
 						if ((year && year != data[key].year) ||
@@ -950,8 +941,8 @@ softballServices.factory('BattingTeam', ['CONFIG', '$firebase', '$q', 'Players',
 		return dataFactory;
 }]);
 
-softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'avgFilter', 'slugFilter', 'xfactorFilter', 'yearSeasonGameDisplayFilter', 
-	function(CONFIG, $firebase, $q, Players, avgFilter, slugFilter, xfactorFilter, yearSeasonGameDisplayFilter){
+softballServices.factory('Batting', ['CONFIG', '$firebaseObject', '$q', 'Players', 'avgFilter', 'slugFilter', 'xfactorFilter', 'yearSeasonGameDisplayFilter', 
+	function(CONFIG, $firebaseObject, $q, Players, avgFilter, slugFilter, xfactorFilter, yearSeasonGameDisplayFilter){
 		var dataFactory = {};
 
 		dataFactory.getHeadings = function(typename)
@@ -996,14 +987,12 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 			var deferred = $q.defer();
 
 			var dRef = new Firebase(CONFIG.BASE_URL+"/batting");
-			var data = $firebase(dRef);
+			var data = $firebaseObject(dRef);
 
 			var batting = [];
-			data.$on("loaded", function() {
-				var keys = data.$getIndex();
-
+			data.$loaded().then(function() {
 				var skip = false;
-				keys.forEach(function(key, i) {
+				angular.forEach(data, function(i, key) {
 					skip = false;
 					if ((year && year != data[key].year) ||
 					   (season && season != data[key].season) ||
@@ -1046,21 +1035,19 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 
 			Players.getPlayers().then(function(players) {
 				var dRef = new Firebase(CONFIG.BASE_URL+"/batting");
-				var data = $firebase(dRef);
+				var data = $firebaseObject(dRef);
 
 				var allxfactor = {};
 				var topxfactor = [];
 				topxfactor[0] = [];
 				topxfactor[1] = [];
 				topxfactor[2] = [];
-				data.$on("loaded", function() {
-					var keys = data.$getIndex();
-
+				data.$loaded().then(function() {
 					// pre-process each data entry to group each top score
 					var name = null;
 					var skip = false;
 					var xf = null;
-					keys.forEach(function(key, i) {
+					angular.forEach(data, function(i, key) {
 						name = data[key].name;
 						skip = false;
 						if ((year && year != data[key].year) ||
@@ -1119,14 +1106,17 @@ softballServices.factory('Batting', ['CONFIG', '$firebase', '$q', 'Players', 'av
 					});
 					//console.log(topxfactor);
 
+					// function to process each xfactor entry
+					var xfactorfn = function(i, key) {
+						res.push(topxfactor[m].names[key]);
+					};
+
 					// convert names list from object to array
 					for (var m = 0; m < cnt; m++)
 					{
 						var res = [];
 						// ignore nested function in loop error
-						angular.forEach(topxfactor[m].names, function(i, key) {
-							res.push(topxfactor[m].names[key]);
-						});
+						angular.forEach(topxfactor[m].names, xfactorfn);
 						topxfactor[m].names = res;
 					}
 					//console.log(topxfactor);
