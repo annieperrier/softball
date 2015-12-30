@@ -1,6 +1,7 @@
 var softballConfig = angular.module('softballConfig', []);
 
 softballConfig.constant('CONFIG', {
+		'AUTH_URL': 'https://terrorbytes.firebaseio.com',
 		'BASE_URL': 'https://terrorbytes.firebaseio.com/dev/',
 		'COLORS': {
 			'B1': {

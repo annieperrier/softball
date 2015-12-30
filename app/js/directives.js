@@ -205,3 +205,83 @@ softballDirectives.directive('chartLine', ['$parse',
 
 	return directiveDefinitionObject;
 }]);
+
+
+softballDirectives.directive('messaging', ['$timeout', 'Messaging',
+	function ($timeout, Messaging) {
+
+	var directiveDefinitionObject = {
+		restrict: 'E',
+		templateUrl: 'messaging.html',
+		replace: true,
+		scope: {},
+		link: function (scope, element, attrs) {
+
+			var timeoutId;
+
+			console.log('Messaging setup');
+
+			element.on('$destroy', function() {
+				cancelTimeout();
+			});
+
+
+			scope.$on("messagingSet", function (event, message) {
+				console.log('Messaging set called');
+
+				cancelTimeout();
+
+				scope.msg = Messaging.msg;
+
+				// auto-close message unless specified
+				if (!scope.msg.keepopen && !timeoutId)
+				{
+					timeoutId = $timeout(function() {
+						console.log('Messaging timeout complete');
+						scope.clearMsg();
+					}, 5000);
+				}
+			});
+			scope.$on("messagingClear", function (event, message) {
+				console.log('Messaging clear called');
+				scope.clearMsg();
+			});
+
+			scope.clearMsg = function()
+			{
+				console.log('Messaging clear');
+				cancelTimeout();
+				Messaging.resetMsg();
+				scope.msg = Messaging.msg;
+			};
+
+			scope.confirmYes = function()
+			{
+				console.log('Messaging confirmYes');
+				if(scope.msg.callbackyes)
+					scope.msg.callbackyes();
+				scope.clearMsg();
+			};
+
+			scope.confirmNo = function()
+			{
+				console.log('Messaging confirmNo');
+				if(scope.msg.callbackno)
+					scope.msg.callbackno();
+				scope.clearMsg();
+			};
+
+			function cancelTimeout()
+			{
+				if (timeoutId)
+				{
+					$timeout.cancel(timeoutId);
+					timeoutId = null;
+				}
+
+			}
+		}
+	};
+
+	return directiveDefinitionObject;
+}]);

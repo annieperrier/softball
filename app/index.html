@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/style-icomoon.css">
 	<link rel="stylesheet" href="css/style.css" />
 </head>
-<body ng-app="softballApp">
+<body ng-controller="AppCtrl">
 
 	<div class="navbar navbar-default navbar-static-top navbar-inverse" role="navigation">
 		<div class="container">
@@ -35,7 +35,7 @@
 		</div>
 	</div>
 
-	<div ui-view class="masterView"></div>
+	<div ui-view="masterview" class="masterView"></div>
 
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- templates start below -->
@@ -70,10 +70,304 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li ui-sref-active="active">
-					<a ui-sref=".info"><span class="fa fa-info"/> Info</a>
+					<a ui-sref=".info" title="Info"><span class="fa fa-info"/></a>
+				</li>
+				<li ui-sref-active="active" ng-if="!loggedIn">
+					<a ui-sref=".admin.login" title="Admin Login"><span class="fa fa-cogs"/></a>
+				</li>
+				<li ng-class="{active:$state.includes('main.admin.**')}" ng-if="loggedIn">
+					<a href="javascript: void(0);" class="dropdown-toggle" data-toggle="dropdown" title="Admin Tasks"><span class="fa fa-cogs"/></a>
+					<ul class="dropdown-menu">
+						<li ng-class="{active:$state.includes('main.admin.games.**')}" ><a ui-sref=".admin.games.add">Games</a></li>
+						<li class="disabled" ui-sref-active="active"><a ui-sref=".admin.batting.add">Batting</a></li>
+						<li class="disabled" ui-sref-active="active"><a ui-sref=".admin.fielding.add">Fielding</a></li>
+						<li class="disabled" ui-sref-active="active"><a ui-sref=".admin.snacks.add">Snacks</a></li>
+						<li class="disabled" ui-sref-active="active"><a ui-sref=".admin.players.add">Players</a></li>
+						<li role="separator" class="divider"></li>
+						<li ui-sref-active="active"><a href="javascript: void(0);" ng-click="logout()" title="{{user.password.email}}"><span class="fa fa-sign-out"/> Logout ({{user.password.email}})</a></li>
+					</ul>
 				</li>
 			</ul>
 		</div>
+	</script>
+
+	<script type="text/ng-template" id="messaging.html">
+		<div class="messageArea">
+			<div ng-if="msg && msg.type && 'error' == msg.type" class="alert alert-danger" role="alert">
+				<button type="button" class="close" ng-click="clearMsg()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<strong>Error</strong> {{msg.text}}
+			</div>
+			<div ng-if="msg && msg.type && 'success' == msg.type" class="alert alert-success" role="alert">
+				<button type="button" class="close" ng-click="clearMsg()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<strong>Success</strong> {{msg.text}}
+			</div>
+			<div ng-if="msg && msg.type && 'confirm' == msg.type" class="alert alert-warning" role="alert">
+				<div class="clear">
+					<strong>Confirm</strong> {{msg.text}}
+				</div>
+				<div class="text-right alert-buttons">
+					<a href="javascript: void(0);" type="button" class="alert-link" ng-click="confirmNo()">No</a>
+					<a href="javascript: void(0);" type="button" class="alert-link" ng-click="confirmYes()">Yes</a>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="admin.html">
+		<messaging></messaging>
+		<div ui-view></div>
+	</script>
+
+	<script type="text/ng-template" id="admin.login.html">
+		<div class="container topspacer">
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<form ng-submit="login(adminemail, adminpassword);">
+					<div class="form-group">
+						<label for="adminEmail">Email Address</label>
+						<input type="email" class="form-control" id="adminEmail" placeholder="user@domain.com" ng-model="adminemail">
+					</div>
+					<div class="form-group">
+						<label for="adminPassword">Password</label>
+						<input type="password" class="form-control" id="adminPassword" placeholder="Password" ng-model="adminpassword">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block">Log In</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="admin.games.html">
+		<div class="container topspacer">
+		<div class="row">
+			<div class="col-sm-3">
+				<ul class="nav nav-pills nav-stacked">
+					<li role="presentation" ui-sref-active="active"><a ui-sref=".add">Add Game</a></li>
+					<li role="presentation" ui-sref-active="active"><a ui-sref=".edit">Edit Game</a></li>
+					<li role="presentation" ui-sref-active="active"><a ui-sref=".delete">Delete Game</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9">
+				<div ui-view></div>
+
+			</div>
+		</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="admin.games.add.html">
+		<h3>Add Game</h3>
+		<form class="form-horizontal" ng-submit="submitAddGame()">
+			<div class="form-group">
+				<label for="year" class="col-sm-3 control-label">Year</label>
+				<div class="col-sm-3">
+					<select class="form-control" id="year"
+						ng-model="sel.year"
+						ng-options="val.year for (key, val) in static.yearseason"
+						>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="season" class="col-sm-3 control-label">Season</label>
+				<div class="col-sm-3">
+					<select class="form-control" id="season"
+						ng-model="sel.season"
+						ng-options="val as val.displayname for (key, val) in static.seasons"
+						>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+			<label for="game" class="col-sm-3 control-label">Game</label>
+				<div class="col-sm-2">
+					<input type="number" class="form-control" id="game" ng-model="gameobj.game">
+				</div>
+			</div>
+			<div ng-include="'admin.gameobj.fields.html'"></div>
+			<div class="form-group">
+				<div class="col-sm-3">
+					<button type="button" class="btn btn-default pull-right" ng-click="resetAddGame();">Reset</button>
+				</div>
+				<div class="col-sm-3">
+					<button type="submit" class="btn btn-primary">Add Game</button>
+				</div>
+			</div>
+		</form>
+	</script>
+
+	<script type="text/ng-template" id="admin.games.edit.html">
+		<h3>Edit Game</h3>
+		<form class="form-horizontal" ng-submit="submitEditGame()">
+			<div class="form-group">
+				<label for="gamelistyear" class="col-sm-3 control-label">Year</label>
+				<div class="col-sm-3">
+					<select class="form-control" id="gamelistyear"
+						ng-model="sel.year"
+						ng-options="val.year for (key, val) in static.yearseason"
+						ng-change="changeGames()"
+					>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="gamelistseason" class="col-sm-3 control-label">Season</label>
+				<div class="col-sm-3">
+					<select class="form-control" id="season"
+						ng-model="sel.season"
+						ng-options="val as val.displayname for (key, val) in static.seasons"
+						ng-change="changeGames()"
+					>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="curgame" class="col-sm-3 control-label">Game</label>
+				<div class="col-sm-5">
+					<select class="form-control" id="curgame"
+						ng-model="sel.gameObj"
+						ng-options="val | gameDisplayName for val in static.games track by val.gameid"
+						ng-change="changeGameDetails()"
+					>
+					</select>
+				</div>
+			</div>
+		</form>
+		<hr/>
+
+		<div ng-if="sel.gameObj">
+		<form class="form-horizontal" ng-submit="submitEditGame()">
+			<div ng-include="'admin.gameobj.fields.html'"></div>
+			<div class="form-group">
+				<div class="col-sm-3">
+					<button type="button" class="btn btn-default pull-right" ng-click="resetEditGame();">Reset</button>
+				</div>
+				<div class="col-sm-3">
+					<button type="submit" class="btn btn-primary">Save Game</button>
+				</div>
+			</div>
+		</form>
+		</div>
+		<div ng-if="!sel.gameObj">
+			<p class="text-center"><i class="fa fa-3x fa-cog fa-spin"></i></p>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="admin.games.delete.html">
+		<h3>Delete Game</h3>
+		<form class="form-horizontal" ng-submit="submitDeleteGame()">
+			<div class="form-group">
+				<label for="gamelistyear" class="col-sm-3 control-label">Year</label>
+				<div class="col-sm-3">
+					<select class="form-control" id="gamelistyear"
+						ng-model="sel.year"
+						ng-options="val.year for (key, val) in static.yearseason"
+						ng-change="changeGames()"
+					>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="gamelistseason" class="col-sm-3 control-label">Season</label>
+				<div class="col-sm-3">
+					<select class="form-control" id="season"
+						ng-model="sel.season"
+						ng-options="val as val.displayname for (key, val) in static.seasons"
+						ng-change="changeGames()"
+					>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="curgame" class="col-sm-3 control-label">Game</label>
+				<div class="col-sm-5">
+					<select class="form-control" id="curgame"
+						ng-model="sel.gameObj"
+						ng-options="val | gameDisplayName for val in static.games track by val.gameid"
+					>
+					</select>
+				</div>
+			</div>
+		</form>
+
+		<div ng-if="sel.gameObj">
+		<form class="form-horizontal" ng-submit="submitDeleteGame()">
+<!--
+			<div class="form-group">
+				<label for="delbatting" class="col-sm-3 control-label">Delete Batting</label>
+				<div class="col-sm-4">
+					<div class="checkbox"><label><input type="checkbox" id="delbatting" ng-model="gameobj.delbatting" /></label></div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="delfielding" class="col-sm-3 control-label">Delete Fielding</label>
+				<div class="col-sm-4">
+					<div class="checkbox"><label><input type="checkbox" id="delfielding" ng-model="gameobj.delfielding" /></label></div>
+				</div>
+			</div>
+-->
+			<div class="form-group">
+				<div class="col-sm-3 col-sm-offset-3">
+					<button type="submit" class="btn btn-danger">Delete Game</button>
+				</div>
+			</div>
+		</form>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="admin.gameobj.fields.html">
+			<div class="form-group">
+				<label for="date" class="col-sm-3 control-label">Date</label>
+				<div class="col-sm-4">
+					<input type="date" class="form-control" id="date" placeholder="Date" ng-model="sel.dateObj">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="status" class="col-sm-3 control-label">Status</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="status" ng-model="gameobj.status">
+						<option value="played">Played</option>
+						<option value="default">Default</option>
+						<option value="rainedout">Rained Out</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="type" class="col-sm-3 control-label">Type</label>
+				<div class="col-sm-4">
+					<select class="form-control" id="type" ng-model="gameobj.type">
+						<option value="regular">Regular</option>
+						<option value="playoff1">Playoff 1</option>
+						<option value="playoff2">Playoff 2</option>
+						<option value="rescheduled">Rescheduled</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="scoreus" class="col-sm-3 control-label">Score Us</label>
+				<div class="col-sm-2">
+					<input type="number" class="form-control" id="scoreus" ng-model="gameobj.scoreus">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="scorethem" class="col-sm-3 control-label">Score Them</label>
+				<div class="col-sm-2">
+					<input type="number" class="form-control" id="scorethem" ng-model="gameobj.scorethem">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="result" class="col-sm-3 control-label">Result</label>
+				<div class="col-sm-3">
+					<select class="form-control" id="result" ng-model="gameobj.result">
+						<option value="win">Win</option>
+						<option value="lose">Lose</option>
+						<option value="tie">Tie</option>
+					</select>
+				</div>
+			</div>
 	</script>
 
 	<script type="text/ng-template" id="info.html">
@@ -216,7 +510,7 @@
 					ng-model="curgame"
 					ng-change="changeGame(curgame)"
 					ng-init="curgameid=$curgame"
-					ng-options="val.displayname for val in games track by val.gameid"
+					ng-options="val | gameDisplayName for val in games track by val.gameid"
 					>
 				</select>
 				</span>
@@ -668,7 +962,7 @@
 	<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-		<h3><span class="fa icon-bat"/> Batting {{game.displayname}} ({{game.date}})
+		<h3><span class="fa icon-bat"/> Batting {{game | gameDisplayName}} ({{game.date}})
 			<span ng-class="{
 					'label label-success':
 						game.result == 'win' || game.result == 'defaultthem'
@@ -841,7 +1135,7 @@
 	<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-		<h3><span class="fa icon-field"/> Fielding  {{game.displayname}} ({{game.date}}) 
+		<h3><span class="fa icon-field"/> Fielding  {{game | gameDisplayName}} ({{game.date}})
 			<span ng-class="{
 					'label label-success':
 						game.result == 'win' || game.result == 'defaultthem'
@@ -952,6 +1246,7 @@
 	<script src="js/app.js"></script>
 	<script src="js/config.js"></script>
 	<script src="js/controllers.js"></script>
+	<script src="js/admin-controllers.js"></script>
 	<script src="js/filters.js"></script>
 	<script src="js/services.js"></script>
 	<script src="js/directives.js"></script>

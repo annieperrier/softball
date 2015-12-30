@@ -1,5 +1,6 @@
 {
 	"2014-2-1":{
+		"gameid": "2014-2-1",
 		"year": 2014,
 		"season": 2,
 		"game": 1,
@@ -7,6 +8,7 @@
 		"snack": "Gummy Candies and Beer Nuts"
 	},
 	"2014-2-2":{
+		"gameid": "2014-2-2",
 		"year": 2014,
 		"season": 2,
 		"game": 2,
@@ -14,6 +16,7 @@
 		"snack": "Timbits"
 	},
 	"2014-2-3":{
+		"gameid": "2014-2-3",
 		"year": 2014,
 		"season": 2,
 		"game": 3,
@@ -21,6 +24,7 @@
 		"snack": "Rice Krispie Squares and Granola Bars"
 	},
 	"2014-2-4":{
+		"gameid": "2014-2-4",
 		"year": 2014,
 		"season": 2,
 		"game": 4,
@@ -28,6 +32,7 @@
 		"snack": "Sausages and Cheese"
 	},
 	"2014-2-5":{
+		"gameid": "2014-2-5",
 		"year": 2014,
 		"season": 2,
 		"game": 5,
@@ -35,6 +40,7 @@
 		"snack": "Pepperettes, Freezies and Berries"
 	},
 	"2014-2-6":{
+		"gameid": "2014-2-6",
 		"year": 2014,
 		"season": 2,
 		"game": 6,
@@ -42,6 +48,7 @@
 		"snack": "Watermelon and Turkey Sausage"
 	},
 	"2014-2-7":{
+		"gameid": "2014-2-7",
 		"year": 2014,
 		"season": 2,
 		"game": 7,
@@ -49,6 +56,7 @@
 		"snack": "Fruit Tray and Donuts"
 	},
 	"2014-3-1":{
+		"gameid": "2014-3-1",
 		"year": 2014,
 		"season": 3,
 		"game": 1,
@@ -56,6 +64,7 @@
 		"snack": "Frozen Fruit Skewers"
 	},
 	"2014-3-2":{
+		"gameid": "2014-3-2",
 		"year": 2014,
 		"season": 3,
 		"game": 2,
@@ -63,6 +72,7 @@
 		"snack": "Rice Krispie Squares and Granola Bars"
 	},
 	"2014-3-3":{
+		"gameid": "2014-3-3",
 		"year": 2014,
 		"season": 3,
 		"game": 3,
@@ -70,6 +80,7 @@
 		"snack": "Sausages, Cheese and Cherries"
 	},
 	"2014-3-4":{
+		"gameid": "2014-3-4",
 		"year": 2014,
 		"season": 3,
 		"game": 4,
@@ -77,6 +88,7 @@
 		"snack": "Timbits and Cold Drinks"
 	},
 	"2014-3-5":{
+		"gameid": "2014-3-5",
 		"year": 2014,
 		"season": 3,
 		"game": 5,
@@ -84,6 +96,7 @@
 		"snack": "Mini Chocolate Chip Cookies"
 	},
 	"2014-3-6":{
+		"gameid": "2014-3-6",
 		"year": 2014,
 		"season": 3,
 		"game": 6,
@@ -91,6 +104,7 @@
 		"snack": "Timbits"
 	},
 	"2014-3-7":{
+		"gameid": "2014-3-7",
 		"year": 2014,
 		"season": 3,
 		"game": 7,
@@ -98,6 +112,7 @@
 		"snack": "Frozen Grapes and Homemade Cookies"
 	},
 	"2014-3-8":{
+		"gameid": "2014-3-8",
 		"year": 2014,
 		"season": 3,
 		"game": 8,
@@ -105,6 +120,7 @@
 		"snack": ""
 	},
 	"2015-2-1":{
+		"gameid": "2015-2-1",
 		"year": 2015,
 		"season": 2,
 		"game": 1,
@@ -112,6 +128,7 @@
 		"snack": "Mini Birthday Cupcakes"
 	},
 	"2015-2-2":{
+		"gameid": "2015-2-2",
 		"year": 2015,
 		"season": 2,
 		"game": 2,
@@ -119,6 +136,7 @@
 		"snack": "Cheese Cubes and Crackers"
 	},
 	"2015-2-3":{
+		"gameid": "2015-2-3",
 		"year": 2015,
 		"season": 2,
 		"game": 3,
@@ -126,6 +144,7 @@
 		"snack": "Assorted Chips"
 	},
 	"2015-2-4":{
+		"gameid": "2015-2-4",
 		"year": 2015,
 		"season": 2,
 		"game": 4,
@@ -133,6 +152,7 @@
 		"snack": "Rice Krispie Squares"
 	},
 	"2015-2-5":{
+		"gameid": "2015-2-5",
 		"year": 2015,
 		"season": 2,
 		"game": 5,
@@ -140,6 +160,7 @@
 		"snack": "Chocolate Pop-Tarts"
 	},
 	"2015-2-7":{
+		"gameid": "2015-2-7",
 		"year": 2015,
 		"season": 2,
 		"game": 7,
@@ -147,6 +168,7 @@
 		"snack": "Timbits"
 	},
 	"2015-3-2":{
+		"gameid": "2015-3-2",
 		"year": 2015,
 		"season": 3,
 		"game": 2,
@@ -154,6 +176,7 @@
 		"snack": "Freezies"
 	},
 	"2015-3-4":{
+		"gameid": "2015-3-4",
 		"year": 2015,
 		"season": 3,
 		"game": 4,

@@ -18,13 +18,14 @@ softballApp.config(['$stateProvider', '$urlRouterProvider',
 				abstract: true,
 				url: "",
 				views: {
-					'': {
+					// load the master view in top level parent
+					'masterview@': {
 						template: '<div ui-view></div>'
 					},
 					// load nav menu in top level parent
 					'navmenu@': {
 						templateUrl: 'navmenu.html',
-						controller: 'GameListCtrl'
+						controller: 'NavMenuCtrl'
 					}
 				}
 			})
@@ -36,8 +37,127 @@ softballApp.config(['$stateProvider', '$urlRouterProvider',
 						templateUrl: 'info.html'
 					}
 				}
+
 			})
 
+			// ADMIN //////////////////////////////////////////////////////
+
+			.state('main.admin', {
+				abstract: true,
+				url: "/admin",
+				views: {
+					'': {
+						templateUrl: 'admin.html',
+						controller: 'AdminCtrl'
+					}
+				},
+				resolve: {
+					// controller will not be loaded until $waitForAuth resolves
+					// Auth refers to our $firebaseAuth wrapper in the example above
+					"currentAuth": ["Auth", function(Auth) {
+						// $waitForAuth returns a promise so the resolve waits for it to complete
+						return Auth.$waitForAuth();
+					}]
+				}
+			})
+
+			.state('main.admin.login', {
+				url: "/login",
+				views: {
+					'': {
+						templateUrl: 'admin.login.html',
+						controller: 'AdminLoginCtrl'
+					}
+				},
+				params: {
+					msg: {}
+				}
+			})
+
+			.state('main.admin.games', {
+				abstract: true,
+				url: "/games",
+				templateUrl: 'admin.games.html',
+				controller: 'AdminGamesCtrl',
+				resolve: {
+					// controller will not be loaded until $requireAuth resolves
+					// Auth refers to our $firebaseAuth wrapper in the example above
+					"currentAuth": ["Auth", function(Auth) {
+						// $requireAuth returns a promise so the resolve waits for it to complete
+						// If the promise is rejected, it will throw a $stateChangeError (see above)
+						return Auth.$requireAuth();
+					}]
+				},
+				data: {
+					"auth": true
+				}
+			})
+
+			.state('main.admin.games.add', {
+				url: "/add",
+				views: {
+					'': {
+						templateUrl: 'admin.games.add.html',
+						controller: 'AdminGamesAddCtrl'
+					}
+				},
+				resolve: {
+					// controller will not be loaded until $requireAuth resolves
+					// Auth refers to our $firebaseAuth wrapper in the example above
+					"currentAuth": ["Auth", function(Auth) {
+						// $requireAuth returns a promise so the resolve waits for it to complete
+						// If the promise is rejected, it will throw a $stateChangeError (see above)
+						return Auth.$requireAuth();
+					}]
+				},
+				data: {
+					"auth": true
+				}
+			})
+
+			.state('main.admin.games.edit', {
+				url: "/edit",
+				views: {
+					'': {
+						templateUrl: 'admin.games.edit.html',
+						controller: 'AdminGamesEditCtrl'
+					}
+				},
+				resolve: {
+					// controller will not be loaded until $requireAuth resolves
+					// Auth refers to our $firebaseAuth wrapper in the example above
+					"currentAuth": ["Auth", function(Auth) {
+						// $requireAuth returns a promise so the resolve waits for it to complete
+						// If the promise is rejected, it will throw a $stateChangeError (see above)
+						return Auth.$requireAuth();
+					}]
+				},
+				data: {
+					"auth": true
+				}
+			})
+
+			.state('main.admin.games.delete', {
+				url: "/delete",
+				views: {
+					'': {
+						templateUrl: 'admin.games.delete.html',
+						controller: 'AdminGamesDeleteCtrl'
+					}
+				},
+				resolve: {
+					// controller will not be loaded until $requireAuth resolves
+					// Auth refers to our $firebaseAuth wrapper in the example above
+					"currentAuth": ["Auth", function(Auth) {
+						// $requireAuth returns a promise so the resolve waits for it to complete
+						// If the promise is rejected, it will throw a $stateChangeError (see above)
+						return Auth.$requireAuth();
+					}]
+				},
+				data: {
+					"auth": true
+				}
+			})
 			// DASHBOARD //////////////////////////////////////////////////////
 
 			.state('main.dashboard', {
@@ -217,9 +337,42 @@ softballApp.config(['$stateProvider', '$urlRouterProvider',
 }]);
 
 
-softballApp.run(function($rootScope, $state) {
+softballApp.run(['$rootScope', '$state', 'Auth', function($rootScope, $state, Auth) {
 	// have the ui.router state available for setting active tabs for parents
 	// ng-class="{active:$state.includes('season.dashboard')}"
 	$rootScope.$state = $state;
 	//console.log($state);
-});
+
+	// track status of authentication
+	Auth.$onAuth(function(user) {
+		// add the auth firebase object so we can call methods directly
+		$rootScope.auth = Auth;
+
+		$rootScope.loggedIn = !!user;
+		$rootScope.user = user;
+		console.log('Logged in value:', $rootScope.loggedIn, $rootScope.user);
+	});
+
+	$rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
+		console.log('stateChangeStart');
+		console.log(toState);
+
+		if ($rootScope.auth && toState.data && toState.data.auth && !$rootScope.loggedIn)
+		{
+			console.log('Attempting to access restricted page');
+			$state.go("main.admin.login");
+			// prevent completing the transition
+			event.preventDefault();
+		}
+	});
+
+	$rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
+		console.log('stateChangeError');
+		// We can catch the error thrown when the $requireAuth promise is rejected
+		// and redirect the user back to the home page
+		if (error === "AUTH_REQUIRED") {
+			console.log('Not authenticated');
+			$state.go("main.admin.login");
+		}
+	});
+}]);

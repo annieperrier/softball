@@ -1,5 +1,5 @@
 {
-	"2012-2-1":{
+	"2012-2-1": {
 		"year": 2012,
 		"season": 2,
 		"game": 1,
@@ -8,9 +8,10 @@
 		"type": "regular",
 		"scoreus": 13,
 		"scorethem": 21,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2012-2-1"
 	},
-	"2012-2-2":{
+	"2012-2-2": {
 		"year": 2012,
 		"season": 2,
 		"game": 2,
@@ -19,9 +20,10 @@
 		"type": "regular",
 		"scoreus": 6,
 		"scorethem": 16,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2012-2-2"
 	},
-	"2012-2-3":{
+	"2012-2-3": {
 		"year": 2012,
 		"season": 2,
 		"game": 3,
@@ -30,9 +32,10 @@
 		"type": "regular",
 		"scoreus": 13,
 		"scorethem": 14,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2012-2-3"
 	},
-	"2012-2-4":{
+	"2012-2-4": {
 		"year": 2012,
 		"season": 2,
 		"game": 4,
@@ -41,9 +44,10 @@
 		"type": "regular",
 		"scoreus": 11,
 		"scorethem": 11,
-		"result": "tie"
+		"result": "tie",
+		"gameid": "2012-2-4"
 	},
-	"2012-2-5":{
+	"2012-2-5": {
 		"year": 2012,
 		"season": 2,
 		"game": 5,
@@ -52,9 +56,10 @@
 		"type": "regular",
 		"scoreus": 11,
 		"scorethem": 14,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2012-2-5"
 	},
-	"2012-2-6":{
+	"2012-2-6": {
 		"year": 2012,
 		"season": 2,
 		"game": 6,
@@ -63,9 +68,10 @@
 		"type": "playoff1",
 		"scoreus": 14,
 		"scorethem": 9,
-		"result": "win"
+		"result": "win",
+		"gameid": "2012-2-6"
 	},
-	"2012-2-7":{
+	"2012-2-7": {
 		"year": 2012,
 		"season": 2,
 		"game": 7,
@@ -75,9 +81,10 @@
 		"scoreus": 22,
 		"scorethem": 23,
 		"result": "lose",
-		"notes": "We actually scored 26 runs but counted incorrectly during the game and ended early."
+		"notes": "We actually scored 26 runs but counted incorrectly during the game and ended early.",
+		"gameid": "2012-2-7"
 	},
-	"2012-3-1":{
+	"2012-3-1": {
 		"year": 2012,
 		"season": 3,
 		"game": 1,
@@ -86,9 +93,10 @@
 		"type": "regular",
 		"scoreus": 18,
 		"scorethem": 24,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2012-3-1"
 	},
-	"2012-3-2":{
+	"2012-3-2": {
 		"year": 2012,
 		"season": 3,
 		"game": 2,
@@ -97,9 +105,10 @@
 		"type": "regular",
 		"scoreus": 29,
 		"scorethem": 5,
-		"result": "win"
+		"result": "win",
+		"gameid": "2012-3-2"
 	},
-	"2012-3-3":{
+	"2012-3-3": {
 		"year": 2012,
 		"season": 3,
 		"game": 3,
@@ -108,9 +117,10 @@
 		"type": "regular",
 		"scoreus": 15,
 		"scorethem": 14,
-		"result": "win"
+		"result": "win",
+		"gameid": "2012-3-3"
 	},
-	"2012-3-4":{
+	"2012-3-4": {
 		"year": 2012,
 		"season": 3,
 		"game": 4,
@@ -119,9 +129,10 @@
 		"type": "regular",
 		"scoreus": 0,
 		"scorethem": 0,
-		"result": "win"
+		"result": "win",
+		"gameid": "2012-3-4"
 	},
-	"2012-3-5":{
+	"2012-3-5": {
 		"year": 2012,
 		"season": 3,
 		"game": 5,
@@ -130,9 +141,10 @@
 		"type": "regular",
 		"scoreus": 9,
 		"scorethem": 6,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2012-3-5"
 	},
-	"2012-3-6":{
+	"2012-3-6": {
 		"year": 2012,
 		"season": 3,
 		"game": 6,
@@ -141,9 +153,10 @@
 		"type": "regular",
 		"scoreus": 11,
 		"scorethem": 16,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2012-3-6"
 	},
-	"2012-3-7":{
+	"2012-3-7": {
 		"year": 2012,
 		"season": 3,
 		"game": 7,
@@ -152,9 +165,10 @@
 		"type": "regular",
 		"scoreus": 14,
 		"scorethem": 15,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2012-3-7"
 	},
-	"2012-3-8":{
+	"2012-3-8": {
 		"year": 2012,
 		"season": 3,
 		"game": 8,
@@ -163,9 +177,10 @@
 		"type": "playoff1",
 		"scoreus": 18,
 		"scorethem": 17,
-		"result": "win"
+		"result": "win",
+		"gameid": "2012-3-8"
 	},
-	"2012-3-9":{
+	"2012-3-9": {
 		"year": 2012,
 		"season": 3,
 		"game": 9,
@@ -174,9 +189,10 @@
 		"type": "playoff2",
 		"scoreus": 26,
 		"scorethem": 14,
-		"result": "win"
+		"result": "win",
+		"gameid": "2012-3-9"
 	},
-	"2013-2-1":{
+	"2013-2-1": {
 		"year": 2013,
 		"season": 2,
 		"game": 1,
@@ -185,9 +201,10 @@
 		"type": "regular",
 		"scoreus": 12,
 		"scorethem": 14,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-2-1"
 	},
-	"2013-2-2":{
+	"2013-2-2": {
 		"year": 2013,
 		"season": 2,
 		"game": 2,
@@ -196,9 +213,10 @@
 		"type": "regular",
 		"scoreus": 19,
 		"scorethem": 11,
-		"result": "win"
+		"result": "win",
+		"gameid": "2013-2-2"
 	},
-	"2013-2-3":{
+	"2013-2-3": {
 		"year": 2013,
 		"season": 2,
 		"game": 3,
@@ -207,9 +225,10 @@
 		"type": "regular",
 		"scoreus": 0,
 		"scorethem": 0,
-		"result": "tie"
+		"result": "tie",
+		"gameid": "2013-2-3"
 	},
-	"2013-2-4":{
+	"2013-2-4": {
 		"year": 2013,
 		"season": 2,
 		"game": 4,
@@ -218,9 +237,10 @@
 		"type": "regular",
 		"scoreus": 5,
 		"scorethem": 28,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-2-4"
 	},
-	"2013-2-5":{
+	"2013-2-5": {
 		"year": 2013,
 		"season": 2,
 		"game": 5,
@@ -229,9 +249,10 @@
 		"type": "regular",
 		"scoreus": 31,
 		"scorethem": 13,
-		"result": "win"
+		"result": "win",
+		"gameid": "2013-2-5"
 	},
-	"2013-2-6":{
+	"2013-2-6": {
 		"year": 2013,
 		"season": 2,
 		"game": 6,
@@ -240,9 +261,10 @@
 		"type": "playoff1",
 		"scoreus": 14,
 		"scorethem": 15,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-2-6"
 	},
-	"2013-2-7":{
+	"2013-2-7": {
 		"year": 2013,
 		"season": 2,
 		"game": 7,
@@ -251,9 +273,10 @@
 		"type": "playoff2",
 		"scoreus": 9,
 		"scorethem": 19,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-2-7"
 	},
-	"2013-3-1":{
+	"2013-3-1": {
 		"year": 2013,
 		"season": 3,
 		"game": 1,
@@ -262,9 +285,10 @@
 		"type": "regular",
 		"scoreus": 7,
 		"scorethem": 17,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-3-1"
 	},
-	"2013-3-2":{
+	"2013-3-2": {
 		"year": 2013,
 		"season": 3,
 		"game": 2,
@@ -274,9 +298,10 @@
 		"scoreus": 21,
 		"scorethem": 12,
 		"result": "win",
-		"notes": "Rescheduled at a later date from rained out."
+		"notes": "Rescheduled at a later date from rained out.",
+		"gameid": "2013-3-2"
 	},
-	"2013-3-3":{
+	"2013-3-3": {
 		"year": 2013,
 		"season": 3,
 		"game": 3,
@@ -285,9 +310,10 @@
 		"type": "regular",
 		"scoreus": 16,
 		"scorethem": 17,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-3-3"
 	},
-	"2013-3-4":{
+	"2013-3-4": {
 		"year": 2013,
 		"season": 3,
 		"game": 4,
@@ -296,9 +322,10 @@
 		"type": "regular",
 		"scoreus": 0,
 		"scorethem": 0,
-		"result": "win"
+		"result": "win",
+		"gameid": "2013-3-4"
 	},
-	"2013-3-5":{
+	"2013-3-5": {
 		"year": 2013,
 		"season": 3,
 		"game": 5,
@@ -307,9 +334,10 @@
 		"type": "regular",
 		"scoreus": 20,
 		"scorethem": 21,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-3-5"
 	},
-	"2013-3-6":{
+	"2013-3-6": {
 		"year": 2013,
 		"season": 3,
 		"game": 6,
@@ -318,9 +346,10 @@
 		"type": "regular",
 		"scoreus": 10,
 		"scorethem": 21,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-3-6"
 	},
-	"2013-3-7":{
+	"2013-3-7": {
 		"year": 2013,
 		"season": 3,
 		"game": 7,
@@ -329,9 +358,10 @@
 		"type": "regular",
 		"scoreus": 13,
 		"scorethem": 14,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-3-7"
 	},
-	"2013-3-8":{
+	"2013-3-8": {
 		"year": 2013,
 		"season": 3,
 		"game": 8,
@@ -340,9 +370,10 @@
 		"type": "playoff1",
 		"scoreus": 17,
 		"scorethem": 10,
-		"result": "win"
+		"result": "win",
+		"gameid": "2013-3-8"
 	},
-	"2013-3-9":{
+	"2013-3-9": {
 		"year": 2013,
 		"season": 3,
 		"game": 9,
@@ -351,9 +382,10 @@
 		"type": "playoff2",
 		"scoreus": 11,
 		"scorethem": 12,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2013-3-9"
 	},
-	"2014-2-1":{
+	"2014-2-1": {
 		"year": 2014,
 		"season": 2,
 		"game": 1,
@@ -362,9 +394,10 @@
 		"type": "regular",
 		"scoreus": 15,
 		"scorethem": 12,
-		"result": "win"
+		"result": "win",
+		"gameid": "2014-2-1"
 	},
-	"2014-2-2":{
+	"2014-2-2": {
 		"year": 2014,
 		"season": 2,
 		"game": 2,
@@ -373,9 +406,10 @@
 		"type": "regular",
 		"scoreus": 15,
 		"scorethem": 27,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-2-2"
 	},
-	"2014-2-3":{
+	"2014-2-3": {
 		"year": 2014,
 		"season": 2,
 		"game": 3,
@@ -384,9 +418,10 @@
 		"type": "regular",
 		"scoreus": 15,
 		"scorethem": 11,
-		"result": "win"
+		"result": "win",
+		"gameid": "2014-2-3"
 	},
-	"2014-2-4":{
+	"2014-2-4": {
 		"year": 2014,
 		"season": 2,
 		"game": 4,
@@ -395,9 +430,10 @@
 		"type": "regular",
 		"scoreus": 13,
 		"scorethem": 27,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-2-4"
 	},
-	"2014-2-5":{
+	"2014-2-5": {
 		"year": 2014,
 		"season": 2,
 		"game": 5,
@@ -406,9 +442,10 @@
 		"type": "regular",
 		"scoreus": 10,
 		"scorethem": 20,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-2-5"
 	},
-	"2014-2-6":{
+	"2014-2-6": {
 		"year": 2014,
 		"season": 2,
 		"game": 6,
@@ -417,9 +454,10 @@
 		"type": "playoff1",
 		"scoreus": 0,
 		"scorethem": 0,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-2-6"
 	},
-	"2014-2-7":{
+	"2014-2-7": {
 		"year": 2014,
 		"season": 2,
 		"game": 7,
@@ -428,9 +466,10 @@
 		"type": "playoff2",
 		"scoreus": 12,
 		"scorethem": 23,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-2-7"
 	},
-	"2014-3-1":{
+	"2014-3-1": {
 		"year": 2014,
 		"season": 3,
 		"game": 1,
@@ -439,9 +478,10 @@
 		"type": "regular",
 		"scoreus": 19,
 		"scorethem": 9,
-		"result": "win"
+		"result": "win",
+		"gameid": "2014-3-1"
 	},
-	"2014-3-2":{
+	"2014-3-2": {
 		"year": 2014,
 		"season": 3,
 		"game": 2,
@@ -450,9 +490,10 @@
 		"type": "regular",
 		"scoreus": 23,
 		"scorethem": 27,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-3-2"
 	},
-	"2014-3-3":{
+	"2014-3-3": {
 		"year": 2014,
 		"season": 3,
 		"game": 3,
@@ -461,9 +502,10 @@
 		"type": "regular",
 		"scoreus": 25,
 		"scorethem": 3,
-		"result": "win"
+		"result": "win",
+		"gameid": "2014-3-3"
 	},
-	"2014-3-4":{
+	"2014-3-4": {
 		"year": 2014,
 		"season": 3,
 		"game": 4,
@@ -472,9 +514,10 @@
 		"type": "regular",
 		"scoreus": 6,
 		"scorethem": 4,
-		"result": "win"
+		"result": "win",
+		"gameid": "2014-3-4"
 	},
-	"2014-3-5":{
+	"2014-3-5": {
 		"year": 2014,
 		"season": 3,
 		"game": 5,
@@ -483,9 +526,10 @@
 		"type": "regular",
 		"scoreus": 20,
 		"scorethem": 21,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-3-5"
 	},
-	"2014-3-6":{
+	"2014-3-6": {
 		"year": 2014,
 		"season": 3,
 		"game": 6,
@@ -494,9 +538,10 @@
 		"type": "regular",
 		"scoreus": 10,
 		"scorethem": 14,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-3-6"
 	},
-	"2014-3-7":{
+	"2014-3-7": {
 		"year": 2014,
 		"season": 3,
 		"game": 7,
@@ -505,9 +550,10 @@
 		"type": "playoff1",
 		"scoreus": 13,
 		"scorethem": 26,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2014-3-7"
 	},
-	"2014-3-8":{
+	"2014-3-8": {
 		"year": 2014,
 		"season": 3,
 		"game": 8,
@@ -516,9 +562,10 @@
 		"type": "playoff2",
 		"scoreus": 0,
 		"scorethem": 0,
-		"result": "win"
+		"result": "win",
+		"gameid": "2014-3-8"
 	},
-	"2015-2-1":{
+	"2015-2-1": {
 		"year": 2015,
 		"season": 2,
 		"game": 1,
@@ -527,9 +574,10 @@
 		"type": "regular",
 		"scoreus": 8,
 		"scorethem": 15,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2015-2-1"
 	},
-	"2015-2-2":{
+	"2015-2-2": {
 		"year": 2015,
 		"season": 2,
 		"game": 2,
@@ -538,9 +586,10 @@
 		"type": "regular",
 		"scoreus": 6,
 		"scorethem": 29,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2015-2-2"
 	},
-	"2015-2-3":{
+	"2015-2-3": {
 		"year": 2015,
 		"season": 2,
 		"game": 3,
@@ -549,9 +598,10 @@
 		"type": "regular",
 		"scoreus": 3,
 		"scorethem": 25,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2015-2-3"
 	},
-	"2015-2-4":{
+	"2015-2-4": {
 		"year": 2015,
 		"season": 2,
 		"game": 4,
@@ -560,9 +610,10 @@
 		"type": "regular",
 		"scoreus": 6,
 		"scorethem": 19,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2015-2-4"
 	},
-	"2015-2-5":{
+	"2015-2-5": {
 		"year": 2015,
 		"season": 2,
 		"game": 5,
@@ -571,9 +622,10 @@
 		"type": "regular",
 		"scoreus": 15,
 		"scorethem": 20,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2015-2-5"
 	},
-	"2015-2-6":{
+	"2015-2-6": {
 		"year": 2015,
 		"season": 2,
 		"game": 6,
@@ -582,9 +634,10 @@
 		"type": "playoff1",
 		"scoreus": 0,
 		"scorethem": 0,
-		"result": "win"
+		"result": "win",
+		"gameid": "2015-2-6"
 	},
-	"2015-2-7":{
+	"2015-2-7": {
 		"year": 2015,
 		"season": 2,
 		"game": 7,
@@ -593,9 +646,10 @@
 		"type": "playoff2",
 		"scoreus": 12,
 		"scorethem": 12,
-		"result": "tie"
+		"result": "tie",
+		"gameid": "2015-2-7"
 	},
-	"2015-3-1":{
+	"2015-3-1": {
 		"year": 2015,
 		"season": 3,
 		"game": 1,
@@ -604,9 +658,10 @@
 		"type": "regular",
 		"scoreus": 40,
 		"scorethem": 12,
-		"result": "win"
+		"result": "win",
+		"gameid": "2015-3-1"
 	},
-	"2015-3-2":{
+	"2015-3-2": {
 		"year": 2015,
 		"season": 3,
 		"game": 2,
@@ -615,9 +670,10 @@
 		"type": "regular",
 		"scoreus": 32,
 		"scorethem": 11,
-		"result": "win"
+		"result": "win",
+		"gameid": "2015-3-2"
 	},
-	"2015-3-3":{
+	"2015-3-3": {
 		"year": 2015,
 		"season": 3,
 		"game": 3,
@@ -626,9 +682,10 @@
 		"type": "regular",
 		"scoreus": 0,
 		"scorethem": 0,
-		"result": "win"
+		"result": "win",
+		"gameid": "2015-3-3"
 	},
-	"2015-3-4":{
+	"2015-3-4": {
 		"year": 2015,
 		"season": 3,
 		"game": 4,
@@ -637,9 +694,10 @@
 		"type": "regular",
 		"scoreus": 19,
 		"scorethem": 3,
-		"result": "win"
+		"result": "win",
+		"gameid": "2015-3-4"
 	},
-	"2015-3-5":{
+	"2015-3-5": {
 		"year": 2015,
 		"season": 3,
 		"game": 5,
@@ -648,9 +706,10 @@
 		"type": "regular",
 		"scoreus": 13,
 		"scorethem": 27,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2015-3-5"
 	},
-	"2015-3-6":{
+	"2015-3-6": {
 		"year": 2015,
 		"season": 3,
 		"game": 6,
@@ -659,9 +718,10 @@
 		"type": "regular",
 		"scoreus": 16,
 		"scorethem": 15,
-		"result": "win"
+		"result": "win",
+		"gameid": "2015-3-6"
 	},
-	"2015-3-7":{
+	"2015-3-7": {
 		"year": 2015,
 		"season": 3,
 		"game": 7,
@@ -670,9 +730,10 @@
 		"type": "regular",
 		"scoreus": 14,
 		"scorethem": 13,
-		"result": "win"
+		"result": "win",
+		"gameid": "2015-3-7"
 	},
-	"2015-3-8":{
+	"2015-3-8": {
 		"year": 2015,
 		"season": 3,
 		"game": 8,
@@ -681,9 +742,10 @@
 		"type": "playoff1",
 		"scoreus": 18,
 		"scorethem": 17,
-		"result": "win"
+		"result": "win",
+		"gameid": "2015-3-8"
 	},
-	"2015-3-9":{
+	"2015-3-9": {
 		"year": 2015,
 		"season": 3,
 		"game": 9,
@@ -692,6 +754,7 @@
 		"type": "playoff2",
 		"scoreus": 10,
 		"scorethem": 22,
-		"result": "lose"
+		"result": "lose",
+		"gameid": "2015-3-9"
 	}
 }

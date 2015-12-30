@@ -1,5 +1,51 @@
 var softballServices = angular.module('softballServices', ['firebase', 'softballConfig', 'softballFilters']);
 
+
+softballServices.factory("Auth", ["CONFIG", "$firebaseAuth",
+	function(CONFIG, $firebaseAuth) {
+		var ref = new Firebase(CONFIG.AUTH_URL);
+		return $firebaseAuth(ref);
+	}
+]);
+
+softballServices.factory("Messaging", ['$rootScope',
+	function($rootScope) {
+		var dataFactory = {};
+
+		dataFactory.msg = {};
+		dataFactory.msg.type = null;
+		dataFactory.msg.text = null;
+		dataFactory.msg.keepopen = null;
+
+		dataFactory.setMsg = function(type, text, keepopen, callbackyes, callbackno)
+		{
+			dataFactory.msg.type = type;
+			dataFactory.msg.text = text;
+			dataFactory.msg.keepopen = keepopen;
+			dataFactory.msg.callbackyes = callbackyes;
+			dataFactory.msg.callbackno = callbackno;
+			$rootScope.$broadcast("messagingSet", dataFactory.msg);
+		};
+
+		dataFactory.clearMsg = function()
+		{
+			dataFactory.resetMsg();
+			$rootScope.$broadcast("messagingClear", dataFactory.msg);
+		};
+
+		dataFactory.resetMsg = function()
+		{
+			dataFactory.msg = {};
+			dataFactory.msg.type = null;
+			dataFactory.msg.text = null;
+			dataFactory.msg.keepopen = null;
+			dataFactory.msg.callbackyes = null;
+			dataFactory.msg.callbackno = null;
+		};
+
+		return dataFactory;
+}]);
+
 softballServices.factory('Players', ['CONFIG', '$firebaseObject', '$q',
 	function(CONFIG, $firebaseObject, $q){
 		var dataFactory = {};
@@ -122,25 +168,29 @@ softballServices.factory('Games', ['CONFIG', '$firebaseObject', '$q', 'yearSeaso
 	function(CONFIG, $firebaseObject, $q, yearSeasonDisplayFilter, yearSeasonGameDisplayFilter, seasonIconFilter){
 		var dataFactory = {};
 
+		// cache details
+		dataFactory.yearseason = null;
+		// firebases promise
+		dataFactory.refGames = null;
+		// promise of a firebase object
+		dataFactory.fObjGames = null;
+
+
 		dataFactory.getYears = function(currentyear)
 		{
-			var deferred = $q.defer();
-
-			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebaseObject(dRef);
+			ref = loadGames();
 
 			var years = {};
-			data.$loaded().then(function() {
+			return ref.then(function(data) {
+				//build the list of unique years from games
 				angular.forEach(data, function(i, key) {
 					if (!years[data[key].year])
 						years[data[key].year] = {};
 					years[data[key].year].year = data[key].year;
 					years[data[key].year].current = (currentyear == data[key].year) ? true : false;
 				});
-				//console.log(years);
-				deferred.resolve(years);
+				return years;
 			});
-			return deferred.promise;
 		};
 
 		/**
@@ -165,93 +215,115 @@ softballServices.factory('Games', ['CONFIG', '$firebaseObject', '$q', 'yearSeaso
 			return seasons;
 		};
 
-
 		dataFactory.getYearSeasons = function()
 		{
-			var deferred = $q.defer();
+			// return cache data if we have it
+			if (dataFactory.yearseason)
+				return $q.resolve(dataFactory.yearseason);
 
-			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebaseObject(dRef);
+			ref = loadGames();
 
 			var years = {};
-			data.$loaded().then(function() {
+			return ref.then(function(data) {
 				angular.forEach(data, function(i, key) {
 					if (!years[data[key].year])
 						years[data[key].year] = {};
 					years[data[key].year].season = data[key].season;
 					years[data[key].year].year = data[key].year;
 				});
-				deferred.resolve(years);
+				return years;
 			});
-			return deferred.promise;
 		};
 
 		dataFactory.getGames = function(year, season)
 		{
-			var deferred = $q.defer();
-
-			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebaseObject(dRef);
+			ref = loadGames();
 
 			var games = [];
-			data.$loaded().then(function() {
+			return ref.then(function(data) {
 				var skip = false;
+				console.log('getGames from firebase:', data);
+				// filter out games not in specified year and season, if provided
 				angular.forEach(data, function(i, key) {
 					skip = false;
 					if ((year && year != data[key].year) ||
 					   (season && season != data[key].season))
 						skip = true;
 					if (!skip)
-					{
-						// build the gameid
-						data[key].gameid = data[key].year + '-' + data[key].season + '-' + data[key].game;
-						// build display name
-						data[key].displayname = yearSeasonGameDisplayFilter(data[key].year, data[key].season, data[key].game);
 						games.push(data[key]);
-					}
 				});
-				deferred.resolve(games);
+				console.log('getGames processed:', games);
+				return games;
 			});
-			return deferred.promise;
 		};
 
 		dataFactory.getGame = function(year, season, game)
 		{
-			var deferred = $q.defer();
+			console.log('getGame:', year, season, game);
+			ref = loadGames();
 
-			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebaseObject(dRef);
-
-			data.$loaded().then(function() {
-				var curgame = {};
-				angular.forEach(data, function(i, key) {
-					skip = false;
-					if ((year && year == data[key].year) &&
-						(season && season == data[key].season) &&
-						(game && game == data[key].game))
-					{
-						// build the gameid
-						data[key].gameid = data[key].year + '-' + data[key].season + '-' + data[key].game;
-						// build display name
-						data[key].displayname = yearSeasonGameDisplayFilter(data[key].year, data[key].season, data[key].game);
-						curgame = data[key];
-						return;
-					}
+			return ref.then(function(data) {
+				var c = dataFactory.refGames.child(year+'-'+season+'-'+game);
+				var d = $firebaseObject(c);
+					console.log('getGame from child processing');
+				return d.$loaded().then(function() {
+					console.log('getGame from child loaded', d);
+					return d;
 				});
-				deferred.resolve(curgame);
 			});
-			return deferred.promise;
+		};
+
+		dataFactory.saveGame = function(gameFireObj)
+		{
+			console.log('saveGame:', gameFireObj);
+			return gameFireObj.$save().then(function(ref) {
+				console.log('saveGame from firebase success');
+				return ref;
+			}, function(ref) {
+				console.log('saveGame from firebase failed');
+				return $q.reject();
+			});
+		};
+
+		dataFactory.deleteGame = function(year, season, game)
+		{
+			console.log('deleteGame:', year, season, game);
+			var data = dataFactory.getGame(year, season, game);
+			return data.then(function(ref) {
+				console.log('deleteGame loaded:', ref);
+				return ref.$remove().then(function(ref) {
+					console.log('deleteGame from firebase success');
+					return ref;
+				}, function(ref) {
+					console.log('deleteGame from firebase failed');
+					return $q.reject();
+				});
+			});
+		};
+
+		dataFactory.addGame = function(gameObj)
+		{
+			console.log('addGame:', gameObj);
+			ref = loadGames();
+
+			return ref.then(function(data) {
+				dataFactory.fObjGames[gameObj.gameid] = gameObj;
+				return dataFactory.fObjGames.$save().then(function(ref) {
+					console.log('addGame from firebase success');
+					return ref;
+				}, function(ref) {
+					console.log('addGame from firebase failed');
+					return $q.reject();
+				});
+			});
 		};
 
 		dataFactory.getGameStats = function(year, season)
 		{
-			var deferred = $q.defer();
-
-			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebaseObject(dRef);
+			ref = loadGames();
 
 			var gamestats = [];
-			data.$loaded().then(function() {
+			return ref.then(function(data) {
 				var win = 0, lose = 0, tie = 0, newg = 0;
 				var skip = false;
 				angular.forEach(data, function(i, key) {
@@ -278,26 +350,21 @@ softballServices.factory('Games', ['CONFIG', '$firebaseObject', '$q', 'yearSeaso
 					gamestats.push({"label": "Lose", "value": lose, "color": CONFIG.COLORS.lose.color, "highlight": CONFIG.COLORS.lose.highlight});
 				if (tie)
 					gamestats.push({"label": "Tie", "value": tie, "color": CONFIG.COLORS.tie.color, "highlight": CONFIG.COLORS.tie.highlight});
-//				if (newg)
-//					gamestats.push({"label": "New", "value": newg, "color": CONFIG.COLORS.new.color, "highlight": CONFIG.COLORS.new.highlight});
-				deferred.resolve(gamestats);
+
+				return gamestats;
 			});
-			return deferred.promise;
 		};
 
 		dataFactory.getGameScores = function(year, season)
 		{
-			var deferred = $q.defer();
-
-			var dRef = new Firebase(CONFIG.BASE_URL+"/games");
-			var data = $firebaseObject(dRef);
+			ref = loadGames();
 
 			var gamedata = {};
 			var gamelabels = [];
 			var scoreus = [];
 			var scorethem = [];
 
-			data.$loaded().then(function() {
+			return ref.then(function(data) {
 				var skip = false;
 				angular.forEach(data, function(i, key) {
 					skip = false;
@@ -335,11 +402,27 @@ softballServices.factory('Games', ['CONFIG', '$firebaseObject', '$q', 'yearSeaso
 				gamedata.labels = gamelabels;
 				gamedata.datasets = datasets;
 
-				deferred.resolve(gamedata);
+				return gamedata;
 			});
-			return deferred.promise;
 		};
 
+		///////////////////////////////////////////////////////////////////////
+
+		var loadGames = function()
+		{
+			console.log('loadGames requested');
+			if (!dataFactory.fObjGames)
+			{
+				console.log('loadGames processing');
+				dataFactory.refGames = new Firebase(CONFIG.BASE_URL+"/games");
+				dataFactory.fObjGames = $firebaseObject(dataFactory.refGames);
+				dataFactory.fObjGames.$loaded().then(function(data) {
+					console.log('loadGames loaded');
+					dataFactory.gamesData = dataFactory.fObjGames;
+				});
+			}
+			return dataFactory.fObjGames.$loaded();
+		};
 
 		return dataFactory;
 }]);

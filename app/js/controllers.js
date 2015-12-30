@@ -1,5 +1,55 @@
 var softballControllers = angular.module('softballControllers', ['firebase']);
 
+softballControllers.controller('AppCtrl', ['$scope', '$state', 'Games',
+	function ($scope, $state, Games) {
+		Games.getYearSeasons().then(function(data) {
+			$scope.yearseason = data;
+		});
+
+		function determineCurrentYearSeason()
+		{
+			var d = new Date();
+			var y = d.getFullYear();
+			// get the season 1-4 winter-fall
+			// only allow 2-3
+			var s = Math.ceil((d.getMonth()+1) / 3);
+			// late in the year, show last season
+			if (s > 3)
+				s = 3;
+			// early in the year, show last season of last year
+			else if (s < 2)
+			{
+				s = 3;
+				y--;
+			}
+			$scope.nowyear = y;
+			$scope.nowseason = s;
+			$scope.nowdate = d;
+			console.log('Now Year Season: ',$scope.nowyear, $scope.nowseason, $scope.nowdate);
+		}
+
+		determineCurrentYearSeason();
+}]);
+
+softballControllers.controller('NavMenuCtrl', ['$scope', '$stateParams', '$state', 'Auth', 'Games',
+	function ($scope, $stateParams, $state, Auth, Games) {
+		$scope.year = $stateParams.year;
+		$scope.season = $stateParams.season;
+		Games.getGames($scope.year, $scope.season).then(function(data) {
+			$scope.games = data;
+		});
+		Games.getYearSeasons().then(function(data) {
+			$scope.yearseason = data;
+		});
+
+		$scope.logout = function() {
+			console.log('attempted logout');
+			Auth.$unauth();
+			$state.go('main.admin.login', {'msg': {type: 'success', text: 'You have successfully been logged out.'}});
+			console.log('Logout completed');
+		};
+}]);
+
 softballControllers.controller('FilterYearSeasonCtrl', ['$scope', '$stateParams', '$state', 'Games', 
 	function ($scope, $stateParams, $state, Games) {
 		$scope.year = $stateParams.year;
@@ -242,18 +292,6 @@ softballControllers.controller('PlayerListCtrl', ['$scope', '$stateParams', 'Pla
 	function ($scope, $stateParams, Players) {
 		$scope.season = $stateParams.season;
 		$scope.players = Players.getPlayers($scope.season);
-}]);
-
-softballControllers.controller('GameListCtrl', ['$scope', '$stateParams', 'Games',
-	function ($scope, $stateParams, Games) {
-		$scope.year = $stateParams.year;
-		$scope.season = $stateParams.season;
-		Games.getGames($scope.year, $scope.season).then(function(data) {
-			$scope.games = data;
-		});
-		Games.getYearSeasons().then(function(data) {
-			$scope.yearseason = data;
-		});
 }]);
 
 

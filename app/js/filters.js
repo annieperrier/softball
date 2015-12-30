@@ -126,6 +126,7 @@ softballFilters.filter("yearSeasonDisplay", [
 			return res;
 		};
 }]);
+
 softballFilters.filter("yearSeasonGameDisplay", ['yearSeasonDisplayFilter', 
 	function(yearSeasonDisplayFilter) {
 		return function(year, season, game) {
@@ -134,6 +135,18 @@ softballFilters.filter("yearSeasonGameDisplay", ['yearSeasonDisplayFilter',
 				res += ' ';
 			if (game)
 				res += ' Game #'+game;
+			return res;
+		};
+}]);
+
+softballFilters.filter("gameDisplayName", ['yearSeasonDisplayFilter', 
+	function(yearSeasonDisplayFilter) {
+		return function(gameObj) {
+			var res = yearSeasonDisplayFilter(gameObj.year, gameObj.season);
+			if (res)
+				res += ' ';
+			if (gameObj.game)
+				res += ' Game #'+gameObj.game;
 			return res;
 		};
 }]);

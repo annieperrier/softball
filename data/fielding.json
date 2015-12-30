@@ -5,7 +5,8 @@
 		"game": 2,
 		"name": "Al",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-2"
 	},
 	"2013-2-7-Al": {
 		"year": 2013,
@@ -13,7 +14,8 @@
 		"game": 7,
 		"name": "Al",
 		"outs": 5,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-7"
 	},
 	"2013-3-5-Al": {
 		"year": 2013,
@@ -21,7 +23,8 @@
 		"game": 5,
 		"name": "Al",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-5"
 	},
 	"2013-2-1-Albert": {
 		"year": 2013,
@@ -29,7 +32,8 @@
 		"game": 1,
 		"name": "Albert",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-1"
 	},
 	"2013-2-2-Albert": {
 		"year": 2013,
@@ -37,7 +41,8 @@
 		"game": 2,
 		"name": "Albert",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-2"
 	},
 	"2013-2-4-Albert": {
 		"year": 2013,
@@ -45,7 +50,8 @@
 		"game": 4,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-4"
 	},
 	"2013-2-5-Albert": {
 		"year": 2013,
@@ -53,7 +59,8 @@
 		"game": 5,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-5"
 	},
 	"2013-2-6-Albert": {
 		"year": 2013,
@@ -61,7 +68,8 @@
 		"game": 6,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-6"
 	},
 	"2013-3-1-Albert": {
 		"year": 2013,
@@ -69,7 +77,8 @@
 		"game": 1,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-2-Albert": {
 		"year": 2013,
@@ -77,7 +86,8 @@
 		"game": 2,
 		"name": "Albert",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-2"
 	},
 	"2013-3-3-Albert": {
 		"year": 2013,
@@ -85,7 +95,8 @@
 		"game": 3,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-6-Albert": {
 		"year": 2013,
@@ -93,7 +104,8 @@
 		"game": 6,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-6"
 	},
 	"2013-3-7-Albert": {
 		"year": 2013,
@@ -101,7 +113,8 @@
 		"game": 7,
 		"name": "Albert",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-7"
 	},
 	"2013-3-8-Albert": {
 		"year": 2013,
@@ -109,7 +122,8 @@
 		"game": 8,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-8"
 	},
 	"2013-3-9-Albert": {
 		"year": 2013,
@@ -117,7 +131,8 @@
 		"game": 9,
 		"name": "Albert",
 		"outs": 4,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2013-3-9"
 	},
 	"2013-2-1-Andy": {
 		"year": 2013,
@@ -125,7 +140,8 @@
 		"game": 1,
 		"name": "Andy",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-1"
 	},
 	"2013-2-2-Andy": {
 		"year": 2013,
@@ -133,7 +149,8 @@
 		"game": 2,
 		"name": "Andy",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-2"
 	},
 	"2013-2-5-Andy": {
 		"year": 2013,
@@ -141,7 +158,8 @@
 		"game": 5,
 		"name": "Andy",
 		"outs": 7,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-5"
 	},
 	"2013-2-6-Andy": {
 		"year": 2013,
@@ -149,7 +167,8 @@
 		"game": 6,
 		"name": "Andy",
 		"outs": 6,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-6"
 	},
 	"2013-3-1-Andy": {
 		"year": 2013,
@@ -157,7 +176,8 @@
 		"game": 1,
 		"name": "Andy",
 		"outs": 4,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-3-Andy": {
 		"year": 2013,
@@ -165,7 +185,8 @@
 		"game": 3,
 		"name": "Andy",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-6-Andy": {
 		"year": 2013,
@@ -173,7 +194,8 @@
 		"game": 6,
 		"name": "Andy",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-6"
 	},
 	"2013-2-6-Annie": {
 		"year": 2013,
@@ -181,7 +203,8 @@
 		"game": 6,
 		"name": "Annie",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-6"
 	},
 	"2013-3-2-Annie": {
 		"year": 2013,
@@ -189,7 +212,8 @@
 		"game": 2,
 		"name": "Annie",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-2"
 	},
 	"2013-3-3-Annie": {
 		"year": 2013,
@@ -197,7 +221,8 @@
 		"game": 3,
 		"name": "Annie",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-5-Annie": {
 		"year": 2013,
@@ -205,7 +230,8 @@
 		"game": 5,
 		"name": "Annie",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-5"
 	},
 	"2013-3-6-Annie": {
 		"year": 2013,
@@ -213,7 +239,8 @@
 		"game": 6,
 		"name": "Annie",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-6"
 	},
 	"2013-3-8-Annie": {
 		"year": 2013,
@@ -221,7 +248,8 @@
 		"game": 8,
 		"name": "Annie",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-8"
 	},
 	"2013-2-1-Aslam": {
 		"year": 2013,
@@ -229,7 +257,8 @@
 		"game": 1,
 		"name": "Aslam",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-1"
 	},
 	"2013-2-2-Aslam": {
 		"year": 2013,
@@ -237,7 +266,8 @@
 		"game": 2,
 		"name": "Aslam",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-2"
 	},
 	"2013-2-4-Aslam": {
 		"year": 2013,
@@ -245,7 +275,8 @@
 		"game": 4,
 		"name": "Aslam",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-4"
 	},
 	"2013-2-1-Brad": {
 		"year": 2013,
@@ -253,7 +284,8 @@
 		"game": 1,
 		"name": "Brad",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-1"
 	},
 	"2013-2-2-Brad": {
 		"year": 2013,
@@ -261,7 +293,8 @@
 		"game": 2,
 		"name": "Brad",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-2"
 	},
 	"2013-2-4-Brad": {
 		"year": 2013,
@@ -269,7 +302,8 @@
 		"game": 4,
 		"name": "Brad",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-4"
 	},
 	"2013-2-6-Brad": {
 		"year": 2013,
@@ -277,7 +311,8 @@
 		"game": 6,
 		"name": "Brad",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-6"
 	},
 	"2013-3-1-Brad": {
 		"year": 2013,
@@ -285,7 +320,8 @@
 		"game": 1,
 		"name": "Brad",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-7-Brad": {
 		"year": 2013,
@@ -293,7 +329,8 @@
 		"game": 7,
 		"name": "Brad",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-7"
 	},
 	"2013-3-8-Brad": {
 		"year": 2013,
@@ -301,7 +338,8 @@
 		"game": 8,
 		"name": "Brad",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-8"
 	},
 	"2013-3-9-Brad": {
 		"year": 2013,
@@ -309,7 +347,8 @@
 		"game": 9,
 		"name": "Brad",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-9"
 	},
 	"2013-2-1-Brookes": {
 		"year": 2013,
@@ -317,7 +356,8 @@
 		"game": 1,
 		"name": "Brookes",
 		"outs": 5,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-1"
 	},
 	"2013-2-4-Brookes": {
 		"year": 2013,
@@ -325,7 +365,8 @@
 		"game": 4,
 		"name": "Brookes",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-4"
 	},
 	"2013-3-1-Brookes": {
 		"year": 2013,
@@ -333,7 +374,8 @@
 		"game": 1,
 		"name": "Brookes",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-8-Brookes": {
 		"year": 2013,
@@ -341,7 +383,8 @@
 		"game": 8,
 		"name": "Brookes",
 		"outs": 6,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-8"
 	},
 	"2013-3-9-Brookes": {
 		"year": 2013,
@@ -349,7 +392,8 @@
 		"game": 9,
 		"name": "Brookes",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-9"
 	},
 	"2013-2-2-Charles": {
 		"year": 2013,
@@ -357,7 +401,8 @@
 		"game": 2,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-2"
 	},
 	"2013-2-5-Charles": {
 		"year": 2013,
@@ -365,7 +410,8 @@
 		"game": 5,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-5"
 	},
 	"2013-2-6-Charles": {
 		"year": 2013,
@@ -373,7 +419,8 @@
 		"game": 6,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-6"
 	},
 	"2013-2-7-Charles": {
 		"year": 2013,
@@ -381,7 +428,8 @@
 		"game": 7,
 		"name": "Charles",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-7"
 	},
 	"2013-3-3-Charles": {
 		"year": 2013,
@@ -389,7 +437,8 @@
 		"game": 3,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-5-Charles": {
 		"year": 2013,
@@ -397,7 +446,8 @@
 		"game": 5,
 		"name": "Charles",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-5"
 	},
 	"2013-3-6-Charles": {
 		"year": 2013,
@@ -405,7 +455,8 @@
 		"game": 6,
 		"name": "Charles",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-6"
 	},
 	"2013-3-9-Charles": {
 		"year": 2013,
@@ -413,7 +464,8 @@
 		"game": 9,
 		"name": "Charles",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-9"
 	},
 	"2013-3-2-Jeff": {
 		"year": 2013,
@@ -421,7 +473,8 @@
 		"game": 2,
 		"name": "Jeff",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-2"
 	},
 	"2013-3-3-Jeff": {
 		"year": 2013,
@@ -429,7 +482,8 @@
 		"game": 3,
 		"name": "Jeff",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-9-Jeff": {
 		"year": 2013,
@@ -437,7 +491,8 @@
 		"game": 9,
 		"name": "Jeff",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-9"
 	},
 	"2013-2-1-Kaitlyn": {
 		"year": 2013,
@@ -445,7 +500,8 @@
 		"game": 1,
 		"name": "Kaitlyn",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-1"
 	},
 	"2013-2-2-Kaitlyn": {
 		"year": 2013,
@@ -453,7 +509,8 @@
 		"game": 2,
 		"name": "Kaitlyn",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-2"
 	},
 	"2013-2-4-Kaitlyn": {
 		"year": 2013,
@@ -461,7 +518,8 @@
 		"game": 4,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2013-2-4"
 	},
 	"2013-2-5-Kaitlyn": {
 		"year": 2013,
@@ -469,7 +527,8 @@
 		"game": 5,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-5"
 	},
 	"2013-2-6-Kaitlyn": {
 		"year": 2013,
@@ -477,7 +536,8 @@
 		"game": 6,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2013-2-6"
 	},
 	"2013-2-7-Kaitlyn": {
 		"year": 2013,
@@ -485,7 +545,8 @@
 		"game": 7,
 		"name": "Kaitlyn",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-7"
 	},
 	"2013-3-1-Kaitlyn": {
 		"year": 2013,
@@ -493,7 +554,8 @@
 		"game": 1,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-2-Kaitlyn": {
 		"year": 2013,
@@ -501,7 +563,8 @@
 		"game": 2,
 		"name": "Kaitlyn",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-2"
 	},
 	"2013-3-3-Kaitlyn": {
 		"year": 2013,
@@ -509,7 +572,8 @@
 		"game": 3,
 		"name": "Kaitlyn",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-5-Kaitlyn": {
 		"year": 2013,
@@ -517,7 +581,8 @@
 		"game": 5,
 		"name": "Kaitlyn",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-5"
 	},
 	"2013-3-7-Kaitlyn": {
 		"year": 2013,
@@ -525,7 +590,8 @@
 		"game": 7,
 		"name": "Kaitlyn",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-7"
 	},
 	"2013-3-8-Kaitlyn": {
 		"year": 2013,
@@ -533,7 +599,8 @@
 		"game": 8,
 		"name": "Kaitlyn",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-8"
 	},
 	"2013-3-9-Kaitlyn": {
 		"year": 2013,
@@ -541,7 +608,8 @@
 		"game": 9,
 		"name": "Kaitlyn",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-9"
 	},
 	"2013-2-2-Kim": {
 		"year": 2013,
@@ -549,7 +617,8 @@
 		"game": 2,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-2"
 	},
 	"2013-3-1-Kim": {
 		"year": 2013,
@@ -557,7 +626,8 @@
 		"game": 1,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-3-Kim": {
 		"year": 2013,
@@ -565,7 +635,8 @@
 		"game": 3,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-6-Kim": {
 		"year": 2013,
@@ -573,7 +644,8 @@
 		"game": 6,
 		"name": "Kim",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-6"
 	},
 	"2013-3-9-Kim": {
 		"year": 2013,
@@ -581,7 +653,8 @@
 		"game": 9,
 		"name": "Kim",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-9"
 	},
 	"2013-3-1-Leslie": {
 		"year": 2013,
@@ -589,7 +662,8 @@
 		"game": 1,
 		"name": "Leslie",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-1"
 	},
 	"2013-2-1-Lou": {
 		"year": 2013,
@@ -597,7 +671,8 @@
 		"game": 1,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-1"
 	},
 	"2013-2-4-Lou": {
 		"year": 2013,
@@ -605,7 +680,8 @@
 		"game": 4,
 		"name": "Lou",
 		"outs": 2,
-		"assists": 5
+		"assists": 5,
+		"gameid": "2013-2-4"
 	},
 	"2013-2-5-Lou": {
 		"year": 2013,
@@ -613,7 +689,8 @@
 		"game": 5,
 		"name": "Lou",
 		"outs": 4,
-		"assists": 7
+		"assists": 7,
+		"gameid": "2013-2-5"
 	},
 	"2013-2-6-Lou": {
 		"year": 2013,
@@ -621,7 +698,8 @@
 		"game": 6,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2013-2-6"
 	},
 	"2013-2-7-Lou": {
 		"year": 2013,
@@ -629,7 +707,8 @@
 		"game": 7,
 		"name": "Lou",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-7"
 	},
 	"2013-3-1-Lou": {
 		"year": 2013,
@@ -637,7 +716,8 @@
 		"game": 1,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-2-Lou": {
 		"year": 2013,
@@ -645,7 +725,8 @@
 		"game": 2,
 		"name": "Lou",
 		"outs": 4,
-		"assists": 6
+		"assists": 6,
+		"gameid": "2013-3-2"
 	},
 	"2013-3-3-Lou": {
 		"year": 2013,
@@ -653,7 +734,8 @@
 		"game": 3,
 		"name": "Lou",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-5-Lou": {
 		"year": 2013,
@@ -661,7 +743,8 @@
 		"game": 5,
 		"name": "Lou",
 		"outs": 1,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2013-3-5"
 	},
 	"2013-3-6-Lou": {
 		"year": 2013,
@@ -669,7 +752,8 @@
 		"game": 6,
 		"name": "Lou",
 		"outs": 4,
-		"assists": 5
+		"assists": 5,
+		"gameid": "2013-3-6"
 	},
 	"2013-3-7-Lou": {
 		"year": 2013,
@@ -677,7 +761,8 @@
 		"game": 7,
 		"name": "Lou",
 		"outs": 1,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2013-3-7"
 	},
 	"2013-3-8-Lou": {
 		"year": 2013,
@@ -685,7 +770,8 @@
 		"game": 8,
 		"name": "Lou",
 		"outs": 5,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2013-3-8"
 	},
 	"2013-3-9-Lou": {
 		"year": 2013,
@@ -693,7 +779,8 @@
 		"game": 9,
 		"name": "Lou",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-9"
 	},
 	"2013-2-5-Michelle": {
 		"year": 2013,
@@ -701,7 +788,8 @@
 		"game": 5,
 		"name": "Michelle",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-2-5"
 	},
 	"2013-3-1-Michelle": {
 		"year": 2013,
@@ -709,7 +797,8 @@
 		"game": 1,
 		"name": "Michelle",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-9-Michelle": {
 		"year": 2013,
@@ -717,7 +806,8 @@
 		"game": 9,
 		"name": "Michelle",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-9"
 	},
 	"2013-3-2-Steve": {
 		"year": 2013,
@@ -725,7 +815,8 @@
 		"game": 2,
 		"name": "Steve",
 		"outs": 5,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-2"
 	},
 	"2013-3-6-Steve": {
 		"year": 2013,
@@ -733,7 +824,8 @@
 		"game": 6,
 		"name": "Steve",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-6"
 	},
 	"2013-3-7-Steve": {
 		"year": 2013,
@@ -741,7 +833,8 @@
 		"game": 7,
 		"name": "Steve",
 		"outs": 6,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-7"
 	},
 	"2013-3-8-Steve": {
 		"year": 2013,
@@ -749,7 +842,8 @@
 		"game": 8,
 		"name": "Steve",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-8"
 	},
 	"2013-3-9-Steve": {
 		"year": 2013,
@@ -757,7 +851,8 @@
 		"game": 9,
 		"name": "Steve",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-9"
 	},
 	"2013-3-5-Tom": {
 		"year": 2013,
@@ -765,7 +860,8 @@
 		"game": 5,
 		"name": "Tom",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-5"
 	},
 	"2013-3-6-Tom": {
 		"year": 2013,
@@ -773,7 +869,8 @@
 		"game": 6,
 		"name": "Tom",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2013-3-6"
 	},
 	"2013-2-1-Tratham": {
 		"year": 2013,
@@ -781,7 +878,8 @@
 		"game": 1,
 		"name": "Tratham",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-1"
 	},
 	"2013-2-2-Tratham": {
 		"year": 2013,
@@ -789,7 +887,8 @@
 		"game": 2,
 		"name": "Tratham",
 		"outs": 3,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2013-2-2"
 	},
 	"2013-2-4-Tratham": {
 		"year": 2013,
@@ -797,7 +896,8 @@
 		"game": 4,
 		"name": "Tratham",
 		"outs": 6,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-4"
 	},
 	"2013-2-5-Tratham": {
 		"year": 2013,
@@ -805,7 +905,8 @@
 		"game": 5,
 		"name": "Tratham",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-5"
 	},
 	"2013-2-6-Tratham": {
 		"year": 2013,
@@ -813,7 +914,8 @@
 		"game": 6,
 		"name": "Tratham",
 		"outs": 4,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-2-6"
 	},
 	"2013-2-7-Tratham": {
 		"year": 2013,
@@ -821,7 +923,8 @@
 		"game": 7,
 		"name": "Tratham",
 		"outs": 4,
-		"assists": 6
+		"assists": 6,
+		"gameid": "2013-2-7"
 	},
 	"2013-3-1-Tratham": {
 		"year": 2013,
@@ -829,7 +932,8 @@
 		"game": 1,
 		"name": "Tratham",
 		"outs": 2,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2013-3-1"
 	},
 	"2013-3-2-Tratham": {
 		"year": 2013,
@@ -837,7 +941,8 @@
 		"game": 2,
 		"name": "Tratham",
 		"outs": 2,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2013-3-2"
 	},
 	"2013-3-3-Tratham": {
 		"year": 2013,
@@ -845,7 +950,8 @@
 		"game": 3,
 		"name": "Tratham",
 		"outs": 4,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2013-3-3"
 	},
 	"2013-3-5-Tratham": {
 		"year": 2013,
@@ -853,7 +959,8 @@
 		"game": 5,
 		"name": "Tratham",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2013-3-5"
 	},
 	"2013-3-6-Tratham": {
 		"year": 2013,
@@ -861,7 +968,8 @@
 		"game": 6,
 		"name": "Tratham",
 		"outs": 2,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2013-3-6"
 	},
 	"2013-3-7-Tratham": {
 		"year": 2013,
@@ -869,7 +977,8 @@
 		"game": 7,
 		"name": "Tratham",
 		"outs": 7,
-		"assists": 6
+		"assists": 6,
+		"gameid": "2013-3-7"
 	},
 	"2013-3-8-Tratham": {
 		"year": 2013,
@@ -877,7 +986,8 @@
 		"game": 8,
 		"name": "Tratham",
 		"outs": 0,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2013-3-8"
 	},
 	"2014-2-1-Albert": {
 		"year": 2014,
@@ -885,7 +995,8 @@
 		"game": 1,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-2-Albert": {
 		"year": 2014,
@@ -893,7 +1004,8 @@
 		"game": 2,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2014-2-2"
 	},
 	"2014-2-3-Albert": {
 		"year": 2014,
@@ -901,7 +1013,8 @@
 		"game": 3,
 		"name": "Albert",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-5-Albert": {
 		"year": 2014,
@@ -909,7 +1022,8 @@
 		"game": 5,
 		"name": "Albert",
 		"outs": 5,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-5"
 	},
 	"2014-2-7-Albert": {
 		"year": 2014,
@@ -917,7 +1031,8 @@
 		"game": 7,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2014-2-7"
 	},
 	"2014-2-4-Andy": {
 		"year": 2014,
@@ -925,7 +1040,8 @@
 		"game": 4,
 		"name": "Andy",
 		"outs": 2,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-2-4"
 	},
 	"2014-2-7-Andy": {
 		"year": 2014,
@@ -933,7 +1049,8 @@
 		"game": 7,
 		"name": "Andy",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-7"
 	},
 	"2014-2-1-Annie": {
 		"year": 2014,
@@ -941,7 +1058,8 @@
 		"game": 1,
 		"name": "Annie",
 		"outs": 1,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-2-Annie": {
 		"year": 2014,
@@ -949,7 +1067,8 @@
 		"game": 2,
 		"name": "Annie",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-2"
 	},
 	"2014-2-3-Annie": {
 		"year": 2014,
@@ -957,7 +1076,8 @@
 		"game": 3,
 		"name": "Annie",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-4-Annie": {
 		"year": 2014,
@@ -965,7 +1085,8 @@
 		"game": 4,
 		"name": "Annie",
 		"outs": 8,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2014-2-4"
 	},
 	"2014-2-1-Brookes": {
 		"year": 2014,
@@ -973,7 +1094,8 @@
 		"game": 1,
 		"name": "Brookes",
 		"outs": 6,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-3-Brookes": {
 		"year": 2014,
@@ -981,7 +1103,8 @@
 		"game": 3,
 		"name": "Brookes",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-1-Charles": {
 		"year": 2014,
@@ -989,7 +1112,8 @@
 		"game": 1,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-3-Charles": {
 		"year": 2014,
@@ -997,7 +1121,8 @@
 		"game": 3,
 		"name": "Charles",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-7-Charles": {
 		"year": 2014,
@@ -1005,7 +1130,8 @@
 		"game": 7,
 		"name": "Charles",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-7"
 	},
 	"2014-2-1-Garrett": {
 		"year": 2014,
@@ -1013,7 +1139,8 @@
 		"game": 1,
 		"name": "Garrett",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-2-Garrett": {
 		"year": 2014,
@@ -1021,7 +1148,8 @@
 		"game": 2,
 		"name": "Garrett",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-2"
 	},
 	"2014-2-3-Garrett": {
 		"year": 2014,
@@ -1029,7 +1157,8 @@
 		"game": 3,
 		"name": "Garrett",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-5-Garrett": {
 		"year": 2014,
@@ -1037,7 +1166,8 @@
 		"game": 5,
 		"name": "Garrett",
 		"outs": 5,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-5"
 	},
 	"2014-2-1-Jeff": {
 		"year": 2014,
@@ -1045,7 +1175,8 @@
 		"game": 1,
 		"name": "Jeff",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-2-Jeff": {
 		"year": 2014,
@@ -1053,7 +1184,8 @@
 		"game": 2,
 		"name": "Jeff",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-2"
 	},
 	"2014-2-3-Jeff": {
 		"year": 2014,
@@ -1061,7 +1193,8 @@
 		"game": 3,
 		"name": "Jeff",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-4-Jeff": {
 		"year": 2014,
@@ -1069,7 +1202,8 @@
 		"game": 4,
 		"name": "Jeff",
 		"outs": 1,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2014-2-4"
 	},
 	"2014-2-5-Jeff": {
 		"year": 2014,
@@ -1077,7 +1211,8 @@
 		"game": 5,
 		"name": "Jeff",
 		"outs": 7,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-5"
 	},
 	"2014-2-1-Kaitlyn": {
 		"year": 2014,
@@ -1085,7 +1220,8 @@
 		"game": 1,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-3-Kaitlyn": {
 		"year": 2014,
@@ -1093,7 +1229,8 @@
 		"game": 3,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-4-Kaitlyn": {
 		"year": 2014,
@@ -1101,7 +1238,8 @@
 		"game": 4,
 		"name": "Kaitlyn",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-4"
 	},
 	"2014-2-5-Kaitlyn": {
 		"year": 2014,
@@ -1109,7 +1247,8 @@
 		"game": 5,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-5"
 	},
 	"2014-2-7-Kaitlyn": {
 		"year": 2014,
@@ -1117,7 +1256,8 @@
 		"game": 7,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-7"
 	},
 	"2014-2-2-Katia": {
 		"year": 2014,
@@ -1125,7 +1265,8 @@
 		"game": 2,
 		"name": "Katia",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-2"
 	},
 	"2014-2-3-Katia": {
 		"year": 2014,
@@ -1133,7 +1274,8 @@
 		"game": 3,
 		"name": "Katia",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-7-Kim": {
 		"year": 2014,
@@ -1141,7 +1283,8 @@
 		"game": 7,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-7"
 	},
 	"2014-2-1-Lou": {
 		"year": 2014,
@@ -1149,7 +1292,8 @@
 		"game": 1,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-2-Lou": {
 		"year": 2014,
@@ -1157,7 +1301,8 @@
 		"game": 2,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-2-2"
 	},
 	"2014-2-3-Lou": {
 		"year": 2014,
@@ -1165,7 +1310,8 @@
 		"game": 3,
 		"name": "Lou",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-4-Lou": {
 		"year": 2014,
@@ -1173,7 +1319,8 @@
 		"game": 4,
 		"name": "Lou",
 		"outs": 1,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-2-4"
 	},
 	"2014-2-5-Lou": {
 		"year": 2014,
@@ -1181,7 +1328,8 @@
 		"game": 5,
 		"name": "Lou",
 		"outs": 2,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-2-5"
 	},
 	"2014-2-5-Michelle": {
 		"year": 2014,
@@ -1189,7 +1337,8 @@
 		"game": 5,
 		"name": "Michelle",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-5"
 	},
 	"2014-2-3-Stuart": {
 		"year": 2014,
@@ -1197,7 +1346,8 @@
 		"game": 3,
 		"name": "Stuart",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-4-Tom": {
 		"year": 2014,
@@ -1205,7 +1355,8 @@
 		"game": 4,
 		"name": "Tom",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-4"
 	},
 	"2014-2-7-Tom": {
 		"year": 2014,
@@ -1213,7 +1364,8 @@
 		"game": 7,
 		"name": "Tom",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-7"
 	},
 	"2014-2-1-Tratham": {
 		"year": 2014,
@@ -1221,7 +1373,8 @@
 		"game": 1,
 		"name": "Tratham",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-1"
 	},
 	"2014-2-2-Tratham": {
 		"year": 2014,
@@ -1229,7 +1382,8 @@
 		"game": 2,
 		"name": "Tratham",
 		"outs": 1,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2014-2-2"
 	},
 	"2014-2-3-Tratham": {
 		"year": 2014,
@@ -1237,7 +1391,8 @@
 		"game": 3,
 		"name": "Tratham",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-3"
 	},
 	"2014-2-4-Tratham": {
 		"year": 2014,
@@ -1245,7 +1400,8 @@
 		"game": 4,
 		"name": "Tratham",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-2-4"
 	},
 	"2014-2-7-Tratham": {
 		"year": 2014,
@@ -1253,7 +1409,8 @@
 		"game": 7,
 		"name": "Tratham",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-2-7"
 	},
 	"2014-3-1-Albert": {
 		"year": 2014,
@@ -1261,7 +1418,8 @@
 		"game": 1,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-1"
 	},
 	"2014-3-2-Albert": {
 		"year": 2014,
@@ -1269,7 +1427,8 @@
 		"game": 2,
 		"name": "Albert",
 		"outs": 2,
-		"assists": 5
+		"assists": 5,
+		"gameid": "2014-3-2"
 	},
 	"2014-3-3-Albert": {
 		"year": 2014,
@@ -1277,7 +1436,8 @@
 		"game": 3,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-3"
 	},
 	"2014-3-4-Albert": {
 		"year": 2014,
@@ -1285,7 +1445,8 @@
 		"game": 4,
 		"name": "Albert",
 		"outs": 4,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-3-4"
 	},
 	"2014-3-1-Andy": {
 		"year": 2014,
@@ -1293,7 +1454,8 @@
 		"game": 1,
 		"name": "Andy",
 		"outs": 6,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-1"
 	},
 	"2014-3-2-Andy": {
 		"year": 2014,
@@ -1301,7 +1463,8 @@
 		"game": 2,
 		"name": "Andy",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-2"
 	},
 	"2014-3-1-Lou": {
 		"year": 2014,
@@ -1309,7 +1472,8 @@
 		"game": 1,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-3-1"
 	},
 	"2014-3-2-Lou": {
 		"year": 2014,
@@ -1317,7 +1481,8 @@
 		"game": 2,
 		"name": "Lou",
 		"outs": 1,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2014-3-2"
 	},
 	"2014-3-3-Lou": {
 		"year": 2014,
@@ -1325,7 +1490,8 @@
 		"game": 3,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-3-3"
 	},
 	"2014-3-4-Lou": {
 		"year": 2014,
@@ -1333,7 +1499,8 @@
 		"game": 4,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 9
+		"assists": 9,
+		"gameid": "2014-3-4"
 	},
 	"2014-3-5-Lou": {
 		"year": 2014,
@@ -1341,7 +1508,8 @@
 		"game": 5,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 8
+		"assists": 8,
+		"gameid": "2014-3-5"
 	},
 	"2014-3-1-Charles": {
 		"year": 2014,
@@ -1349,7 +1517,8 @@
 		"game": 1,
 		"name": "Charles",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-1"
 	},
 	"2014-3-3-Charles": {
 		"year": 2014,
@@ -1357,7 +1526,8 @@
 		"game": 3,
 		"name": "Charles",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-3"
 	},
 	"2014-3-1-Annie": {
 		"year": 2014,
@@ -1365,7 +1535,8 @@
 		"game": 1,
 		"name": "Annie",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-1"
 	},
 	"2014-3-2-Annie": {
 		"year": 2014,
@@ -1373,7 +1544,8 @@
 		"game": 2,
 		"name": "Annie",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-3-2"
 	},
 	"2014-3-4-Annie": {
 		"year": 2014,
@@ -1381,7 +1553,8 @@
 		"game": 4,
 		"name": "Annie",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-4"
 	},
 	"2014-3-5-Annie": {
 		"year": 2014,
@@ -1389,7 +1562,8 @@
 		"game": 5,
 		"name": "Annie",
 		"outs": 3,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2014-3-5"
 	},
 	"2014-3-1-Jeff": {
 		"year": 2014,
@@ -1397,7 +1571,8 @@
 		"game": 1,
 		"name": "Jeff",
 		"outs": 0,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-3-1"
 	},
 	"2014-3-3-Jeff": {
 		"year": 2014,
@@ -1405,7 +1580,8 @@
 		"game": 3,
 		"name": "Jeff",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-3"
 	},
 	"2014-3-4-Jeff": {
 		"year": 2014,
@@ -1413,7 +1589,8 @@
 		"game": 4,
 		"name": "Jeff",
 		"outs": 7,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-4"
 	},
 	"2014-3-5-Jeff": {
 		"year": 2014,
@@ -1421,7 +1598,8 @@
 		"game": 5,
 		"name": "Jeff",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-5"
 	},
 	"2014-3-1-Garrett": {
 		"year": 2014,
@@ -1429,7 +1607,8 @@
 		"game": 1,
 		"name": "Garrett",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-1"
 	},
 	"2014-3-2-Garrett": {
 		"year": 2014,
@@ -1437,7 +1616,8 @@
 		"game": 2,
 		"name": "Garrett",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-2"
 	},
 	"2014-3-3-Garrett": {
 		"year": 2014,
@@ -1445,7 +1625,8 @@
 		"game": 3,
 		"name": "Garrett",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-3"
 	},
 	"2014-3-1-Tratham": {
 		"year": 2014,
@@ -1453,7 +1634,8 @@
 		"game": 1,
 		"name": "Tratham",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-1"
 	},
 	"2014-3-2-Tratham": {
 		"year": 2014,
@@ -1461,7 +1643,8 @@
 		"game": 2,
 		"name": "Tratham",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-2"
 	},
 	"2014-3-3-Tratham": {
 		"year": 2014,
@@ -1469,7 +1652,8 @@
 		"game": 3,
 		"name": "Tratham",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2014-3-3"
 	},
 	"2014-3-5-Tratham": {
 		"year": 2014,
@@ -1477,7 +1661,8 @@
 		"game": 5,
 		"name": "Tratham",
 		"outs": 7,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-5"
 	},
 	"2014-3-2-Kaitlyn": {
 		"year": 2014,
@@ -1485,7 +1670,8 @@
 		"game": 2,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-2"
 	},
 	"2014-3-3-Kaitlyn": {
 		"year": 2014,
@@ -1493,7 +1679,8 @@
 		"game": 3,
 		"name": "Kaitlyn",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-3"
 	},
 	"2014-3-2-Tom": {
 		"year": 2014,
@@ -1501,7 +1688,8 @@
 		"game": 2,
 		"name": "Tom",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-2"
 	},
 	"2014-3-3-Katia": {
 		"year": 2014,
@@ -1509,7 +1697,8 @@
 		"game": 3,
 		"name": "Katia",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-3"
 	},
 	"2014-3-4-Leslie": {
 		"year": 2014,
@@ -1517,7 +1706,8 @@
 		"game": 4,
 		"name": "Leslie",
 		"outs": 1,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2014-3-4"
 	},
 	"2014-3-6-Jeff": {
 		"year": 2014,
@@ -1525,7 +1715,8 @@
 		"game": 6,
 		"name": "Jeff",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-6"
 	},
 	"2014-3-6-Albert": {
 		"year": 2014,
@@ -1533,7 +1724,8 @@
 		"game": 6,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-6"
 	},
 	"2014-3-6-Lou": {
 		"year": 2014,
@@ -1541,7 +1733,8 @@
 		"game": 6,
 		"name": "Lou",
 		"outs": 5,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-6"
 	},
 	"2014-3-6-Garrett": {
 		"year": 2014,
@@ -1549,7 +1742,8 @@
 		"game": 6,
 		"name": "Garrett",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-6"
 	},
 	"2014-3-6-Andy": {
 		"year": 2014,
@@ -1557,7 +1751,8 @@
 		"game": 6,
 		"name": "Andy",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-6"
 	},
 	"2014-3-6-Charles": {
 		"year": 2014,
@@ -1565,7 +1760,8 @@
 		"game": 6,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-6"
 	},
 	"2014-3-7-Annie": {
 		"year": 2014,
@@ -1573,7 +1769,8 @@
 		"game": 7,
 		"name": "Annie",
 		"outs": 5,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-7"
 	},
 	"2014-3-7-Albert": {
 		"year": 2014,
@@ -1581,7 +1778,8 @@
 		"game": 7,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-7"
 	},
 	"2014-3-7-Andy": {
 		"year": 2014,
@@ -1589,7 +1787,8 @@
 		"game": 7,
 		"name": "Andy",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-7"
 	},
 	"2014-3-7-Lou": {
 		"year": 2014,
@@ -1597,7 +1796,8 @@
 		"game": 7,
 		"name": "Lou",
 		"outs": 4,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-7"
 	},
 	"2014-3-7-Tratham": {
 		"year": 2014,
@@ -1605,7 +1805,8 @@
 		"game": 7,
 		"name": "Tratham",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2014-3-7"
 	},
 	"2014-3-7-Tom": {
 		"year": 2014,
@@ -1613,7 +1814,8 @@
 		"game": 7,
 		"name": "Tom",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2014-3-7"
 	},
 	"2015-2-1-Albert": {
 		"year": 2015,
@@ -1621,7 +1823,8 @@
 		"game": 1,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-1"
 	},
 	"2015-2-1-Lou": {
 		"year": 2015,
@@ -1629,7 +1832,8 @@
 		"game": 1,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2015-2-1"
 	},
 	"2015-2-1-Annie": {
 		"year": 2015,
@@ -1637,7 +1841,8 @@
 		"game": 1,
 		"name": "Annie",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-1"
 	},
 	"2015-2-1-Mike": {
 		"year": 2015,
@@ -1645,7 +1850,8 @@
 		"game": 1,
 		"name": "Mike",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-1"
 	},
 	"2015-2-1-Garrett": {
 		"year": 2015,
@@ -1653,7 +1859,8 @@
 		"game": 1,
 		"name": "Garrett",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-1"
 	},
 	"2015-2-1-Charles": {
 		"year": 2015,
@@ -1661,7 +1868,8 @@
 		"game": 1,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-1"
 	},
 	"2015-2-1-Kim": {
 		"year": 2015,
@@ -1669,7 +1877,8 @@
 		"game": 1,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-1"
 	},
 	"2015-2-2-Andy": {
 		"year": 2015,
@@ -1677,7 +1886,8 @@
 		"game": 2,
 		"name": "Andy",
 		"outs": 7,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-2"
 	},
 	"2015-2-2-Annie": {
 		"year": 2015,
@@ -1685,7 +1895,8 @@
 		"game": 2,
 		"name": "Annie",
 		"outs": 3,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-2-2"
 	},
 	"2015-2-2-Lou": {
 		"year": 2015,
@@ -1693,7 +1904,8 @@
 		"game": 2,
 		"name": "Lou",
 		"outs": 1,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2015-2-2"
 	},
 	"2015-2-2-Charles": {
 		"year": 2015,
@@ -1701,7 +1913,8 @@
 		"game": 2,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-2"
 	},
 	"2015-2-2-Albert": {
 		"year": 2015,
@@ -1709,7 +1922,8 @@
 		"game": 2,
 		"name": "Albert",
 		"outs": 0,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2015-2-2"
 	},
 	"2015-2-2-Kim": {
 		"year": 2015,
@@ -1717,7 +1931,8 @@
 		"game": 2,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-2"
 	},
 	"2015-2-2-Mike": {
 		"year": 2015,
@@ -1725,7 +1940,8 @@
 		"game": 2,
 		"name": "Mike",
 		"outs": 3,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2015-2-2"
 	},
 	"2015-2-2-Tom": {
 		"year": 2015,
@@ -1733,7 +1949,8 @@
 		"game": 2,
 		"name": "Tom",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-2"
 	},
 	"2015-2-3-Annie": {
 		"year": 2015,
@@ -1741,7 +1958,8 @@
 		"game": 3,
 		"name": "Annie",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-3"
 	},
 	"2015-2-3-Lou": {
 		"year": 2015,
@@ -1749,7 +1967,8 @@
 		"game": 3,
 		"name": "Lou",
 		"outs": 6,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2015-2-3"
 	},
 	"2015-2-3-Michelle": {
 		"year": 2015,
@@ -1757,7 +1976,8 @@
 		"game": 3,
 		"name": "Michelle",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-3"
 	},
 	"2015-2-3-Albert": {
 		"year": 2015,
@@ -1765,7 +1985,8 @@
 		"game": 3,
 		"name": "Albert",
 		"outs": 4,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-2-3"
 	},
 	"2015-2-3-Jeff": {
 		"year": 2015,
@@ -1773,7 +1994,8 @@
 		"game": 3,
 		"name": "Jeff",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-3"
 	},
 	"2015-2-3-Andy": {
 		"year": 2015,
@@ -1781,7 +2003,8 @@
 		"game": 3,
 		"name": "Andy",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-3"
 	},
 	"2015-2-3-Garrett": {
 		"year": 2015,
@@ -1789,7 +2012,8 @@
 		"game": 3,
 		"name": "Garrett",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-3"
 	},
 	"2015-2-3-Kaitlyn": {
 		"year": 2015,
@@ -1797,7 +2021,8 @@
 		"game": 3,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-3"
 	},
 	"2015-2-4-Michelle": {
 		"year": 2015,
@@ -1805,7 +2030,8 @@
 		"game": 4,
 		"name": "Michelle",
 		"outs": 5,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-4"
 	},
 	"2015-2-4-Nathan": {
 		"year": 2015,
@@ -1813,7 +2039,8 @@
 		"game": 4,
 		"name": "Nathan",
 		"outs": 0,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-2-4"
 	},
 	"2015-2-4-Albert": {
 		"year": 2015,
@@ -1821,7 +2048,8 @@
 		"game": 4,
 		"name": "Albert",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-4"
 	},
 	"2015-2-4-Lou": {
 		"year": 2015,
@@ -1829,7 +2057,8 @@
 		"game": 4,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 5
+		"assists": 5,
+		"gameid": "2015-2-4"
 	},
 	"2015-2-4-Annie": {
 		"year": 2015,
@@ -1837,7 +2066,8 @@
 		"game": 4,
 		"name": "Annie",
 		"outs": 2,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-2-4"
 	},
 	"2015-2-4-Charles": {
 		"year": 2015,
@@ -1845,7 +2075,8 @@
 		"game": 4,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-4"
 	},
 	"2015-2-4-Kaitlyn": {
 		"year": 2015,
@@ -1853,7 +2084,8 @@
 		"game": 4,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-4"
 	},
 	"2015-2-5-Tom": {
 		"year": 2015,
@@ -1861,7 +2093,8 @@
 		"game": 5,
 		"name": "Tom",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-5"
 	},
 	"2015-2-5-Annie": {
 		"year": 2015,
@@ -1869,7 +2102,8 @@
 		"game": 5,
 		"name": "Annie",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-5"
 	},
 	"2015-2-5-Lou": {
 		"year": 2015,
@@ -1877,7 +2111,8 @@
 		"game": 5,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-5"
 	},
 	"2015-2-5-Mike": {
 		"year": 2015,
@@ -1885,7 +2120,8 @@
 		"game": 5,
 		"name": "Mike",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-5"
 	},
 	"2015-2-5-Albert": {
 		"year": 2015,
@@ -1893,7 +2129,8 @@
 		"game": 5,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2015-2-5"
 	},
 	"2015-2-5-Michelle": {
 		"year": 2015,
@@ -1901,7 +2138,8 @@
 		"game": 5,
 		"name": "Michelle",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-5"
 	},
 	"2015-2-5-Kim": {
 		"year": 2015,
@@ -1909,7 +2147,8 @@
 		"game": 5,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-5"
 	},
 	"2015-2-5-Charles": {
 		"year": 2015,
@@ -1917,7 +2156,8 @@
 		"game": 5,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-5"
 	},
 	"2015-2-7-Annie": {
 		"year": 2015,
@@ -1925,7 +2165,8 @@
 		"game": 7,
 		"name": "Annie",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-7"
 	},
 	"2015-2-7-Charles": {
 		"year": 2015,
@@ -1933,7 +2174,8 @@
 		"game": 7,
 		"name": "Charles",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-7"
 	},
 	"2015-2-7-Jeff": {
 		"year": 2015,
@@ -1941,7 +2183,8 @@
 		"game": 7,
 		"name": "Jeff",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-7"
 	},
 	"2015-2-7-Albert": {
 		"year": 2015,
@@ -1949,7 +2192,8 @@
 		"game": 7,
 		"name": "Albert",
 		"outs": 5,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-7"
 	},
 	"2015-2-7-Andy": {
 		"year": 2015,
@@ -1957,7 +2201,8 @@
 		"game": 7,
 		"name": "Andy",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-7"
 	},
 	"2015-2-7-Mike": {
 		"year": 2015,
@@ -1965,7 +2210,8 @@
 		"game": 7,
 		"name": "Mike",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-7"
 	},
 	"2015-2-7-Tom": {
 		"year": 2015,
@@ -1973,7 +2219,8 @@
 		"game": 7,
 		"name": "Tom",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-7"
 	},
 	"2015-2-7-Lou": {
 		"year": 2015,
@@ -1981,7 +2228,8 @@
 		"game": 7,
 		"name": "Lou",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-2-7"
 	},
 	"2015-2-7-Nathan": {
 		"year": 2015,
@@ -1989,7 +2237,8 @@
 		"game": 7,
 		"name": "Nathan",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-2-7"
 	},
 	"2015-3-1-Jeff": {
 		"year": 2015,
@@ -1997,7 +2246,8 @@
 		"game": 1,
 		"name": "Jeff",
 		"outs": 4,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-3-1"
 	},
 	"2015-3-1-Annie": {
 		"year": 2015,
@@ -2005,7 +2255,8 @@
 		"game": 1,
 		"name": "Annie",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-1"
 	},
 	"2015-3-1-Lou": {
 		"year": 2015,
@@ -2013,7 +2264,8 @@
 		"game": 1,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-3-1"
 	},
 	"2015-3-1-Nathan": {
 		"year": 2015,
@@ -2021,7 +2273,8 @@
 		"game": 1,
 		"name": "Nathan",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-1"
 	},
 	"2015-3-1-Kaitlyn": {
 		"year": 2015,
@@ -2029,7 +2282,8 @@
 		"game": 1,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-1"
 	},
 	"2015-3-1-Albert": {
 		"year": 2015,
@@ -2037,7 +2291,8 @@
 		"game": 1,
 		"name": "Albert",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-1"
 	},
 	"2015-3-1-Mike": {
 		"year": 2015,
@@ -2045,7 +2300,8 @@
 		"game": 1,
 		"name": "Mike",
 		"outs": 2,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-3-1"
 	},
 	"2015-3-1-Garrett": {
 		"year": 2015,
@@ -2053,7 +2309,8 @@
 		"game": 1,
 		"name": "Garrett",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-1"
 	},
 	"2015-3-2-Tom": {
 		"year": 2015,
@@ -2061,7 +2318,8 @@
 		"game": 2,
 		"name": "Tom",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-2"
 	},
 	"2015-3-2-Lou": {
 		"year": 2015,
@@ -2069,7 +2327,8 @@
 		"game": 2,
 		"name": "Lou",
 		"outs": 4,
-		"assists": 6
+		"assists": 6,
+		"gameid": "2015-3-2"
 	},
 	"2015-3-2-Mike": {
 		"year": 2015,
@@ -2077,7 +2336,8 @@
 		"game": 2,
 		"name": "Mike",
 		"outs": 4,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-2"
 	},
 	"2015-3-2-Kim": {
 		"year": 2015,
@@ -2085,7 +2345,8 @@
 		"game": 2,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-2"
 	},
 	"2015-3-2-Annie": {
 		"year": 2015,
@@ -2093,7 +2354,8 @@
 		"game": 2,
 		"name": "Annie",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-2"
 	},
 	"2015-3-2-Kaitlyn": {
 		"year": 2015,
@@ -2101,7 +2363,8 @@
 		"game": 2,
 		"name": "Kaitlyn",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-2"
 	},
 	"2015-3-2-Albert": {
 		"year": 2015,
@@ -2109,7 +2372,8 @@
 		"game": 2,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-2"
 	},
 	"2015-3-2-Nathan": {
 		"year": 2015,
@@ -2117,7 +2381,8 @@
 		"game": 2,
 		"name": "Nathan",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-2"
 	},
 	"2015-3-4-Lou": {
 		"year": 2015,
@@ -2125,7 +2390,8 @@
 		"game": 4,
 		"name": "Lou",
 		"outs": 5,
-		"assists": 10
+		"assists": 10,
+		"gameid": "2015-3-4"
 	},
 	"2015-3-4-Annie": {
 		"year": 2015,
@@ -2133,7 +2399,8 @@
 		"game": 4,
 		"name": "Annie",
 		"outs": 1,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-3-4"
 	},
 	"2015-3-4-Jeff": {
 		"year": 2015,
@@ -2141,7 +2408,8 @@
 		"game": 4,
 		"name": "Jeff",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-4"
 	},
 	"2015-3-4-Tom": {
 		"year": 2015,
@@ -2149,7 +2417,8 @@
 		"game": 4,
 		"name": "Tom",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-4"
 	},
 	"2015-3-4-Michelle": {
 		"year": 2015,
@@ -2157,7 +2426,8 @@
 		"game": 4,
 		"name": "Michelle",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-4"
 	},
 	"2015-3-4-Albert": {
 		"year": 2015,
@@ -2165,7 +2435,8 @@
 		"game": 4,
 		"name": "Albert",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-4"
 	},
 	"2015-3-4-Kim": {
 		"year": 2015,
@@ -2173,7 +2444,8 @@
 		"game": 4,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-4"
 	},
 	"2015-3-5-Garrett": {
 		"year": 2015,
@@ -2181,7 +2453,8 @@
 		"game": 5,
 		"name": "Garrett",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-5"
 	},
 	"2015-3-5-Annie": {
 		"year": 2015,
@@ -2189,7 +2462,8 @@
 		"game": 5,
 		"name": "Annie",
 		"outs": 4,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-5"
 	},
 	"2015-3-5-Lou": {
 		"year": 2015,
@@ -2197,7 +2471,8 @@
 		"game": 5,
 		"name": "Lou",
 		"outs": 3,
-		"assists": 5
+		"assists": 5,
+		"gameid": "2015-3-5"
 	},
 	"2015-3-5-Tom": {
 		"year": 2015,
@@ -2205,7 +2480,8 @@
 		"game": 5,
 		"name": "Tom",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-5"
 	},
 	"2015-3-5-Andy": {
 		"year": 2015,
@@ -2213,7 +2489,8 @@
 		"game": 5,
 		"name": "Andy",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-5"
 	},
 	"2015-3-5-Jeff": {
 		"year": 2015,
@@ -2221,7 +2498,8 @@
 		"game": 5,
 		"name": "Jeff",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-5"
 	},
 	"2015-3-5-Nathan": {
 		"year": 2015,
@@ -2229,7 +2507,8 @@
 		"game": 5,
 		"name": "Nathan",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-5"
 	},
 	"2015-3-6-Lou": {
 		"year": 2015,
@@ -2237,7 +2516,8 @@
 		"game": 6,
 		"name": "Lou",
 		"outs": 6,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2015-3-6"
 	},
 	"2015-3-6-Kaitlyn": {
 		"year": 2015,
@@ -2245,7 +2525,8 @@
 		"game": 6,
 		"name": "Kaitlyn",
 		"outs": 3,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-6"
 	},
 	"2015-3-6-Jeff": {
 		"year": 2015,
@@ -2253,7 +2534,8 @@
 		"game": 6,
 		"name": "Jeff",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-6"
 	},
 	"2015-3-6-Tom": {
 		"year": 2015,
@@ -2261,7 +2543,8 @@
 		"game": 6,
 		"name": "Tom",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-6"
 	},
 	"2015-3-6-Albert": {
 		"year": 2015,
@@ -2269,7 +2552,8 @@
 		"game": 6,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-6"
 	},
 	"2015-3-6-Charles": {
 		"year": 2015,
@@ -2277,7 +2561,8 @@
 		"game": 6,
 		"name": "Charles",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-6"
 	},
 	"2015-3-6-Garrett": {
 		"year": 2015,
@@ -2285,7 +2570,8 @@
 		"game": 6,
 		"name": "Garrett",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-6"
 	},
 	"2015-3-6-Kim": {
 		"year": 2015,
@@ -2293,7 +2579,8 @@
 		"game": 6,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-6"
 	},
 	"2015-3-7-Kim": {
 		"year": 2015,
@@ -2301,7 +2588,8 @@
 		"game": 7,
 		"name": "Kim",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-7"
 	},
 	"2015-3-7-Lou": {
 		"year": 2015,
@@ -2309,7 +2597,8 @@
 		"game": 7,
 		"name": "Lou",
 		"outs": 9,
-		"assists": 4
+		"assists": 4,
+		"gameid": "2015-3-7"
 	},
 	"2015-3-7-Mike": {
 		"year": 2015,
@@ -2317,7 +2606,8 @@
 		"game": 7,
 		"name": "Mike",
 		"outs": 2,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-7"
 	},
 	"2015-3-7-Andy": {
 		"year": 2015,
@@ -2325,7 +2615,8 @@
 		"game": 7,
 		"name": "Andy",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-7"
 	},
 	"2015-3-7-Jeff": {
 		"year": 2015,
@@ -2333,7 +2624,8 @@
 		"game": 7,
 		"name": "Jeff",
 		"outs": 5,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-7"
 	},
 	"2015-3-7-Albert": {
 		"year": 2015,
@@ -2341,7 +2633,8 @@
 		"game": 7,
 		"name": "Albert",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-7"
 	},
 	"2015-3-7-Nathan": {
 		"year": 2015,
@@ -2349,7 +2642,8 @@
 		"game": 7,
 		"name": "Nathan",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-7"
 	},
 	"2015-3-8-Lou": {
 		"year": 2015,
@@ -2357,7 +2651,8 @@
 		"game": 8,
 		"name": "Lou",
 		"outs": 9,
-		"assists": 6
+		"assists": 6,
+		"gameid": "2015-3-8"
 	},
 	"2015-3-8-Kaitlyn": {
 		"year": 2015,
@@ -2365,7 +2660,8 @@
 		"game": 8,
 		"name": "Kaitlyn",
 		"outs": 0,
-		"assists": 1
+		"assists": 1,
+		"gameid": "2015-3-8"
 	},
 	"2015-3-8-Michelle": {
 		"year": 2015,
@@ -2373,7 +2669,8 @@
 		"game": 8,
 		"name": "Michelle",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-8"
 	},
 	"2015-3-8-Andy": {
 		"year": 2015,
@@ -2381,7 +2678,8 @@
 		"game": 8,
 		"name": "Andy",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-8"
 	},
 	"2015-3-8-Jeff": {
 		"year": 2015,
@@ -2389,7 +2687,8 @@
 		"game": 8,
 		"name": "Jeff",
 		"outs": 3,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-8"
 	},
 	"2015-3-8-Charles": {
 		"year": 2015,
@@ -2397,7 +2696,8 @@
 		"game": 8,
 		"name": "Charles",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-8"
 	},
 	"2015-3-8-Mike": {
 		"year": 2015,
@@ -2405,7 +2705,8 @@
 		"game": 8,
 		"name": "Mike",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-8"
 	},
 	"2015-3-9-Jeff": {
 		"year": 2015,
@@ -2413,7 +2714,8 @@
 		"game": 9,
 		"name": "Jeff",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Michelle": {
 		"year": 2015,
@@ -2421,7 +2723,8 @@
 		"game": 9,
 		"name": "Michelle",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Lou": {
 		"year": 2015,
@@ -2429,7 +2732,8 @@
 		"game": 9,
 		"name": "Lou",
 		"outs": 4,
-		"assists": 3
+		"assists": 3,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Charles": {
 		"year": 2015,
@@ -2437,7 +2741,8 @@
 		"game": 9,
 		"name": "Charles",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Albert": {
 		"year": 2015,
@@ -2445,7 +2750,8 @@
 		"game": 9,
 		"name": "Albert",
 		"outs": 3,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Andy": {
 		"year": 2015,
@@ -2453,7 +2759,8 @@
 		"game": 9,
 		"name": "Andy",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Annie": {
 		"year": 2015,
@@ -2461,7 +2768,8 @@
 		"game": 9,
 		"name": "Annie",
 		"outs": 2,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Nathan": {
 		"year": 2015,
@@ -2469,7 +2777,8 @@
 		"game": 9,
 		"name": "Nathan",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Kim": {
 		"year": 2015,
@@ -2477,7 +2786,8 @@
 		"game": 9,
 		"name": "Kim",
 		"outs": 1,
-		"assists": 0
+		"assists": 0,
+		"gameid": "2015-3-9"
 	},
 	"2015-3-9-Kaitlyn": {
 		"year": 2015,
@@ -2485,6 +2795,7 @@
 		"game": 9,
 		"name": "Kaitlyn",
 		"outs": 0,
-		"assists": 2
+		"assists": 2,
+		"gameid": "2015-3-9"
 	}
 }
