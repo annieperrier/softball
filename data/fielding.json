@@ -2797,5 +2797,68 @@
 		"outs": 0,
 		"assists": 2,
 		"gameid": "2015-3-9"
+	},
+	"2016-2-1-Annie": {
+		"year": 2016,
+		"season": 2,
+		"game": 1,
+		"name": "Annie",
+		"outs": 2,
+		"assists": 1,
+		"gameid": "2016-2-1"
+	},
+	"2016-2-1-Lou": {
+		"year": 2016,
+		"season": 2,
+		"game": 1,
+		"name": "Lou",
+		"outs": 5,
+		"assists": 3,
+		"gameid": "2016-2-1"
+	},
+	"2016-2-1-Kim": {
+		"year": 2016,
+		"season": 2,
+		"game": 1,
+		"name": "Kim",
+		"outs": 3,
+		"assists": 0,
+		"gameid": "2016-2-1"
+	},
+	"2016-2-1-Tom": {
+		"year": 2016,
+		"season": 2,
+		"game": 1,
+		"name": "Tom",
+		"outs": 1,
+		"assists": 1,
+		"gameid": "2016-2-1"
+	},
+	"2016-2-1-Kaitlyn": {
+		"year": 2016,
+		"season": 2,
+		"game": 1,
+		"name": "Kaitlyn",
+		"outs": 3,
+		"assists": 0,
+		"gameid": "2016-2-1"
+	},
+	"2016-2-1-Andy": {
+		"year": 2016,
+		"season": 2,
+		"game": 1,
+		"name": "Andy",
+		"outs": 1,
+		"assists": 0,
+		"gameid": "2016-2-1"
+	},
+	"2016-2-1-Charles": {
+		"year": 2016,
+		"season": 2,
+		"game": 1,
+		"name": "Charles",
+		"outs": 1,
+		"assists": 0,
+		"gameid": "2016-2-1"
 	}
 }

@@ -756,5 +756,17 @@
 		"scorethem": 22,
 		"result": "lose",
 		"gameid": "2015-3-9"
+	},
+	"2016-2-1": {
+		"year": 2016,
+		"season": 2,
+		"game": 1,
+		"date": "2016-05-03",
+		"status": "played",
+		"type": "regular",
+		"scoreus": 16,
+		"scorethem": 21,
+		"result": "lose",
+		"gameid": "2016-2-1"
 	}
 }

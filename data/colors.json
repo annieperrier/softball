@@ -30,6 +30,7 @@
 		"highlight": "#F6C9B5"
 	},
 	{
+		"name": "Marites",
 		"color": "#FFD2BE",
 		"highlight": "#E7AC92"
 	},
@@ -63,6 +64,7 @@
 		"highlight": "#FFA65D"
 	},
 	{
+		"name": "Kamran",
 		"color": "#FFB596",
 		"highlight": "#FF7F45"
 	},
@@ -115,6 +117,7 @@
 		"highlight": "#779A5F"
 	},
 	{
+		"name": "Ozayr",
 		"color": "#7BEFC3",
 		"highlight": "#4FD9A5"
 	},
@@ -255,6 +258,7 @@
 		"highlight": "#5B4216"
 	},
 	{
+		"name": "Hitesh",
 		"color": "#AF5F30",
 		"highlight": "#8C4013"
 	},
