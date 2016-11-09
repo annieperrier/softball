@@ -1,6 +1,7 @@
 [
 
 	{
+		"name": "John",
 		"color": "#FFF9BE",
 		"highlight": "#E7DF92"
 	},
@@ -40,6 +41,7 @@
 		"highlight": "#F5A885"
 	},
 	{
+		"name": "Victoria",
 		"color": "#F898BF",
 		"highlight": "#EC4387"
 	},
@@ -126,6 +128,7 @@
 		"highlight": "#34C18C"
 	},
 	{
+		"name": "Burton",
 		"color": "#75E188",
 		"highlight": "#29C644"
 	},
@@ -171,6 +174,7 @@
 		"highlight": "#406868"
 	},
 	{
+		"name": "James",
 		"color": "#82ACAC",
 		"highlight": "#568C8C"
 	},
@@ -249,6 +253,7 @@
 		"highlight": "#9E9951"
 	},
 	{
+		"name": "Austin",
 		"color": "#9A8F57",
 		"highlight": "#736935"
 	},
@@ -279,6 +284,7 @@
 		"highlight": "#57554A"
 	},
 	{
+		"name": "Anthony",
 		"color": "#A4AA85",
 		"highlight": "#808761"
 	},

@@ -301,12 +301,60 @@
 		"color": "#7BEFC3",
 		"highlight": "#4FD9A5"
 	},
-	"Hitest":{
-		"name": "Hitest",
+	"Hitesh":{
+		"name": "Hitesh",
 		"number": "0",
 		"sex": "m",
 		"sub": false,
 		"color": "#AF5F30",
 		"highlight": "#8C4013"
+	},
+	"John":{
+		"name": "John",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#FFF9BE",
+		"highlight": "#E7DF92"
+	},
+	"Burton":{
+		"name": "Burton",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#75E188",
+		"highlight": "#29C644"
+	},
+	"James":{
+		"name": "James",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#82ACAC",
+		"highlight": "#568C8C"
+	},
+	"Austin":{
+		"name": "Austin",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#9A8F57",
+		"highlight": "#736935"
+	},
+	"Anthony":{
+		"name": "Anthony",
+		"number": "0",
+		"sex": "m",
+		"sub": true,
+		"color": "#A4AA85",
+		"highlight": "#808761"
+	},
+	"Victoria":{
+		"name": "Victoria",
+		"number": "0",
+		"sex": "f",
+		"sub": true,
+		"color": "#F898BF",
+		"highlight": "#EC4387"
 	}
 }
